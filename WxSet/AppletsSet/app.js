@@ -1,44 +1,20 @@
-// app.js
 App({
-  onLaunch: function () {
-
+  onLaunch: function (opt) {
+    console.log("APP onLaunch", opt);
   },
-  onShow: function () {
-
+  onShow: function (opt) {
+    console.log("APP onShow", opt);
   },
   onHide: function () {
-
+    console.log("APP onHide");
   },
-  onError: function () {
-
+  onError: function (msg) {
+    console.log("APP onError", msg);
   },
   onPageNotFound: function () {
-
+    console.log("APP onPageNotFound");
   },
   globalData: {
-    hello: "Hello,world!"
+    global_data_test: "global_data_test"
   }
 })
-
-// JSON文件tarbar配置
-/*"tabBar": {
-  "color": "#333",
-  "selectedColor": "#e71f19",
-  "backgroundColor": "#fff",
-  "borderStyle": "black",
-  "position": "bottom",
-  "list": [
-    {
-      "pagePath": "",
-      "text": "",
-      "iconPath": "",
-      "selectedIconPath": ""
-    },
-    {
-      "pagePath": "",
-      "text": "",
-      "iconPath": "",
-      "selectedIconPath": ""
-    }
-  ]
-},*/

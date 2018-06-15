@@ -1,17 +1,17 @@
 {
   "pages": [
-    "pages/index/index"
+    "PageTest/PageTest"
   ],
   "window": {
     "navigationBarBackgroundColor": "#333",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "框架",
+    "navigationBarTitleText": "小程序测试集合",
     "navigationStyle": "default",
     "backgroundColor": "#fff",
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "backgroundColorTop": "#fff",
     "backgroundColorBottom": "#fff",
-    "enablePullDownRefresh": false,
+    "enablePullDownRefresh": true,
     "onReachBottomDistance": "50"
   },
   "networkTimeout": {
@@ -19,5 +19,26 @@
     "connectSocket": "60000",
     "uploadFile": "60000",
     "downloadFile": "60000"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#e71f19",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "PageTest/PageTest",
+        "text": "tarbar测试",
+        "iconPath": "images/SmallImageTest.png",
+        "selectedIconPath": "images/SmallImageTest.png"
+      },
+      {
+        "pagePath": "PageTest/PageTest",
+        "text": "tarbar测试",
+        "iconPath": "images/SmallImageTest.png",
+        "selectedIconPath": "images/SmallImageTest.png"
+      }
+    ]
   }
 }

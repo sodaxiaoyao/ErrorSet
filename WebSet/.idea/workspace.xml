@@ -48,7 +48,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="351" />
     <option name="width" value="1752" />
     <option name="height" value="1020" />
@@ -74,6 +74,12 @@
               <item name="WebSet" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebSet" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebSet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebSet" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="my_pack" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -115,15 +121,17 @@
       <option name="presentableId" value="Default" />
       <updated>1529047499279</updated>
       <workItem from="1529047500580" duration="1899000" />
-      <workItem from="1529049522491" duration="536000" />
+      <workItem from="1529049522491" duration="1229000" />
+      <workItem from="1529051076216" duration="37000" />
+      <workItem from="1529055911264" duration="601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2435000" />
+    <option name="totallyTimeSpent" value="3766000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-7" width="1233" height="735" extended-state="6" />
+    <frame x="55" y="-7" width="1233" height="735" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23625922" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -166,20 +174,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/lib/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/my_pack/JqueryTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/css/my_css/CssTest.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -192,6 +187,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4294">
           <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/my_pack/JqueryTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
