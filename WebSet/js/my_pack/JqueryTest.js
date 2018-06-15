@@ -172,17 +172,17 @@ sj_storage:
 /*
 sj_tool:
     $.each(set,func)---------->遍历数据
-    $.extend(obj1,obj2)---------->合并两个对象
     $.grep(set,func)---------->过滤集合
     $.Deferred()
     $.makeArray()---------->转换类数组为真数组
     $.map()---------->map
     $.inArray()---------->索引元素位置
     $.toArray()---------->转换数组
+    $.extend(obj1,obj2)---------->合并两个对象
     $.merge()---------->合并两个数组
     $.uniqueSort()---------->删除重复dom
     $.parseXML(string)---------->解析为xml
-    $..noop()---------->空函数
+    $.noop()---------->空函数
     $.proxy()---------->代理执行类的方法
     $.contains()---------->dom中是否包含dom
     $.type()---------->检测类型
@@ -288,41 +288,6 @@ let _s = (function () {
 
 })();
 
-function sj_datetime() {
-    //datetime库
-    _s.extends({
-        "now": function (_test_str) {
-            const _date = new Date();
-
-            let test_str = _test_str || "y-M-d h:m:s";
-
-            this._debug_fun("日期格式：" + _test_str);
-
-            function comp_zero(content) {
-                return content >= 10 ? content.toString() : '0' + content.toString();
-            }
-
-            let now_obj = {
-                'y': _date.getFullYear().toString(),
-                'M': comp_zero(_date.getMonth() + 1),
-                'd': comp_zero(_date.getDay()),
-                'h': comp_zero(_date.getHours()),
-                'm': comp_zero(_date.getMinutes()),
-                's': comp_zero(_date.getSeconds()),
-            };
-
-            let tmp;
-            for (tmp in now_obj) {
-                test_str = test_str.replace(tmp, now_obj[tmp])
-            }
-
-            this._debug_fun("返回日期格式：" + _test_str);
-
-            return test_str;
-        }
-    });
-}
-
 function sj_connect() {
     //connect库
     _s.extends({
@@ -415,7 +380,4 @@ function sj_connect() {
     });
 }
 
-_s.module.loads([
-    "sj_connect",
-    "sj_datetime",
-]);
+_s.module.load("sj_connect");
