@@ -170,12 +170,12 @@ version.stderr.on('data', (data) => {
     console.log(`错误：${data}`);
 });
 version.on('error', (err) => {
-    console.log('启动子进程失败。',err);
+    console.log('启动子进程失败。', err);
 });
 version.on('close', (code) => {
     console.log(`子进程退出码：${code}`);
 });
-console.log("进程目录",process.argv0);
+console.log("进程目录", process.argv0);
 
 // child_process.spawn()、child_process.fork()、child_process.exec() 和 child_process.execFile()
 // 函数都遵循 Node.js API 惯用的异步编程模式。
@@ -183,9 +183,9 @@ console.log("进程目录",process.argv0);
 // child_process.spawnSync()、child_process.execSync() 和 child_process.execFileSync()
 // 方法是同步的且会阻塞 Node.js 的事件循环，暂停任何额外代码的执行直到衍生的进程退出。
 
-console.log("子进程通道",version.channel);
-console.log("连接性",version.connected);
-console.log("句柄",version.pid);
+console.log("子进程通道", version.channel);
+console.log("连接性", version.connected);
+console.log("句柄", version.pid);
 
 
 //========================================集群=================================================
@@ -198,7 +198,7 @@ if (cluster.isMaster) {
 
 
 //========================================控制台=================================================
-console.log('你好%s','世界');
+console.log('你好%s', '世界');
 console.error(new Error('错误信息'));
 const name = '描述';
 console.warn(`警告${name}`);
@@ -212,3 +212,5 @@ console.warn(`警告${name}`);
 // // 打印: [Error: 错误信息]到 err。
 // myConsole.warn(`警告${name}`);
 // // 打印: '警告描述'到 err。
+
+// =================================未完成:20180615

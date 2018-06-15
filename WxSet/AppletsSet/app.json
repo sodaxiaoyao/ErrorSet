@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "框架",
+    "navigationStyle": "default",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "backgroundColorTop": "#fff",
+    "backgroundColorBottom": "#fff",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": "50"
+  },
+  "networkTimeout": {
+    "request": "60000",
+    "connectSocket": "60000",
+    "uploadFile": "60000",
+    "downloadFile": "60000"
+  }
+}

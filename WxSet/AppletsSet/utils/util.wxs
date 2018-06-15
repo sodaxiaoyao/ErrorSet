@@ -1,0 +1,8 @@
+// utils/utils.wxs
+var get_content_wxs = function (content) {
+  return content;
+}
+
+module.exports = {
+  get_content_wxs: get_content_wxs
+}

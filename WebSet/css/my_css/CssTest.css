@@ -1,0 +1,255 @@
+/*动画属性*/
+/*背景属性*/
+/*边框属性*/
+/*文本属性*/
+/*留白属性*/
+/*规格属性*/
+/*布局属性*/
+/*列表属性*/
+/*定位属性*/
+/*显示属性*/
+
+/*=====================动画属性=====================================*/
+._animate {
+    /*animation: trial 2s linear 10s infinite reverse;*/
+    animation-name: trial_animate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    /*animation-fill-mode: forwards;*/
+    /*animation-play-state: paused;*/
+}
+
+@keyframes trial_animate {
+    from {
+    }
+    to {
+    }
+}
+
+._transform {
+    perspective: 150px;
+    transform-origin: 20% 40%;
+    transform: rotate(7deg);
+    perspective-origin: 10% 10%;
+    backface-visibility: hidden;
+    /*transition: all 2s;*/
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 2s;
+}
+
+/*=====================背景属性=====================================*/
+._background {
+    background: url("http://www.runoob.com/try/demo_source/planets.gif") no-repeat center center fixed;
+    /*background-color: #000;*/
+    /*background-image: url("http://www.runoob.com/try/demo_source/planets.gif");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center;*/
+    /*background-attachment: fixed;*/
+    background-size: 100% 100%;
+    background-origin: padding-box;
+    background-clip: content-box;
+}
+
+/*=====================边框属性=====================================*/
+._border {
+    /*border: 5px solid red;*/
+    /*border-width: 5px;*/
+    /*border-style: solid;*/
+    /*border-color: red;*/
+    border-top: 5px inset blue;
+    /*border-top-width: 5px;*/
+    /*border-top-style: inset;*/
+    /*border-top-color: blue;*/
+    border-left: 10px dotted yellow;
+    /*border-left-width: 15px;*/
+    /*border-left-style: dotted;*/
+    /*border-left-color: yellow;*/
+    border-bottom: 15px groove red;
+    /*border-bottom-width: 25px;*/
+    /*border-bottom-style: groove;*/
+    /*border-bottom-color: red;*/
+    border-right: 20px ridge green;
+    /*border-right-width: 35px;*/
+    /*border-right-style: ridge;*/
+    /*border-right-color: green;*/
+    outline: green dotted thick;
+    /*outline-color: green;*/
+    /*outline-style: dotted;*/
+    /*outline-width: thick;*/
+    /*border-image: url(border.png) 50% 50% 30 30 repeat;*/
+    border-image-source: url("../../images/ImageTest.jpg");
+    /*border-image-slice: 50% 50%;*/
+    border-image-width: 30 30;
+    box-decoration-break: slice;
+    /*该元素必须是inline元素,才能用上述属性*/
+    /*border-image-outset: 30 30;*/
+    border-image-repeat: repeat;
+    border-radius: 25px;
+    /*border-bottom-left-radius: 20px;*/
+    /*border-bottom-right-radius: 30px;*/
+    /*border-top-left-radius: 50px;*/
+    /*border-top-right-radius: 60px;*/
+    box-shadow: 10px 10px 5px #888888, 10px 10px 5px #888888 inset;
+}
+
+/*=====================文本属性=====================================*/
+._text {
+    display: inline-block;
+    overflow: hidden;
+    /*overflow-x: hidden;*/
+    /*overflow-y: hidden;*/
+    direction: rtl;
+    writing-mode: vertical-lr;
+    unicode-bidi: bidi-override;
+    color: red;
+    opacity: 0.5;
+    line-height: 10px;
+    text-align: center;
+    text-align-last: right;
+    text-decoration: line-through;
+    text-indent: 50px;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    text-shadow: 2px 2px #ff0000;
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+    word-spacing: 30px;
+    letter-spacing: 2px;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('http://www.w3cschool.css/css3/Sansation_Light.ttf')
+}
+
+._font {
+    /*font: 15px arial, sans-serif;*/
+    font-family: arial, serif;
+    font-size: 50px;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+._content:before {
+    /*content: "hello,world";*/
+    counter-increment: name;
+    content: counter(name);
+    counter-reset: subsection;
+}
+
+q {
+    quotes: "~" "~" "'" "'";
+}
+
+/*=====================留白属性=====================================*/
+._padding_margin {
+    margin: 20px 20px;
+    padding: 20px 20px;
+}
+
+/*=====================规格属性=====================================*/
+.dimension {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
+}
+
+/*=====================布局属性=====================================*/
+._flex {
+    display: flex;
+    /*flex-flow: row-reverse wrap;*/
+    flex-direction: row-reverse;
+    /*row|row-reverse|column|column-reverse*/
+    flex-wrap: nowrap;
+    align-content: center;
+    /*stretch|center|flex-start|flex-end|space-between|space-around*/
+    align-items: center;
+    /*stretch|center|flex-start|flex-end|baseline*/
+    justify-content: space-around;
+    /*flex-start|flex-end|center|space-between|space-around*/
+}
+
+._flex div {
+    /*flex:1;*/
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 40px;
+}
+
+.bionic {
+    appearance: button;
+    box-sizing: border-box;
+    resize: both;
+}
+
+/*=====================列表属性=====================================*/
+._list-style {
+    list-style: square outside;
+    /*list-style-type: square;*/
+    /*list-style-position: outside;*/
+    /*list-style-image: none;*/
+}
+
+._column {
+    column-fill: auto;
+    column-gap: 40px;
+    column-span: all;
+    /*column-rule: 3px outset #ff00ff;*/
+    column-rule-width: 3px;
+    column-rule-style: dotted;
+    column-rule-color: #ff00ff;
+    /*columns:100px 3;*/
+    column-width: 100px;
+    column-count: 3;
+}
+
+._table {
+    display: table;
+    /*table-row|table-cell|table-caption|table-column|table-column-group|
+    table-row-group|table-footer-group|table-header-group*/
+    vertical-align: middle;
+    border: 1px solid black;
+    border-collapse: separate;
+    border-spacing: 10px;
+    caption-side: bottom;
+    empty-cells: hide;
+    table-layout: auto
+}
+
+/*=====================定位属性=====================================*/
+._position {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    /* z-index 进行定位元素(position:absolute, position:relative, or position:fixed)。*/
+}
+
+/*=====================显示属性=====================================*/
+._display {
+    display: block;
+    float: left;
+    clear: both;
+    clip: rect(0px, 60px, 200px, 0px);
+    cursor: pointer;
+    visibility: visible;
+}
+
+@media screen and (max-width: 480px) {
+    /*480,768,992,1200*/
+    * {
+        display: none;
+    }
+}

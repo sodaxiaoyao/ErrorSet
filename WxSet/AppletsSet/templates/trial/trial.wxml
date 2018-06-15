@@ -1,0 +1,19 @@
+<!--tmplates/trial/trial.wxml-->
+<template name="trial">
+  <view>
+    <view>收件人:{{deal_str.capital(name)}}</view>
+    <view>联系方式:{{phone}}</view>
+    <view>地址:{{address}}</view>
+    <view>介绍:{{info.get_content_wxs('hello,world')}}</view>
+  </view>
+</template>
+
+<wxs module="deal_str">
+  var capital = function(my_str) {
+    return my_str.substring(0, 1).toUpperCase() + my_str.substring(1);
+  }
+  module.exports = {
+    capital: capital
+  }
+</wxs>
+<wxs src="../../utils/util.wxs" module="info"></wxs>

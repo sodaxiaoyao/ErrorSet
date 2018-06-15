@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/web_set.iml" filepath="$PROJECT_DIR$/.idea/web_set.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/WebSet.iml" filepath="$PROJECT_DIR$/.idea/WebSet.iml" />
     </modules>
   </component>
 </project>
