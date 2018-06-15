@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS标签集合测试</title>
+    <style type="text/css">
+        ._animate {
+            /*animation: trial 2s linear 10s infinite reverse;*/
+            animation-name: trial_animate;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            /*animation-fill-mode: forwards;*/
+            /*animation-play-state: paused;*/
+        }
+
+        @keyframes trial_animate {
+            from {
+                width: 100px;
+                height: 100px;
+                background: red
+            }
+            to {
+                width: 200px;
+                height: 200px;
+                background: blue;
+            }
+        }
+
+        ._background {
+            background: url("http://www.runoob.com/try/demo_source/planets.gif") no-repeat center center fixed;
+            /*background-color: #000;*/
+            /*background-image: url("http://www.runoob.com/try/demo_source/planets.gif");*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center center;*/
+            /*background-attachment: fixed;*/
+            background-size: 100% 100%;
+            background-origin: padding-box;
+            background-clip: content-box;
+        }
+
+        ._border {
+            /*border: 5px solid red;*/
+            /*border-width: 5px;*/
+            /*border-style: solid;*/
+            /*border-color: red;*/
+            border-top: 5px inset blue;
+            /*border-top-width: 5px;*/
+            /*border-top-style: inset;*/
+            /*border-top-color: blue;*/
+            border-left: 10px dotted yellow;
+            /*border-left-width: 15px;*/
+            /*border-left-style: dotted;*/
+            /*border-left-color: yellow;*/
+            border-bottom: 15px groove red;
+            /*border-bottom-width: 25px;*/
+            /*border-bottom-style: groove;*/
+            /*border-bottom-color: red;*/
+            border-right: 20px ridge green;
+            /*border-right-width: 35px;*/
+            /*border-right-style: ridge;*/
+            /*border-right-color: green;*/
+            outline: green dotted thick;
+            /*outline-color: green;*/
+            /*outline-style: dotted;*/
+            /*outline-width: thick;*/
+            /*border-image: url(border.png) 50% 50% 30 30 repeat;*/
+            border-image-source: url("https://mdn.mozillademos.org/files/8167/box-decoration-break-inline-slice.png");
+            /*border-image-slice: 50% 50%;*/
+            border-image-width: 30 30;
+            box-decoration-break: slice;
+            /*该元素必须是inline元素,才能用上述属性*/
+            /*border-image-outset: 30 30;*/
+            border-image-repeat: repeat;
+            border-radius: 25px;
+            /*border-bottom-left-radius: 20px;*/
+            /*border-bottom-right-radius: 30px;*/
+            /*border-top-left-radius: 50px;*/
+            /*border-top-right-radius: 60px;*/
+            box-shadow: 10px 10px 5px #888888, 10px 10px 5px #888888 inset;
+        }
+
+        ._overflow {
+            /*overflow: hidden;*/
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        ._color {
+            display: inline-block;
+            color: red;
+            opacity: 0.5;
+            direction: rtl;
+            line-height: 10px;
+            vertical-align: text-top;
+            text-align: center;
+            text-decoration: line-through;
+            text-indent: 50px;
+            text-transform: uppercase;
+            text-overflow: ellipsis;
+            text-shadow: 2px 2px #ff0000;
+            text-align-last: right;
+            white-space: normal;
+            word-spacing: 30px;
+            word-break: break-all;
+            word-wrap: break-word;
+            letter-spacing: 2px;
+        }
+
+        ._padding_margin {
+            margin: 20px 20px;
+            padding: 20px 20px;
+        }
+
+        .dimension {
+            width: 100px;
+            height: 100px;
+            max-width: 100px;
+            min-width: 100px;
+            max-height: 100px;
+            min-height: 100px;
+        }
+
+        ._flex {
+            display: flex;
+            /*flex-flow: row-reverse wrap;*/
+            flex-direction: row-reverse;
+            /*row|row-reverse|column|column-reverse*/
+            flex-wrap: nowrap;
+            align-content: center;
+            /*stretch|center|flex-start|flex-end|space-between|space-around*/
+            align-items: center;
+            /*stretch|center|flex-start|flex-end|baseline*/
+            justify-content: space-around;
+            /*flex-start|flex-end|center|space-between|space-around*/
+        }
+
+        ._flex div {
+            width: 100px;
+            height: 100px;
+            background: green;
+            /*flex:1;*/
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 40px;
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url('http://www.w3cschool.css/css3/Sansation_Light.ttf')
+        }
+
+        ._font {
+            /*font: 15px arial, sans-serif;*/
+            font-family: arial, serif;
+            font-size: 50px;
+            font-style: italic;
+            font-variant: small-caps;
+            font-weight: bold;
+        }
+
+        ._content:before {
+            /*content: "hello,world";*/
+            counter-increment: name;
+            content: counter(name);
+            counter-reset: subsection;
+        }
+
+        q {
+            quotes: "~" "~" "'" "'";
+        }
+
+        ._list-style {
+            list-style: square outside;
+            /*list-style-type: square;*/
+            /*list-style-position: outside;*/
+            /*list-style-image: none;*/
+        }
+
+        ._column {
+            column-fill: auto;
+            column-gap: 40px;
+            column-span: all;
+            /*column-rule: 3px outset #ff00ff;*/
+            column-rule-width: 3px;
+            column-rule-style: dotted;
+            column-rule-color: #ff00ff;
+            /*columns:100px 3;*/
+            column-width: 100px;
+            column-count: 3;
+        }
+
+        ._position {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            /* z-index 进行定位元素(position:absolute, position:relative, or position:fixed)。*/
+        }
+
+        ._display {
+            width: 100px;
+            height: 100px;
+            background: red;
+            display: block;
+            float: left;
+            clear: both;
+            clip: rect(0px, 60px, 200px, 0px);
+            cursor: pointer;
+            visibility: visible;
+        }
+
+        ._table {
+            border: 1px solid black;
+            border-collapse: separate;
+            border-spacing: 10px;
+            caption-side: bottom;
+            empty-cells: hide;
+            table-layout: auto
+        }
+
+        .false_table {
+            display: table;
+            display: table-row;
+            display: table-cell;
+            display: table-caption;
+            display: table-column;
+            display: table-column-group;
+            display: table-row-group;
+            display: table-footer-group;
+            display: table-header-group;
+        }
+
+        ._writing-mode {
+            writing-mode: vertical-lr;
+            unicode-bidi: bidi-override;
+        }
+
+        ._transform {
+            width: 100px;
+            height: 100px;
+            background: red;
+            perspective: 150px;
+            transform-origin: 20% 40%;
+            transform: rotate(7deg);
+            perspective-origin: 10% 10%;
+            backface-visibility: hidden;
+            /*transition: all 2s;*/
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 2s;
+        }
+
+        .user {
+            width: 100px;
+            height: 100px;
+            background: red;
+            appearance: button;
+            box-sizing: border-box;
+            resize: both;
+        }
+
+        @media screen and (max-width: 480px) {
+            /*480,768,992,1200*/
+            * {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="_animate">动画属性</div>
+<div class="_background">背景属性</div>
+<div class="_border">边框属性</div>
+<div class="_overflow">超出属性</div>
+<div class="_color">颜色属性属性</div>
+<div class="_padding_margin">边距属性</div>
+<div class="dimension">尺寸属性</div>
+<div class="_flex">
+    <div style="background: red"></div>
+    <div style="background: black;align-self:center;"></div>
+    <div style="background: blue"></div>
+</div>
+<div class="_font">文字属性</div>
+<div class="_content">内容<q>属</q>性</div>
+<ul class="_list-style">
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+</ul>
+<div class="_column">
+    “当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，
+    决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，
+    但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，
+    我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”
+</div>
+<div class="_position"></div>
+<div class="_display"></div>
+<table class="_table">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+    </tr>
+    <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+    </tr>
+    <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+    </tr>
+</table>
+<div class="_transform"></div>
+<div class="user"></div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="" content="">
+    <meta http-equiv="content-type" content="text/html">
+    <title>HTML标签集合测试</title>
+
+    <base href="http://www.runoob.com/images/" target="_blank"> <style></style>
+    <basefont color="red" size="5"/>
+</head>
+<body>
+<h1>h1标签</h1>
+<h2>h2标签</h2>
+<h3>h3标签</h3>
+<h4>h4标签</h4>
+<h5>h5标签</h5>
+<h6>h6标签</h6>
+
+<p>p标签</p>
+
+<br/>
+
+<hr/>
+
+<!-- 注释 -->
+
+<acronym title="标签描述">acronym已经废弃</acronym>
+<abbr title="标签描述">abbr标签</abbr>
+
+<address>address标签</address>
+
+<b>b标签</b>
+
+<bdi>bdi标签</bdi>
+
+<bdo dir="rtl">bdo标签</bdo>
+
+<big>big已经废弃</big>
+
+<blockquote>blockquote标签</blockquote>
+
+<center>center已经废弃</center>
+
+<cite>cite标签</cite>
+
+<code>code标签</code>
+
+<del>del标签</del>
+
+<dfn>dfn标签</dfn>
+
+<em>em标签</em>
+
+<font>font已经废弃</font>
+
+<i>i标签</i>
+
+<ins>ins标签</ins>
+
+<kbd>kbd标签</kbd>
+
+<mark>mark标签</mark>
+
+<meter value="2" min="0" max="10">meter标签</meter>
+
+<pre>pre标签</pre>
+
+<progress>progress标签</progress>
+
+<q>q标签</q>
+
+<ruby>
+    ruby
+    <rp>(</rp>
+    <rt>jie</rt>
+    <rp>)</rp>
+    标签
+    <rp>(</rp>
+    <rt>shi</rt>
+    <rp>)</rp>
+</ruby>
+
+<s>s标签</s>
+
+<samp>samp标签</samp>
+
+<small>small标签</small>
+
+<strike>strike已经废弃</strike>
+
+<strong>strong标签</strong>
+
+<sub>sub标签</sub>
+
+<sup>sup标签</sup>
+
+<time>time标签</time>
+
+<tt>tt已经废弃</tt>
+
+<u>u标签</u>
+
+<var>var标签</var>
+
+<wbr/>
+
+<form>
+    表单标签
+    <label>label标签</label>
+    <input type="submit" value="input标签" placeholder="提交input">
+    <input type="text" value="input标签" placeholder="文本input">
+    <input type="password" value="input标签" placeholder="密码input">
+    <input type="button" value="input标签" placeholder="按钮input">
+    <input type="file" value="input标签" placeholder="文件input">
+    <input type="color">
+    <input type="date">
+    <input type="datetime">
+    <input type="datatime-local">
+    <input type="email" id="myColor">
+    <input type="month" id="myMonth" value="2014-05">
+    <input type="number" id="myNumber" value="2">
+    <input type="range" id="myRange">
+    <input type="search" id="mySearch" placeholder="搜索..">
+    <input type="week" id="myWeek" value="2014-W15">
+    <input type="url" id="myURL" value="http://www.google.com">
+
+    <textarea placeholder="textarea标签"></textarea>
+    <button value="button标签">button标签</button>
+
+    <label>
+        select标签
+        <select>
+            <optgroup label="optgroup标签">
+                <option value="option标签">option标签</option>
+            </optgroup>
+        </select>
+    </label>
+
+    <fieldset>
+        fieldset标签
+        <legend>legend标签</legend>
+    </fieldset>
+
+    <label>
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="datalist标签">
+        </datalist>
+    </label>
+
+
+    <keygen name="security">keygen已经废弃</keygen>
+
+    <output>output标签</output>
+</form>
+
+<frameset cols="25%,50%,25%">
+    <frame src="scope.html">
+    <noframes>noframes标签</noframes>
+</frameset>
+
+<iframe src="http://www.runoob.com"></iframe>
+
+
+<img src="http://www.runoob.com/try/demo_source/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+<map name="planetmap">
+    <area shape="rect" coords="0,0,82,126" alt="Sun" href="http://www.runoob.com/try/demo_source/sun.htm">
+    <area shape="circle" coords="90,58,3" alt="Mercury" href="http://www.runoob.com/try/demo_source/mercur.htm">
+    <area shape="circle" coords="124,58,8" alt="Venus" href="http://www.runoob.com/try/demo_source/venus.htm">
+</map>
+
+<canvas id="myCanvas">canvas标签</canvas>
+<script>
+    let can = document.getElementById('myCanvas');
+    let ctx = can.getContext('2d');
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, 80, 100);
+    ctx.fillStyle = '#fff';
+    ctx.fillText("canvas标签", 0, 50);
+</script>
+<noscript>noscript标签</noscript>
+
+<figure>
+    <img src="http://www.runoob.com/try/demo_source/img_pulpit.jpg" width="304" height="228">
+    <figcaption>figcaption标签</figcaption>
+</figure>
+
+<audio controls="controls">
+    <source src="http://www.runoob.com/try/demo_source/horse.ogg"/>
+    audio标签
+</audio>
+
+<video width="320" height="240" controls="controls">
+    <source src="http://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4">
+    <track kind="subtitles" srclang="en" label="English" src="">
+    <track kind="subtitles" srclang="no" label="Norwegian" src="">
+    video标签
+</video>
+
+<a href="http://www.runoob.com">a标签</a>
+
+<link rel="stylesheet" type="text/css" href=""/>
+
+<nav>nav标签</nav>
+
+<ul>
+    <li>li标签</li>
+</ul>
+
+<ol>
+    <li>li标签</li>
+</ol>
+
+<dir>
+    <li>li标签</li>
+</dir>
+
+<dl>
+    <dt>dt标签</dt>
+    <dd>dd标签</dd>
+</dl>
+
+<menu>menu完全不支持</menu>
+
+<command>command完全不支持</command>
+
+<table border="1">
+    <caption>caption标签</caption>
+    <colgroup>
+        <col span="2" style="background-color:red">
+        <col style="background-color:yellow">
+    </colgroup>
+    <thead>
+    <tr>
+        <th>th标签</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <td>td标签</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+        <td>td标签</td>
+    </tr>
+    </tbody>
+</table>
+
+<div>div标签</div>
+
+<span>span标签</span>
+
+<article>
+    <header>
+        header标签
+    </header>
+    <section>section标签</section>
+    <footer>footer标签</footer>
+    <aside>aside标签</aside>
+</article>
+
+<details>
+    <summary>summary标签</summary>
+    details标签
+</details>
+
+<dialog>dialog标签</dialog>
+
+<applet>Java applet 已经废弃</applet>
+
+<embed src="helloworld.swf" tppabs="http://www.runoob.com//try/demo_source/helloworld.swf">
+
+<object width="400" height="400" data="http://www.runoob.com//try/demo_source/helloworld.swf">
+    <param name="autoplay" value="true">
+</object>
+
+</body>
+</html>
