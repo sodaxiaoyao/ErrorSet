@@ -1,0 +1,2 @@
+var tool = require("../UtilsTest/UtilsTest.wxs");
+console.log(tool.bar(tool.foo))

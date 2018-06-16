@@ -13,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -31,15 +31,18 @@
       <find>.jpg</find>
       <find>debug</find>
       <find>index</find>
+      <find>compile</find>
+      <find>top</find>
+      <find>proxy</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/my_pack/NodeJsTest.js" />
-        <option value="$PROJECT_DIR$/html/HtmlTest.html" />
         <option value="$PROJECT_DIR$/css/my_css/CssTest.css" />
         <option value="$PROJECT_DIR$/js/my_pack/JqueryTest.js" />
+        <option value="$PROJECT_DIR$/html/HtmlTest.html" />
         <option value="$PROJECT_DIR$/js/my_pack/JavaScriptTest.js" />
       </list>
     </option>
@@ -63,7 +66,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -71,26 +73,11 @@
               <item name="WebSet" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebSet" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="WebSet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSet" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebSet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSet" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebSet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSet" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="my_pack" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -115,6 +102,20 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JavaScript Debug.HtmlTest.html">
+    <configuration name="HtmlTest.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebSet/html/HtmlTest.html" />
+    <configuration name="JavaScriptTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="JavaScriptTest.js" working-dir="$PROJECT_DIR$/js/my_pack" />
+    <list>
+      <item itemvalue="Node.js.JavaScriptTest.js" />
+      <item itemvalue="JavaScript Debug.HtmlTest.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.HtmlTest.html" />
+        <item itemvalue="Node.js.JavaScriptTest.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -132,11 +133,14 @@
       <workItem from="1529072538604" duration="444000" />
       <workItem from="1529073009198" duration="3064000" />
       <workItem from="1529076109716" duration="1427000" />
+      <workItem from="1529120466286" duration="17140000" />
+      <workItem from="1529153640943" duration="3000" />
+      <workItem from="1529154572351" duration="3566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8701000" />
+    <option name="totallyTimeSpent" value="29410000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -198,28 +202,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/HtmlTest.html">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4294">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="279">
+          <caret line="994" column="54" selection-start-line="994" selection-start-column="47" selection-end-line="994" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/my_pack/JqueryTest.js">
+    <entry file="file://$PROJECT_DIR$/html/HtmlTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1053">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="16" />
-          <folding>
-            <element signature="e#6341#8356#0" />
-            <element signature="n#!!block;n#sj_connect#0" />
-          </folding>
+        <state relative-caret-position="486">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/my_pack/JavaScriptTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+        <state relative-caret-position="487">
+          <caret line="289" lean-forward="true" selection-start-line="289" selection-end-line="289" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/my_pack/JqueryTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="155" column="39" lean-forward="true" selection-start-line="155" selection-start-column="39" selection-end-line="155" selection-end-column="39" />
         </state>
       </provider>
     </entry>

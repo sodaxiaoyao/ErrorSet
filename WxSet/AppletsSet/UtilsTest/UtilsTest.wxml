@@ -1,0 +1,4 @@
+<template name="temp_test">
+  <text> {{index}} : {{msg}} </text>
+</template>
+<view>除了模版以外的代码</view>

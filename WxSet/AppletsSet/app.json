@@ -1,6 +1,7 @@
 {
   "pages": [
-    "PageTest/PageTest"
+    "PageTest/PageTest",
+    "component/ComponentTest"
   ],
   "window": {
     "navigationBarBackgroundColor": "#333",

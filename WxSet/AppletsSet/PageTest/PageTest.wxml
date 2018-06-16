@@ -1,0 +1,84 @@
+=====================================数据绑定集合=====================================
+
+<block>
+  {{data_test}}{{1 + 2}} + {{3}} + 4
+</block>
+
+<block wx:for="{{[0,1,2,3,4,5]}}" wx:key="*this" wx:for-index="idx" wx:for-item="itm">
+  {{idx}}_{{itm}}
+</block>
+
+<block wx:if="{{12>13}}">测试</block>
+<block wx:elif="{{30>50}}"> 测试2 </block>
+<block wx:else> 测试3 </block>
+
+<view hidden="{{true ? true : false}}">隐藏,注意：block无hidden属性</view>
+
+<include src="../UtilsTest/UtilsTest.wxml" /> 
+<import src="../UtilsTest/UtilsTest.wxml" />
+<template is="temp_test" data="{{index:12,msg:13}}" />
+
+
+
+
+
+
+=====================================事件绑定集合=====================================
+
+<view data-test="data_test" bindtouchstart="bind_tap">点击开始事件</view>
+<view data-test="data_test" bindtouchmove="bind_tap">点击移动事件</view>
+<view data-test="data_test" bindtouchcancel="bind_tap">点击打断事件</view>
+<view data-test="data_test" bindtouchend="bind_tap">点击结束事件</view>
+<view data-test="data_test" bindtap="bind_tap">点击事件</view>
+<view data-test="data_test" bindlongpress="bind_tap">点击长按事件</view>
+<view data-test="data_test" bindtransitionend="bind_tap">变换结束事件</view>
+<view data-test="data_test" bindanimationstart="bind_tap">动画开始事件</view>
+<view data-test="data_test" bindanimationiteration="bind_tap">动画完成一次事件</view>
+<view data-test="data_test" bindanimationend="bind_tap">动画结束事件</view>
+<view data-test="data_test" bindtouchforcechange="bind_tap">点击3d touch事件</view>
+
+<view data-test="data_test" catchtouchstart="bind_tap">点击开始事件</view>
+<view data-test="data_test" catchtouchmove="bind_tap">点击移动事件</view>
+<view data-test="data_test" catchtouchcancel="bind_tap">点击打断事件</view>
+<view data-test="data_test" catchtouchend="bind_tap">点击结束事件</view>
+<view data-test="data_test" catchtap="bind_tap">点击事件</view>
+<view data-test="data_test" catchlongpress="bind_tap">点击长按事件</view>
+<view data-test="data_test" catchtransitionend="bind_tap">变换结束事件</view>
+<view data-test="data_test" catchanimationstart="bind_tap">动画开始事件</view>
+<view data-test="data_test" catchanimationiteration="bind_tap">动画完成一次事件</view>
+<view data-test="data_test" catchanimationend="bind_tap">动画结束事件</view>
+<view data-test="data_test" catchtouchforcechange="bind_tap">点击3d touch事件</view>
+
+<view id="outer" bind:touchstart="bind_tap" capture-catch:touchstart="bind_tap">
+  outer view
+  <view id="inner" bind:touchstart="bind_tap" capture-bind:touchstart="bind_tap">
+    inner view
+  </view>
+</view>
+
+
+
+
+=====================================wxs集合=====================================
+
+<wxs src="./PageTest.wxs" module="logic" />
+<wxs src="../UtilsTest/UtilsTest.wxs" module="tool" />
+<view> {{tool.foo}} </view>
+<view> {{tool.bar(data_test)}} </view>
+<wxs module="util">
+  var some_msg = "hello world";
+  module.exports = {
+    msg: some_msg,
+  }
+</wxs>
+<view> {{util.msg}} </view>
+
+
+
+
+=====================================自定义组件=====================================
+
+<ComponentTest ComponentProperty="a" BehaviorProperty="b">
+  <view slot="before">自定义组件</view>
+  <view slot="after">自定义组件</view>
+</ComponentTest>
