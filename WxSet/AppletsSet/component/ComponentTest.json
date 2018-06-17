@@ -1,3 +1,8 @@
 {
-  "component": true
+  "component": true,
+  "componentGenerics": {
+    "AbstractNode": {
+      "default": "./ComponentChildTest"
+    }
+  }
 }

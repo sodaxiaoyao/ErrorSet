@@ -2,18 +2,17 @@ var BehaviorTest = require('./BehaviorTest.js');
 
 Component({
   relations: {
-    'BehaviorTest.BehaviorTest': {
-      type: 'descendant',
+    './ComponentTest': {
+      type: 'ancestor',
       linked: function (target) {
-        console.log("c linked")
+        console.log("p linked")
       },
       linkChanged: function (target) {
-        console.log("c linkChanged")
+        console.log("p linkChanged")
       },
       unlinked: function (target) {
-        console.log("c unlinked")
+        console.log("p unlinked")
       },
-      target: BehaviorTest.BehaviorTest
     }
   },
   options: {
@@ -39,22 +38,22 @@ Component({
   },
   methods: {
     ComponentMethod: function () {
-      console.log('log from ComponentTest.js')
+      console.log('log from ComponentChildTest.js')
     }
   },
   created: function () {
-    console.log("This component has been created");
+    console.log("][This component has been created");
   },
   attached: function () {
-    console.log("This component attach to node");
+    console.log("][This component attach to node");
   },
   ready: function () {
-    console.log("The component is ready");
+    console.log("][The component is ready");
   },
   moved: function () {
-    console.log("The component move to other");
+    console.log("][The component move to other");
   },
   detached: function () {
-    console.log("The component is detached");
+    console.log("][The component is detached");
   }
 })

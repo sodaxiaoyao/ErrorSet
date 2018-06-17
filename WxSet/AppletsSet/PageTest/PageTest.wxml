@@ -14,9 +14,9 @@
 
 <view hidden="{{true ? true : false}}">隐藏,注意：block无hidden属性</view>
 
-<include src="../UtilsTest/UtilsTest.wxml" /> 
+<include src="../UtilsTest/UtilsTest.wxml" />
 <import src="../UtilsTest/UtilsTest.wxml" />
-<template is="temp_test" data="{{index:12,msg:13}}" />
+<template is="temp_test" data="{{index:12,msg:13}}" /> 
 
 
 
@@ -78,7 +78,13 @@
 
 =====================================自定义组件=====================================
 
-<ComponentTest ComponentProperty="a" BehaviorProperty="b">
-  <view slot="before">自定义组件</view>
-  <view slot="after">自定义组件</view>
+
+<ComponentTest generic:AbstractNode="ComponentChildTest" custom_class="red-text" ComponentProperty="a" BehaviorProperty="b">
+  <view slot="before">自定义组件--1</view>
+  <view slot="after">自定义组件--2</view>
+  <ComponentChildTest ComponentProperty="c" BehaviorProperty="d" custom_class="red-text" />
 </ComponentTest>
+
+
+
+=====================================自定义组件=====================================
