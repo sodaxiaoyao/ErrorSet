@@ -5,6 +5,17 @@ Page({
   data: {
     data_test: "data_test_data",
     data_test_array: [...Array(5).keys()],
+    nodes: [{
+      name: 'a',
+      attrs: {
+        class: 'a_class',
+        style: 'line-height: 60px; color: red;'
+      },
+      children: [{
+        type: 'text',
+        text: 'Hello&nbsp;World!'
+      }]
+    }],
   },
   onLoad: function(opt) {
     console.log("Page onLoad", opt)

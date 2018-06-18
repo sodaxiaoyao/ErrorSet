@@ -87,4 +87,67 @@
 
 
 
-=====================================自定义组件=====================================
+=====================================组件=====================================
+
+
+<view hover-class="hover-class" hover-stop-propagation="true" hover-start-time="1000" hover-stay-time="1000">view</view>
+
+<scroll-view style='width:100px;height:100px;' scroll-x="" scroll-y="true" upper-threshold="50" lower-threshold="50" scroll-top="0" scroll-left="0" scroll-into-view="test" scroll-with-animation="true" enable-back-to-top="true" catchscrolltoupper="bind_tap"
+  catchscrolltolower="bind_tap" catchscroll="bind_tap">
+  <view style='width:100px;height:100px;background:red'></view>
+  <view id="test" style='width:100px;height:100px;background:blue'>scroll-view</view>
+  <view style='width:100px;height:100px;background:yellow'></view>
+</scroll-view>
+
+
+<swiper indicator-dots="true" indicator-color="red" indicator-active-color="blue" autoplay="true" current="2" current-item-id="" interval="100000" duration="2000" circular="true" vertical="true" previous-margin="50rpx" next-margin="50rpx" display-multiple-items="1"
+  skip-hidden-item-layout="true" catchchange="bind_tap" catchanimationfinish="bind_tap">
+  <block wx:for="{{[1,2,3]}}" wx:key="*this">
+    <swiper-item item-id="item_test">
+      <image src="../images/ImageTest.jpg" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<movable-area style="height: 200px; width: 200px; background: red;" scale-area="true">
+  <movable-view style="height: 50px; width: 50px; background: blue;" direction="all" inertia="true" out-of-bounds="true" x="30" y="30" damping="200" friction="10" disabled="" scale="true" scale-min="0.5" scale-max="2" scale-value="1" animation="true" catchchange="bind_tap"
+    catchscale="bind_tap" catchhtouchmove="bind_tap" catchvtouchmove="bind_tap">
+  </movable-view>
+</movable-area>
+
+
+<cover-view scroll-top="30">
+  cover-view
+  <cover-image src="../images/ImageTest.jpg" catchload="bind_tap" catcherror="bind_tap"></cover-image>
+</cover-view>
+
+<icon type="success" size="50" color="green"></icon>
+
+<text selectable="true" space="emsp" decode="true">      &lttext&lt     </text>
+
+<rich-text nodes="{{nodes}}"></rich-text>
+
+<progress percent="30" show-info="true" stroke-width="8" activeColor="yellow" backgroundColor="red" active="true" active-mode="backwards"></progress>
+
+<button size="mini" type="warn" plain="true" disabled="" loading="true" form-type="reset" hover-class="hover-class" hover-stop-propagation="true" hover-start-time="1000" hover-stay-time="1000" open-type="feedbac" lang="en" bindgetuserinfo="bind_tap" session-from="test_id"
+  send-message-title="标题" send-message-path="PageTest/PageTest" send-message-img="../images/ImageTest.jpg" show-message-card="true" bindcontact="bind_tap" bindgetphonenumber="bind_tap" bindopensetting="bind_tap" app-parameter="send_app_msg" binderror="bind_tap">button open-type：contact | share | getUserInfo | getPhoneNumber | launchApp | openSetting | feedbac | exit
+</button>
+
+
+<checkbox-group bindchange="bind_tap">
+  <label>
+    <checkbox value="1" disabled="" color="blue" checked="true" />one
+  </label>
+  <label>
+    <checkbox value="2" disabled="true" color="red" checked="true" />two
+  </label>
+  <label>
+    <checkbox value="3" disabled="" color="yellow" checked="true" />three
+  </label>
+</checkbox-group>
+
+<form report-submit="true" bindsubmit="bind_tap" bindreset="bind_tap">
+  <input name="test_input" value="12"></input>
+  <button form-type='submit'>提交</button>
+</form>
