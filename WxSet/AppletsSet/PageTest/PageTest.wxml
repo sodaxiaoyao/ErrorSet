@@ -21,8 +21,6 @@
 
 
 
-
-
 =====================================事件绑定集合=====================================
 
 <view data-test="data_test" bindtouchstart="bind_tap">点击开始事件</view>
@@ -92,6 +90,7 @@
 
 <view hover-class="hover-class" hover-stop-propagation="true" hover-start-time="1000" hover-stay-time="1000">view</view>
 
+
 <scroll-view style='width:100px;height:100px;' scroll-x="" scroll-y="true" upper-threshold="50" lower-threshold="50" scroll-top="0" scroll-left="0" scroll-into-view="test" scroll-with-animation="true" enable-back-to-top="true" catchscrolltoupper="bind_tap"
   catchscrolltolower="bind_tap" catchscroll="bind_tap">
   <view style='width:100px;height:100px;background:red'></view>
@@ -122,13 +121,18 @@
   <cover-image src="../images/ImageTest.jpg" catchload="bind_tap" catcherror="bind_tap"></cover-image>
 </cover-view>
 
+
 <icon type="success" size="50" color="green"></icon>
+
 
 <text selectable="true" space="emsp" decode="true">      &lttext&lt     </text>
 
+
 <rich-text nodes="{{nodes}}"></rich-text>
 
+
 <progress percent="30" show-info="true" stroke-width="8" activeColor="yellow" backgroundColor="red" active="true" active-mode="backwards"></progress>
+
 
 <button size="mini" type="warn" plain="true" disabled="" loading="true" form-type="reset" hover-class="hover-class" hover-stop-propagation="true" hover-start-time="1000" hover-stay-time="1000" open-type="feedbac" lang="en" bindgetuserinfo="bind_tap" session-from="test_id"
   send-message-title="标题" send-message-path="PageTest/PageTest" send-message-img="../images/ImageTest.jpg" show-message-card="true" bindcontact="bind_tap" bindgetphonenumber="bind_tap" bindopensetting="bind_tap" app-parameter="send_app_msg" binderror="bind_tap">button open-type：contact | share | getUserInfo | getPhoneNumber | launchApp | openSetting | feedbac | exit
@@ -137,7 +141,7 @@
 
 <checkbox-group bindchange="bind_tap">
   <label>
-    <checkbox value="1" disabled="" color="blue" checked="true" />one
+    <checkbox id="test_lable" value="1" disabled="" color="blue" checked="true" />one
   </label>
   <label>
     <checkbox value="2" disabled="true" color="red" checked="true" />two
@@ -147,7 +151,118 @@
   </label>
 </checkbox-group>
 
+
 <form report-submit="true" bindsubmit="bind_tap" bindreset="bind_tap">
   <input name="test_input" value="12"></input>
   <button form-type='submit'>提交</button>
 </form>
+
+
+<input value="value" type='idcard' password="" placeholder="占位符" placeholder-style="color:red" placeholder-class="input-placeholder" disabled="" maxlength="10" cursor-spacing="0" focus="true" confirm-type="done" confirm-hold="true" cursor="3" selection-start="5"
+  selection-end="1" adjust-position="true" bindinput="bind_tap" bindfocus="bind_tap" bindblur="bind_tap" bindconfirm="bind_tap"> type :text | number | idcard | digit
+</input>
+
+<label for="test_lable">label</label>
+
+
+<picker mode="selector" range='{{[1,2,3,4,5]}}' range-key="*this" value="3" disabled="" bindchange="bind_tap" bindcancel="bind_tap">
+  普通选择器
+</picker>
+<picker mode="multiSelector" range="{{[[2,3,4,5,6],[2,4,2,4,6],[2,4,2,4,6]]}}" range-key="*this" value="{{[2,2,1]}}" disabled="" bindchange="bind_tap" bindcancel="bind_tap" bindcolumnchange="bind_tap">
+  多列选择器
+</picker>
+<picker mode="time" value="10:02" start="09:01" end="21:01" disabled="" bindchange="bind_tap" bindcancel="bind_tap">
+  时间选择器
+</picker>
+<picker mode="date" value="2016-09-01" start="2015-09-01" end="2018-09-01" fields="day" disabled="" bindchange="bind_tap" bindcancel="bind_tap">
+  日期选择器
+</picker>
+<picker mode="region" value="{{['广东省', '广州市', '海珠区']}}" custom-item="全部" disabled="" bindchange="bind_tap" bindcancel="bind_tap">
+  省市区选择器
+</picker>
+
+
+<picker-view style="width: 100%; height: 300px;" value="{{[1,2,3]}}" indicator-style="height: 50px;" indicator-class="" mask-style="" mask-class="" bindchange="bind_tap">
+  <picker-view-column>
+    <view wx:for="{{[1,2,3,4,5]}}" wx:key="*this" style="line-height: 50px">{{item}}年</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for="{{[1,2,3,4,5]}}" wx:key="*this" style="line-height: 50px">{{item}}月</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for="{{[1,2,3,4,5]}}" wx:key="*this" style="line-height: 50px">{{item}}日</view>
+  </picker-view-column>
+</picker-view>
+
+<radio-group bindchange="bind_tap">
+  <block wx:for="{{[1,2,3,4,5]}}" wx:key="*this">
+    <radio value="index" checked="false" disabled="" color="blue" />{{item}}
+  </block>
+</radio-group>
+
+
+<slider min="30" max="100" step="2" disabled="" value="36" activeColor="red" backgroundColor="yellow" block-size="28" block-color="green" show-value="true" bindchange="bind_tap" bindchanging="bind_tap"></slider>
+
+
+<switch checked="true" type="switch" color="yellow" bindchange="bind_tap"></switch>
+
+
+<textarea value="多行文本" placeholder="占位符" placeholder-style="color:red" placeholder-class="input-placeholder" disabled="" maxlength="10" focus="true" auto-height="" fixed="" cursor-spacing="0" cursor="3" show-confirm-bar="true" selection-start="5" selection-end="1"
+  adjust-position="true" bindfocus="bind_tap" bindblur="bind_tap" bindlinechange="bind_tap" bindinput="bind_tap"></textarea>
+
+
+<navigator open-type="switchTab" target="" url="./PageTest" delta="1" app-id="" path="" extra-data="" version="release" hover-class="" hover-stop-propagation="true" hover-start-time="1000" hover-stay-time="1000">
+  跳转 open-type: |navigate | redirect | switchTab | reLaunch | navigateBack | version: develop（开发版），trial（体验版），release（正式版） target:miniProgram
+</navigator>
+
+
+<image src="../images/ImageTest.jpg" mode="widthFix" lazy-load="true" bindload="bind_tap" binderror="bind_tap">
+  mode: 
+  缩放 scaleToFill 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素 
+  缩放 aspectFit 保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。 
+  缩放 aspectFill 保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。 
+  缩放 widthFix 宽度不变，高度自动变化，保持原图宽高比不变 
+  裁剪 top 不缩放图片，只显示图片的顶部区域 
+  裁剪 bottom不缩放图片，只显示图片的底部区域 
+  裁剪 center 不缩放图片，只显示图片的中间区域 
+  裁剪 left 不缩放图片，只显示图片的左边区域 
+  裁剪 right 不缩放图片，只显示图片的右边区域 
+  裁剪 top left 不缩放图片，只显示图片的左上边区域 
+  裁剪 top right 不缩放图片，只显示图片的右上边区域 
+  裁剪 bottom left 不缩放图片，只显示图片的左下边区域
+</image>
+
+
+ <video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+  initial-time="20" duration="" controls="true" danmu-list="{{danmuList}}" danmu-btn="true" enable-danmu="true" autoplay="" loop="" muted="" page-gesture="true" direction="90" show-progress="true" show-fullscreen-btn="true" show-play-btn="true" show-center-play-btn="true"
+  enable-progress-gesture="true" objectFit="contain" poster="" bindplay="bind_tap" bindpause="bind_tap" bindended="bind_tap" bindtimeupdate="bind_tap" bindfullscreenchange="bind_tap" horizontal="bind_tap" bindwaiting="bind_tap" binderror="bind_tap"></video> 
+
+
+<camera style="width: 100%; height: 300px;" mode="normal" device-position="back" flash="auto" scan-area="" bindstop="bind_tap" binderror="bind_tap" bindscancode="bind_tap"></camera>
+
+
+<map style="width:100%;height:800px" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-location="true" 
+bindmarkertap="bind_tap" bindcallouttap="bind_tap" bindcontroltap="bind_tap" bindregionchange="bind_tap" bindtap="bind_tap" bindupdated="bind_tap" 
+markers="{{markers}}" circles="{{circles}}" controls="{{controls}}" include-points=""></map>
+
+
+
+<canvas style="background:red" canvas-id="firstCanvas" disable-scroll=""
+bindtouchstart="bind_tap" bindtouchmove="bind_tap" bindtouchend="bind_tap" 
+bindtouchcancel="bind_tap" bindlongtap="bind_tap" binderror="bind_tap"></canvas>
+
+
+
+<open-data type="userAvatarUrl" open-gid="" lang="en">
+groupName	拉取群名称	1.4.0
+userNickName	用户昵称	1.9.90
+userAvatarUrl	用户头像	1.9.90
+userGender	用户性别	1.9.90
+userCity	用户所在城市	1.9.90
+userProvince	用户所在省份	1.9.90
+userCountry	用户所在国家	1.9.90
+userLanguage	用户的语言	1.9.90
+</open-data>
+
+
+<!-- <web-view src="https://www.baidu.com" bindmessage="bind_tap"></web-view> -->
