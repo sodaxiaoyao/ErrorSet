@@ -36,6 +36,7 @@
         <option value="$PROJECT_DIR$/js/my_pack/NodeJsTest.js" />
         <option value="$PROJECT_DIR$/html/HtmlTest.html" />
         <option value="$PROJECT_DIR$/css/my_css/CssTest.css" />
+        <option value="$PROJECT_DIR$/js/my_pack/JqueryTest.js" />
       </list>
     </option>
   </component>
@@ -48,7 +49,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="351" />
     <option name="width" value="1752" />
     <option name="height" value="1020" />
@@ -58,6 +59,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -85,7 +87,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -124,14 +125,17 @@
       <workItem from="1529049522491" duration="1229000" />
       <workItem from="1529051076216" duration="37000" />
       <workItem from="1529055911264" duration="601000" />
+      <workItem from="1529373272763" duration="51000" />
+      <workItem from="1529375330819" duration="118000" />
+      <workItem from="1529376481558" duration="13000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3766000" />
+    <option name="totallyTimeSpent" value="3948000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-7" width="1233" height="735" extended-state="7" />
+    <frame x="55" y="-7" width="1233" height="735" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23625922" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -192,8 +196,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/my_pack/JqueryTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="-342">
+          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!block;n#sj_connect#0" />
+          </folding>
         </state>
       </provider>
     </entry>

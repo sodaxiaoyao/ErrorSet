@@ -182,16 +182,20 @@ sj_tool:
     $.merge()---------->合并两个数组
     $.uniqueSort()---------->删除重复dom
     $.parseXML(string)---------->解析为xml
-    $..noop()---------->空函数
+    $.parseHTML()---------->解析为html
+    $.parseJSON()---------->解析为json
+    $.noop()---------->空函数
     $.proxy()---------->代理执行类的方法
     $.contains()---------->dom中是否包含dom
     $.type()---------->检测类型
     $.isEmptyObject({})---------->检测对象是否为空
     $.isPlainObject({})---------->检测是否为纯粹的对象
     $.isNumeric()---------->检测是否为数字
+    $.isWindow(window)---------->检测是否为窗口
     $.trim()---------->去除空格
     $.param()---------->序列化object
     $.error()---------->错误信息
+    $.now()---------->返回时间戳
     $.fn.jquery---------->jquery版本号
 */
 
@@ -287,41 +291,6 @@ let _s = (function () {
     return sj;
 
 })();
-
-function sj_datetime() {
-    //datetime库
-    _s.extends({
-        "now": function (_test_str) {
-            const _date = new Date();
-
-            let test_str = _test_str || "y-M-d h:m:s";
-
-            this._debug_fun("日期格式：" + _test_str);
-
-            function comp_zero(content) {
-                return content >= 10 ? content.toString() : '0' + content.toString();
-            }
-
-            let now_obj = {
-                'y': _date.getFullYear().toString(),
-                'M': comp_zero(_date.getMonth() + 1),
-                'd': comp_zero(_date.getDay()),
-                'h': comp_zero(_date.getHours()),
-                'm': comp_zero(_date.getMinutes()),
-                's': comp_zero(_date.getSeconds()),
-            };
-
-            let tmp;
-            for (tmp in now_obj) {
-                test_str = test_str.replace(tmp, now_obj[tmp])
-            }
-
-            this._debug_fun("返回日期格式：" + _test_str);
-
-            return test_str;
-        }
-    });
-}
 
 function sj_connect() {
     //connect库
@@ -419,3 +388,30 @@ _s.module.loads([
     "sj_connect",
     "sj_datetime",
 ]);
+
+
+//Deferred对象使用案例
+let wait = function (callback) {
+    let dtd = $.Deferred();
+    callback(function () {
+        console.log("释放");
+        dtd.resolve();
+    });
+    return dtd.promise();
+};
+$.when(wait(function (res) {
+    console.log("事件");
+    setTimeout(res, 2000);
+})).done(function () {
+    console.log("哈哈，成功了！");
+}).fail(function () {
+    console.log("出错啦！");
+}).then(
+    //相当于done和fail集合
+    function () {
+        alert("成功");
+    },
+    function () {
+        alert("失败");
+    }
+);
