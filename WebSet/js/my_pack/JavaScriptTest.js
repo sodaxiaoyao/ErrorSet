@@ -264,9 +264,11 @@ window.screenTop;
 window.screenX;
 window.screenY;
 
+
 window.alert("a");
 window.confirm("Press a button!");
 window.prompt("请输入您的名字", "Bill Gates");
+window.requestAnimationFrame(null);
 window.clearInterval(window.setInterval(function () {
 }, 1000));
 window.clearTimeout(window.setTimeout(function () {
