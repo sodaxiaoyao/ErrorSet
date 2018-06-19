@@ -241,9 +241,11 @@
 <camera style="width: 100%; height: 300px;" mode="normal" device-position="back" flash="auto" scan-area="" bindstop="bind_tap" binderror="bind_tap" bindscancode="bind_tap"></camera>
 
 
-<map style="width:100%;height:800px" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-location="true" 
+
+<map style="width: 100%; height: 350px;" latitude="{{40.006822}}" longitude="{{116.481451}}" scale="16" show-location="true"
 bindmarkertap="bind_tap" bindcallouttap="bind_tap" bindcontroltap="bind_tap" bindregionchange="bind_tap" bindtap="bind_tap" bindupdated="bind_tap" 
-markers="{{markers}}" circles="{{circles}}" controls="{{controls}}" include-points=""></map>
+markers="{{markers}}" circles="{{circles}}" controls="{{controls}}" polyline="{{polyline}}" include-points="">
+</map>
 
 
 

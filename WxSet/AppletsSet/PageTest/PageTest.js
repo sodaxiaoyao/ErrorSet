@@ -4,12 +4,10 @@ let util = require("../UtilsTest/UtilsTest.js");
 Page({
   data: {
 
-    latitude: 23.099994,
-    longitude: 113.324520,
     markers: [{
       id: 1,
-      latitude: 23.099994,
-      longitude: 113.324520,
+      latitude: 40.006822,
+      longitude: 116.481451,
       title: 'T.I.T 创意园',
       iconPath: "",
       rotate: 0,
@@ -30,8 +28,8 @@ Page({
         content: "label文本",
         color: "blue",
         fontSize: 30,
-        anchorX: 23.099998,
-        anchorY: 113.324520,
+        anchorX: 116.481460,
+        anchorY: 40.006830,
         borderWidth: 5,
         borderColor: "red",
         borderRadius: 15,
@@ -46,11 +44,14 @@ Page({
     }],
     polyline: [{
       points: [{
-        longitude: 23,
-        latitude: 23
+        longitude: '116.481451',
+        latitude: '40.006822'
       }, {
-        longitude: 23.1,
-        latitude: 23.1
+        longitude: '116.487847',
+        latitude: '40.002607'
+      }, {
+        longitude: '116.496507',
+        latitude: '40.006103'
       }],
       color: "#FF0000DD",
       width: 20,
@@ -61,8 +62,8 @@ Page({
       borderWidth: 8
     }],
     circles: [{
-      latitude: 23.099994,
-      longitude: 113.324520,
+      latitude: 116.481451,
+      longitude: 40.006822,
       color: '#FF0000DD',
       fillColor: '#7cb5ec88',
       radius: 3000,
