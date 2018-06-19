@@ -1,0 +1,7 @@
+.red-text {
+  color: red;
+}
+
+.hover-class {
+  background: red;
+}

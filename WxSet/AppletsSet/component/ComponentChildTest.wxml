@@ -1,0 +1,3 @@
+<text class="custom_class">
+component/ComponentChildTest.wxml {{ComponentProperty}}{{BehaviorProperty}}
+</text>

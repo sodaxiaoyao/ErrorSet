@@ -1,0 +1,9 @@
+<view>
+  <slot name="before"></slot>
+  <view class="custom_class">这里是组件的内部细节{{ComponentProperty}}{{BehaviorProperty}}</view>
+  <slot name="after"></slot>
+  提供普通节点进行关联
+  <slot></slot>
+  抽象节点
+  <AbstractNode/>
+</view>
