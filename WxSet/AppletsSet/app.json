@@ -1,5 +1,6 @@
 {
   "pages": [
+    "CanvasTest/CanvasTest",
     "PageTest/PageTest",
     "component/ComponentTest"
   ],
