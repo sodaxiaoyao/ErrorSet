@@ -11,6 +11,15 @@ Page({
     const ctx = wx.createCanvasContext('firstCanvas', this);
 
 
+
+
+    //图片
+    ctx.drawImage("../images/ImageTest.jpg", 0, 0, 300, 150);
+    const pattern = ctx.createPattern('../images/ImageTest.jpg', 'repeat-x');
+    ctx.fillStyle = pattern;
+
+
+
     //创建渐变器
     ctx.beginPath();
     // let grd = ctx.createLinearGradient(0, 0, 200, 0);
@@ -26,11 +35,13 @@ Page({
 
 
     //设置样式
+    // ctx.setTransform(scaleX, skewX, skewY, scaleY, translateX, translateY);
     ctx.scale(0.5, 0.5);
     ctx.rotate(20 * Math.PI / 180);
     ctx.translate(20, 20);
     ctx.setFontSize(20);
     ctx.setLineDash([20, 30], 0);
+    ctx.lineDashOffset = 0;
     ctx.setShadow(2, 2, 3, 'white');
     // ctx.setTextAlign("center");
     ctx.textAlign = "center";
@@ -44,6 +55,10 @@ Page({
     ctx.lineJoin = "miter";
     // ctx.setMiterLimit(5);
     ctx.miterLimit = 5;
+    // ctx.setGlobalAlpha(0.2);
+    ctx.globalAlpha = 0.3;
+    ctx.globalCompositeOperation = "lighter";
+
 
 
 
@@ -54,6 +69,9 @@ Page({
     // ctx.fill();
     ctx.fillRect(30, 30, 100, 50);
     ctx.fillText('Hello', 20, 20);
+    const metrics = ctx.measureText('Hello World');
+    console.log("measureText", metrics);
+
 
 
 
@@ -61,11 +79,14 @@ Page({
     ctx.beginPath();
     // ctx.setStrokeStyle(grd);
     ctx.strokeStyle = "red";
+    ctx.font = '68px Arial';
+    ctx.strokeText("zyp", 0, 300);
     ctx.strokeRect(130, 120, 30, 30);
     ctx.moveTo(50, 250);
     ctx.lineTo(50, 300);
     ctx.lineTo(80, 300);
     ctx.closePath();
+
     ctx.stroke();
 
 
@@ -73,20 +94,38 @@ Page({
     //曲线
     ctx.beginPath();
     ctx.arc(100, 75, 50, 0, 1.5 * Math.PI, false);
+    ctx.arcTo(200, 200, 100, 100, 10);
     ctx.bezierCurveTo(20, 300, 200, 100, 200, 20);
     ctx.quadraticCurveTo(20, 100, 200, 20);
     ctx.stroke();
 
 
 
+    //弧
+    ctx.beginPath();
+    ctx.setStrokeStyle("red");
+    ctx.moveTo(100, 20);
+    ctx.arcTo(150, 20, 150, 70, 50);
+    ctx.stroke();
+
+
+
+
     //清除和裁剪
     ctx.clearRect(0, 80, 150, 75);
     ctx.clip();
+    ctx.save();
+    ctx.restore();
+
 
 
 
     //绘制
-    ctx.draw();
+    ctx.draw(false, function(res) {
+      console.log(res)
+    });
+
+
 
 
     wx.canvasGetImageData({
