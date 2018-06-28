@@ -1,7 +1,7 @@
 {
   "pages": [
-    "CanvasTest/CanvasTest",
     "PageTest/PageTest",
+    "CanvasTest/CanvasTest",
     "component/ComponentTest"
   ],
   "window": {

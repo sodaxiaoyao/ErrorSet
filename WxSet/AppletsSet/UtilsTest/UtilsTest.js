@@ -39,7 +39,7 @@ function wx_api() {
 
 
   console.log("==============API uploadFile======================");
-  if (0)
+  if (1)
     wx.chooseImage({
       success: function(res) {
         let uploadTask = wx.uploadFile({
