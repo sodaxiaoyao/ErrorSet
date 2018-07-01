@@ -528,7 +528,7 @@ function wx_api() {
         console.log("wx.loadFontFace success", res);
       },
       fail: function(res) {
-        console.log("wx.loadFontFace fail", res)
+        console.log("wx.loadFontFace fail", res);
       },
       complete: function(res) {
         console.log("wx.loadFontFace complete", res);
@@ -549,7 +549,7 @@ function wx_api() {
         getSavedFileList();
       },
       fail: function(res) {
-        console.log("wx.saveFile fail", res)
+        console.log("wx.saveFile fail", res);
       },
       complete: function(res) {
         console.log("wx.saveFile complete", res);
@@ -570,7 +570,7 @@ function wx_api() {
         console.log("wx.getFileInfo success", res);
       },
       fail: function(res) {
-        console.log("wx.getFileInfo fail", res)
+        console.log("wx.getFileInfo fail", res);
       },
       complete: function(res) {
         console.log("wx.getFileInfo complete", res);
@@ -592,7 +592,7 @@ function wx_api() {
         removeSavedFile(res.fileList[0].filePath);
       },
       fail: function(res) {
-        console.log("wx.getSavedFileList fail", res)
+        console.log("wx.getSavedFileList fail", res);
       },
       complete: function(res) {
         console.log("wx.getSavedFileList complete", res);
@@ -613,7 +613,7 @@ function wx_api() {
         console.log("wx.getSavedFileInfo success", res);
       },
       fail: function(res) {
-        console.log("wx.getSavedFileInfo fail", res)
+        console.log("wx.getSavedFileInfo fail", res);
       },
       complete: function(res) {
         console.log("wx.getSavedFileInfo complete", res);
@@ -631,7 +631,7 @@ function wx_api() {
         console.log("wx.removeSavedFile success", res);
       },
       fail: function(res) {
-        console.log("wx.removeSavedFile fail", res)
+        console.log("wx.removeSavedFile fail", res);
       },
       complete: function(res) {
         console.log("wx.removeSavedFile complete", res);
@@ -652,7 +652,7 @@ function wx_api() {
         console.log("wx.openDocument success", res);
       },
       fail: function(res) {
-        console.log("wx.openDocument fail", res)
+        console.log("wx.openDocument fail", res);
       },
       complete: function(res) {
         console.log("wx.openDocument complete", res);
@@ -671,7 +671,7 @@ function wx_api() {
       console.log("wx.setStorage success", res);
     },
     fail: function(res) {
-      console.log("wx.setStorage fail", res)
+      console.log("wx.setStorage fail", res);
     },
     complete: function(res) {
       console.log("wx.setStorage complete", res);
@@ -697,7 +697,7 @@ function wx_api() {
       console.log("wx.getStorage success", res);
     },
     fail: function(res) {
-      console.log("wx.getStorage fail", res)
+      console.log("wx.getStorage fail", res);
     },
     complete: function(res) {
       console.log("wx.getStorage complete", res);
@@ -720,7 +720,7 @@ function wx_api() {
       console.log("wx.getStorageInfo success", res);
     },
     fail: function(res) {
-      console.log("wx.getStorageInfo fail", res)
+      console.log("wx.getStorageInfo fail", res);
     },
     complete: function(res) {
       console.log("wx.getStorageInfo complete", res);
@@ -749,7 +749,7 @@ function wx_api() {
       console.log("wx.removeStorage success", res);
     },
     fail: function(res) {
-      console.log("wx.removeStorage fail", res)
+      console.log("wx.removeStorage fail", res);
     },
     complete: function(res) {
       console.log("wx.removeStorage complete", res);
@@ -782,7 +782,7 @@ function wx_api() {
 
 
 
-  console.log("==============API clearStorage======================");
+  console.log("==============API clearStorageSync======================");
   try {
     wx.clearStorageSync();
   } catch (e) {
@@ -800,7 +800,7 @@ function wx_api() {
       console.log("wx.getLocation success", res);
     },
     fail: function(res) {
-      console.log("wx.getLocation fail", res)
+      console.log("wx.getLocation fail", res);
     },
     complete: function(res) {
       console.log("wx.getLocation complete", res);
@@ -816,7 +816,7 @@ function wx_api() {
         console.log("wx.chooseLocation success", res);
       },
       fail: function(res) {
-        console.log("wx.chooseLocation fail", res)
+        console.log("wx.chooseLocation fail", res);
       },
       complete: function(res) {
         console.log("wx.chooseLocation complete", res);
@@ -841,7 +841,7 @@ function wx_api() {
             console.log("wx.openLocation success", res);
           },
           fail: function(res) {
-            console.log("wx.openLocation fail", res)
+            console.log("wx.openLocation fail", res);
           },
           complete: function(res) {
             console.log("wx.openLocation complete", res);
@@ -865,7 +865,7 @@ function wx_api() {
         console.log("mapContext.getCenterLocation success", res);
       },
       fail: function(res) {
-        console.log("mapContext.getCenterLocation fail", res)
+        console.log("mapContext.getCenterLocation fail", res);
       },
       complete: function(res) {
         console.log("mapContext.getCenterLocation complete", res);
@@ -914,7 +914,7 @@ function wx_api() {
         console.log("mapContext.getRegion success", res);
       },
       fail: function(res) {
-        console.log("mapContext.getRegion fail", res)
+        console.log("mapContext.getRegion fail", res);
       },
       complete: function(res) {
         console.log("mapContext.getRegion complete", res);
@@ -927,7 +927,7 @@ function wx_api() {
         console.log("mapContext.getScale success", res);
       },
       fail: function(res) {
-        console.log("mapContext.getScale fail", res)
+        console.log("mapContext.getScale fail", res);
       },
       complete: function(res) {
         console.log("mapContext.getScale complete", res);
@@ -940,7 +940,548 @@ function wx_api() {
 
 
   console.log("==============API getSystemInfo======================");
-  
+  wx.getSystemInfo({
+    success: function(res) {
+      console.log("wx.getSystemInfo success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getSystemInfo fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.getSystemInfo complete", res);
+    }
+  })
+
+
+
+
+
+
+  console.log("==============API getSystemInfoSync======================");
+  console.log("wx.getSystemInfoSync", wx.getSystemInfoSync());
+
+
+
+
+
+
+
+
+  console.log("==============API canIUse======================");
+  console.log("wx.canIUse", wx.canIUse("canIUse"));
+
+
+
+
+
+
+
+
+
+  console.log("==============API onMemoryWarning======================");
+  wx.onMemoryWarning(function(res) {
+    console.log('wx.onMemoryWarning', res);
+  });
+
+
+
+
+
+
+
+
+
+  console.log("==============API getNetworkType======================");
+  wx.getNetworkType({
+    success: function(res) {
+      console.log("wx.getNetworkType success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getNetworkType fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.getNetworkType complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+
+  console.log("==============API onNetworkStatusChange======================");
+  wx.onNetworkStatusChange(function(res) {
+    console.log("wx.onNetworkStatusChange", res);
+  })
+
+
+
+
+
+
+
+
+  console.log("==============API onAccelerometerChange======================");
+  wx.onAccelerometerChange(function(res) {
+    console.log("wx.onAccelerometerChange", res);
+  });
+
+
+
+
+
+
+  console.log("==============API startAccelerometer======================");
+  wx.startAccelerometer({
+    interval: "normal",
+    success: function(res) {
+      console.log("wx.startAccelerometer success", res);
+    },
+    fail: function(res) {
+      console.log("wx.startAccelerometer fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.startAccelerometer complete", res);
+    }
+  });
+
+
+
+
+
+
+
+  console.log("==============API stopAccelerometer======================");
+  setTimeout(function() {
+    wx.stopAccelerometer({
+      interval: "normal",
+      success: function(res) {
+        console.log("wx.stopAccelerometer success", res);
+      },
+      fail: function(res) {
+        console.log("wx.stopAccelerometer fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.stopAccelerometer complete", res);
+      }
+    });
+  }, 2000);
+
+
+
+
+
+
+
+
+  console.log("==============API onCompassChange======================");
+  wx.onCompassChange(function(res) {
+    console.log("wx.onCompassChange", res);
+  })
+
+
+
+
+
+
+  console.log("==============API startCompass======================");
+  wx.startCompass({
+    success: function(res) {
+      console.log("wx.startCompass success", res);
+    },
+    fail: function(res) {
+      console.log("wx.startCompass fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.startCompass complete", res);
+    }
+  });
+
+
+
+  console.log("==============API stopCompass======================");
+  wx.stopCompass({
+    success: function(res) {
+      console.log("wx.stopCompass success", res);
+    },
+    fail: function(res) {
+      console.log("wx.stopCompass fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.stopCompass complete", res);
+    }
+  });
+
+
+
+
+
+
+  console.log("==============API makePhoneCall======================");
+  if (0)
+    wx.makePhoneCall({
+      phoneNumber: '12345678901',
+      success: function(res) {
+        console.log("wx.makePhoneCall success", res);
+      },
+      fail: function(res) {
+        console.log("wx.makePhoneCall fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.makePhoneCall complete", res);
+      }
+    });
+
+
+
+
+
+  console.log("==============API scanCode======================");
+  if (0)
+    wx.scanCode({
+      onlyFromCamera: false,
+      scanType: ["barCode", "qrCode"],
+      success: function(res) {
+        console.log("wx.scanCode success", res);
+      },
+      fail: function(res) {
+        console.log("wx.scanCode fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.scanCode complete", res);
+      }
+    });
+
+
+
+
+
+
+  console.log("==============API setClipboardData======================");
+  wx.setClipboardData({
+    data: 'data',
+    success: function(res) {
+      console.log("wx.setClipboardData success", res);
+    },
+    fail: function(res) {
+      console.log("wx.setClipboardData fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.setClipboardData complete", res);
+    }
+  });
+
+
+
+
+
+
+  console.log("==============API getClipboardData======================");
+  wx.getClipboardData({
+    success: function(res) {
+      console.log("wx.getClipboardData success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getClipboardData fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.getClipboardData complete", res);
+    }
+  });
+
+
+
+
+
+
+
+  console.log("==============API openBluetoothAdapter======================");
+  wx.openBluetoothAdapter({
+    success: function(res) {
+      console.log("wx.openBluetoothAdapter success", res);
+      getBluetoothAdapterState();
+      startBluetoothDevicesDiscovery();
+    },
+    fail: function(res) {
+      console.log("wx.openBluetoothAdapter fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.openBluetoothAdapter complete", res);
+    }
+  });
+
+
+
+
+
+  console.log("==============API getBluetoothAdapterState======================");
+
+  function getBluetoothAdapterState() {
+    wx.getBluetoothAdapterState({
+      success: function(res) {
+        console.log("wx.getBluetoothAdapterState success", res);
+      },
+      fail: function(res) {
+        console.log("wx.getBluetoothAdapterState fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.getBluetoothAdapterState complete", res);
+      }
+    });
+  }
+
+
+
+
+
+  console.log("==============API onBluetoothAdapterStateChange======================");
+  wx.onBluetoothAdapterStateChange(function(res) {
+    console.log("wx.onBluetoothAdapterStateChange", res);
+  });
+
+
+
+
+
+  console.log("==============API startBluetoothDevicesDiscovery======================");
+
+  function startBluetoothDevicesDiscovery() {
+    wx.startBluetoothDevicesDiscovery({
+      allowDuplicatesKey: false,
+      interval: 0,
+      success: function(res) {
+        console.log("wx.startBluetoothDevicesDiscovery success", res);
+        // stopBluetoothDevicesDiscovery();
+      },
+      fail: function(res) {
+        console.log("wx.startBluetoothDevicesDiscovery fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.startBluetoothDevicesDiscovery complete", res);
+      }
+    });
+  }
+
+
+
+
+
+
+
+  console.log("==============API stopBluetoothDevicesDiscovery======================");
+
+  function stopBluetoothDevicesDiscovery() {
+    wx.stopBluetoothDevicesDiscovery({
+      success: function(res) {
+        console.log("wx.stopBluetoothDevicesDiscovery success", res);
+      },
+      fail: function(res) {
+        console.log("wx.stopBluetoothDevicesDiscovery fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.stopBluetoothDevicesDiscovery complete", res);
+      }
+    });
+  }
+
+
+
+  console.log("==============API getBluetoothDevices======================");
+
+  function getBluetoothDevices() {
+    wx.getBluetoothDevices({
+      success: function(res) {
+        console.log("wx.getBluetoothDevices success", res);
+      },
+      fail: function(res) {
+        console.log("wx.getBluetoothDevices fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.getBluetoothDevices complete", res);
+      }
+    });
+  }
+
+
+
+
+
+
+  console.log("==============API getConnectedBluetoothDevices======================");
+
+  function getConnectedBluetoothDevices() {
+    wx.getConnectedBluetoothDevices({
+      services: [],
+      success: function(res) {
+        console.log("wx.getConnectedBluetoothDevices success", res);
+      },
+      fail: function(res) {
+        console.log("wx.getConnectedBluetoothDevices fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.getConnectedBluetoothDevices complete", res);
+      }
+    });
+  }
+
+
+
+
+
+
+  console.log("==============API onBluetoothDeviceFound======================");
+  onBluetoothDeviceFound();
+
+  function onBluetoothDeviceFound() {
+    console.log("wx.onBluetoothDeviceFound开始监听");
+    wx.onBluetoothDeviceFound(function(res) {
+      console.log("wx.onBluetoothDeviceFound", res);
+      getBluetoothDevices();
+    });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API setScreenBrightness======================");
+  wx.setScreenBrightness({
+    value: 1,
+    success: function(res) {
+      console.log("wx.setScreenBrightness success", res);
+    },
+    fail: function(res) {
+      console.log("wx.setScreenBrightness fail", res)
+    },
+    complete: function(res) {
+      console.log("wx.setScreenBrightness complete", res);
+    }
+  });
+
+
+
+
+
+  console.log("==============API getScreenBrightness======================");
+  wx.getScreenBrightness({
+    success: function(res) {
+      console.log("wx.getScreenBrightness success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getScreenBrightness fail", res)
+    },
+    complete: function(res) {
+      console.log("wx.getScreenBrightness complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
