@@ -231,6 +231,24 @@ function wx_api() {
     });
   }
 
+  console.log("==============API saveImageToPhotosAlbum======================");
+
+  function saveImageToPhotosAlbum(path) {
+    wx.saveImageToPhotosAlbum({
+      filePath: path,
+      success: function(res) {
+        console.log("wx.saveImageToPhotosAlbum success", res);
+      },
+      fail: function(res) {
+        console.log("wx.saveImageToPhotosAlbum fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.saveImageToPhotosAlbum complete", res);
+      }
+    })
+  }
+
+
 
 
   console.log("==============API getRecorderManager======================");
@@ -365,7 +383,7 @@ function wx_api() {
   }
 
 
-  console.log("==============API createInnerAudioContext======================");
+  console.log("==============API getAvailableAudioSources======================");
   wx.getAvailableAudioSources({
     success: function(res) {
       console.log("wx.getAvailableAudioSources success", res);
@@ -381,7 +399,150 @@ function wx_api() {
 
 
   console.log("==============API chooseVideo======================");
-  
+  if (0)
+    wx.chooseVideo({
+      sourceType: ['album', 'camera'],
+      compressed: true,
+      maxDuration: 60,
+      success: function(res) {
+        console.log("wx.chooseVideo success", res);
+        saveVideoToPhotosAlbum(res);
+      },
+      fail: function(res) {
+        console.log("wx.chooseVideo fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.chooseVideo complete", res);
+      }
+    });
+
+
+
+
+  console.log("==============API saveVideoToPhotosAlbum======================");
+
+  function saveVideoToPhotosAlbum(_res) {
+    wx.saveVideoToPhotosAlbum({
+      filePath: _res.tempFilePath,
+      success: function(res) {
+        console.log("wx.saveVideoToPhotosAlbum success", res);
+      },
+      fail: function(res) {
+        console.log("wx.saveVideoToPhotosAlbum fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.saveVideoToPhotosAlbum complete", res);
+      }
+    });
+  }
+
+
+
+
+
+  console.log("==============API createVideoContext======================");
+  if (0)
+    createVideoContext();
+
+  function createVideoContext() {
+    let videoContext = wx.createVideoContext('myVideo', this);
+
+    videoContext.play();
+    videoContext.seek(80);
+    setTimeout(function() {
+      videoContext.sendDanmu({
+        "text": "asdf",
+        "color": "red"
+      });
+      videoContext.pause();
+    }, 3000);
+    videoContext.playbackRate(1.5);
+    videoContext.requestFullScreen();
+    videoContext.exitFullScreen();
+  }
+
+
+
+  console.log("==============API createCameraContext======================");
+
+  function createCameraContext() {
+    let cameraContext = wx.createCameraContext(this);
+    cameraContext.startRecord({
+      timeoutCallback: function(res) {
+        console.log("cameraContext.startRecord timeoutCallback", res);
+      },
+      success: function(res) {
+        console.log("cameraContext.startRecord success", res);
+      },
+      fail: function(res) {
+        console.log("cameraContext.startRecord fail", res);
+      },
+      complete: function(res) {
+        console.log("cameraContext.startRecord complete", res);
+      }
+    });
+    cameraContext.stopRecord({
+      success: function(res) {
+        console.log("cameraContext.stopRecord success", res);
+      },
+      fail: function(res) {
+        console.log("cameraContext.stopRecord fail", res);
+      },
+      complete: function(res) {
+        console.log("cameraContext.stopRecord complete", res);
+      }
+    });
+    cameraContext.takePhoto({
+      quality: "high",
+      success: function(res) {
+        console.log("cameraContext.takePhoto success", res);
+      },
+      fail: function(res) {
+        console.log("cameraContext.takePhoto fail", res);
+      },
+      complete: function(res) {
+        console.log("cameraContext.takePhoto complete", res);
+      }
+    });
+  }
+
+
+
+
+  console.log("==============API loadFontFace======================");
+  if (0)
+    wx.loadFontFace({
+      family: 'Bitstream Vera Serif Bold',
+      source: 'url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf")',
+      desc: {
+        "style": "normal",
+        "weight": "normal",
+        "variant": "normal ",
+      },
+      success: function(res) {
+        console.log("wx.loadFontFace success", res);
+      },
+      fail: function(res) {
+        console.log("wx.loadFontFace fail", res)
+      },
+      complete: function(res) {
+        console.log("wx.loadFontFace complete", res);
+      }
+    });
+
+
+
+
+  console.log("==============API saveFile======================");
+
+
+
+
+
+
+
+
+
 
 
 }
