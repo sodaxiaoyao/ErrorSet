@@ -180,9 +180,10 @@ function wx_api() {
       sourceType: ['album', 'camera'],
       success: function(res) {
         console.log("wx.chooseImage success", res);
-        previewImage(res.tempFilePaths);
+        // previewImage(res.tempFilePaths);
         getImageInfo(res);
-        saveImageToPhotosAlbum(res.tempFilePaths[0]);
+        // saveImageToPhotosAlbum(res.tempFilePaths[0]);
+        saveFile(res);
       },
       fail: function(res) {
         console.log("wx.chooseImage fail", res);
@@ -383,6 +384,8 @@ function wx_api() {
   }
 
 
+
+
   console.log("==============API getAvailableAudioSources======================");
   wx.getAvailableAudioSources({
     success: function(res) {
@@ -395,6 +398,8 @@ function wx_api() {
       console.log("wx.getAvailableAudioSources complete", res);
     }
   });
+
+
 
 
 
@@ -535,6 +540,407 @@ function wx_api() {
 
   console.log("==============API saveFile======================");
 
+  function saveFile(_res) {
+    getFileInfo(_res.tempFilePaths[0]);
+    wx.saveFile({
+      tempFilePath: _res.tempFilePaths[0],
+      success: function(res) {
+        console.log("wx.saveFile success", res);
+        getSavedFileList();
+      },
+      fail: function(res) {
+        console.log("wx.saveFile fail", res)
+      },
+      complete: function(res) {
+        console.log("wx.saveFile complete", res);
+      }
+    });
+  }
+
+
+
+
+  console.log("==============API getFileInfo======================");
+
+  function getFileInfo(path) {
+    wx.getFileInfo({
+      filePath: path,
+      digestAlgorithm: "md5",
+      success: function(res) {
+        console.log("wx.getFileInfo success", res);
+      },
+      fail: function(res) {
+        console.log("wx.getFileInfo fail", res)
+      },
+      complete: function(res) {
+        console.log("wx.getFileInfo complete", res);
+      }
+    })
+  }
+
+
+
+
+
+  console.log("==============API getSavedFileList======================");
+
+  function getSavedFileList() {
+    wx.getSavedFileList({
+      success: function(res) {
+        console.log("wx.getSavedFileList success", res);
+        getSavedFileInfo(res.fileList[0].filePath);
+        removeSavedFile(res.fileList[0].filePath);
+      },
+      fail: function(res) {
+        console.log("wx.getSavedFileList fail", res)
+      },
+      complete: function(res) {
+        console.log("wx.getSavedFileList complete", res);
+      }
+    })
+  }
+
+
+
+
+
+  console.log("==============API getSavedFileInfo======================");
+
+  function getSavedFileInfo(path) {
+    wx.getSavedFileInfo({
+      filePath: path,
+      success: function(res) {
+        console.log("wx.getSavedFileInfo success", res);
+      },
+      fail: function(res) {
+        console.log("wx.getSavedFileInfo fail", res)
+      },
+      complete: function(res) {
+        console.log("wx.getSavedFileInfo complete", res);
+      }
+    })
+  }
+
+
+  console.log("==============API removeSavedFile======================");
+
+  function removeSavedFile(path) {
+    wx.removeSavedFile({
+      filePath: path,
+      success: function(res) {
+        console.log("wx.removeSavedFile success", res);
+      },
+      fail: function(res) {
+        console.log("wx.removeSavedFile fail", res)
+      },
+      complete: function(res) {
+        console.log("wx.removeSavedFile complete", res);
+      }
+    });
+  }
+
+
+
+
+  console.log("==============API openDocument======================");
+
+  function openDocument(path) {
+    wx.openDocument({
+      filePath: path,
+      fileType: "doc",
+      success: function(res) {
+        console.log("wx.openDocument success", res);
+      },
+      fail: function(res) {
+        console.log("wx.openDocument fail", res)
+      },
+      complete: function(res) {
+        console.log("wx.openDocument complete", res);
+      }
+    })
+  }
+
+
+
+
+  console.log("==============API setStorage======================");
+  wx.setStorage({
+    key: "key",
+    data: "value",
+    success: function(res) {
+      console.log("wx.setStorage success", res);
+    },
+    fail: function(res) {
+      console.log("wx.setStorage fail", res)
+    },
+    complete: function(res) {
+      console.log("wx.setStorage complete", res);
+    }
+  })
+
+
+
+
+  console.log("==============API setStorageSync======================");
+  try {
+    wx.setStorageSync('key1', 'value1');
+  } catch (e) {
+    console.log(e);
+  }
+
+
+
+  console.log("==============API getStorage======================");
+  wx.getStorage({
+    key: 'key1',
+    success: function(res) {
+      console.log("wx.getStorage success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getStorage fail", res)
+    },
+    complete: function(res) {
+      console.log("wx.getStorage complete", res);
+    }
+  });
+
+
+
+  console.log("==============API getStorageSync======================");
+  try {
+    console.log("wx.getStorageSync", wx.getStorageSync('key1'));
+  } catch (e) {
+    console.log(e);
+  }
+
+
+  console.log("==============API getStorageInfo======================");
+  wx.getStorageInfo({
+    success: function(res) {
+      console.log("wx.getStorageInfo success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getStorageInfo fail", res)
+    },
+    complete: function(res) {
+      console.log("wx.getStorageInfo complete", res);
+    }
+  })
+
+
+
+  console.log("==============API getStorageInfoSync======================");
+  try {
+    var res = wx.getStorageInfoSync()
+    console.log("wx.getStorageInfoSync", res.keys);
+    console.log("wx.getStorageInfoSync", res.currentSize);
+    console.log("wx.getStorageInfoSync", res.limitSize);
+  } catch (e) {
+    console.log(e);
+  }
+
+
+
+
+  console.log("==============API removeStorage======================");
+  wx.removeStorage({
+    key: "key1",
+    success: function(res) {
+      console.log("wx.removeStorage success", res);
+    },
+    fail: function(res) {
+      console.log("wx.removeStorage fail", res)
+    },
+    complete: function(res) {
+      console.log("wx.removeStorage complete", res);
+    }
+  });
+
+
+
+
+
+
+  console.log("==============API removeStorageSync======================");
+  try {
+    wx.removeStorageSync('key');
+  } catch (e) {
+    console.log(e);
+  }
+
+
+
+
+
+
+
+  console.log("==============API clearStorage======================");
+  wx.clearStorage();
+
+
+
+
+
+
+  console.log("==============API clearStorage======================");
+  try {
+    wx.clearStorageSync();
+  } catch (e) {
+    conosole.log(e);
+  }
+
+
+
+
+  console.log("==============API getLocation======================");
+  wx.getLocation({
+    type: "wgs84",
+    altitude: true,
+    success: function(res) {
+      console.log("wx.getLocation success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getLocation fail", res)
+    },
+    complete: function(res) {
+      console.log("wx.getLocation complete", res);
+    }
+  });
+
+
+
+  console.log("==============API chooseLocation======================");
+  if (0)
+    wx.chooseLocation({
+      success: function(res) {
+        console.log("wx.chooseLocation success", res);
+      },
+      fail: function(res) {
+        console.log("wx.chooseLocation fail", res)
+      },
+      complete: function(res) {
+        console.log("wx.chooseLocation complete", res);
+      }
+    });
+
+
+
+
+  console.log("==============API openLocation======================");
+  if (0)
+    wx.getLocation({
+      type: 'gcj02',
+      success: function(res) {
+        wx.openLocation({
+          latitude: res.latitude,
+          longitude: res.longitude,
+          scale: 28,
+          name: "测试",
+          address: "地址详细说明",
+          success: function(res) {
+            console.log("wx.openLocation success", res);
+          },
+          fail: function(res) {
+            console.log("wx.openLocation fail", res)
+          },
+          complete: function(res) {
+            console.log("wx.openLocation complete", res);
+          }
+        })
+      }
+    });
+
+
+
+
+  console.log("==============API createMapContext======================");
+  if (0)
+    createMapContext();
+
+  function createMapContext() {
+    let mapContext = wx.createMapContext("myMap", this);
+
+    mapContext.getCenterLocation({
+      success: function(res) {
+        console.log("mapContext.getCenterLocation success", res);
+      },
+      fail: function(res) {
+        console.log("mapContext.getCenterLocation fail", res)
+      },
+      complete: function(res) {
+        console.log("mapContext.getCenterLocation complete", res);
+      }
+    });
+
+
+    mapContext.moveToLocation();
+
+
+    mapContext.translateMarker({
+      markerId: 1,
+      destination: {
+        latitude: 23.10229,
+        longitude: 113.3345211,
+      },
+      autoRotate: true,
+      rotate: 30,
+      duration: 1000,
+      animationEnd: function() {
+        console.log("mapContext.translateMarker animationEnd");
+      },
+      fail: function() {
+        console.log("mapContext.translateMarker fail");
+      }
+    });
+
+
+    mapContext.includePoints({
+      points: [{
+        longitude: '116.481451',
+        latitude: '40.006822'
+      }, {
+        longitude: '116.487847',
+        latitude: '40.002607'
+      }, {
+        longitude: '116.496507',
+        latitude: '40.006103'
+      }],
+      padding: [10, 10, 10, 10]
+    });
+
+
+    mapContext.getRegion({
+      success: function(res) {
+        console.log("mapContext.getRegion success", res);
+      },
+      fail: function(res) {
+        console.log("mapContext.getRegion fail", res)
+      },
+      complete: function(res) {
+        console.log("mapContext.getRegion complete", res);
+      }
+    });
+
+
+    mapContext.getScale({
+      success: function(res) {
+        console.log("mapContext.getScale success", res);
+      },
+      fail: function(res) {
+        console.log("mapContext.getScale fail", res)
+      },
+      complete: function(res) {
+        console.log("mapContext.getScale complete", res);
+      }
+    });
+  }
+
+
+
+
+
+  console.log("==============API getSystemInfo======================");
+  
 
 
 
