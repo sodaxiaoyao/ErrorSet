@@ -15,27 +15,30 @@ ErrorSet
 │
 ├─WebSet
 │  ├─.idea
+│  │  │  jsLibraryMappings.xml
 │  │  │  misc.xml
 │  │  │  modules.xml
 │  │  │  WebSet.iml
 │  │  │  workspace.xml
 │  │  │
 │  │  └─inspectionProfiles
-│  ├─css
-│  │  └─my_css
+│  │          Project_Default.xml
+│  │
+│  ├─CssSet
+│  │  └─MyCssSet
 │  │          CssTest.css
 │  │
-│  ├─html
+│  ├─HtmlSet
 │  │      HtmlTest.html
 │  │
-│  ├─images
+│  ├─ImgSet
 │  │      ImageTest.jpg
 │  │
-│  └─js
+│  └─JsSet
 │      ├─lib
-│      │      jquery.min.js
+│      │      jquery-3.3.1.js
 │      │
-│      └─my_pack
+│      └─MyJsSet
 │              JavaScriptTest.js
 │              JqueryTest.js
 │              NodeJsTest.js
@@ -83,6 +86,7 @@ ErrorSet
                 UtilsTest.wxml
                 UtilsTest.wxs
                 UtilsTest.wxss
+
 
 
 ```
