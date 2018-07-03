@@ -22,6 +22,7 @@ let array_2 = new Array(3);
 let array_3 = Array.from("01234567");
 
 Array.prototype.say_hello = say_hello;
+array_1.say_hello();
 array_1.constructor;
 array_1.length;
 
@@ -79,6 +80,7 @@ array_1.valueOf();
 let trial_boolean = Boolean(1);
 
 Boolean.prototype.say_hello = say_hello;
+trial_boolean.say_hello();
 trial_boolean.constructor;
 
 trial_boolean.toString();
@@ -89,6 +91,7 @@ trial_boolean.valueOf();
 let trial_date = new Date();
 
 Date.prototype.say_hello = say_hello;
+trial_date.say_hello();
 trial_date.constructor;
 
 Date();
@@ -173,6 +176,7 @@ Math.valueOf();
 let trial_num = Number('20');
 
 Number.prototype.say_hello = say_hello;
+trial_num.say_hello();
 trial_num.constructor;
 Number.MAX_VALUE;
 Number.MIN_VALUE;
@@ -191,6 +195,7 @@ trial_num.valueOf();
 let trial_str = String(5);
 
 String.prototype.say_hello = say_hello;
+trial_str.say_hello();
 trial_str.constructor;
 trial_str.length;
 
@@ -269,8 +274,12 @@ window.alert("a");
 window.confirm("Press a button!");
 window.prompt("请输入您的名字", "Bill Gates");
 window.requestAnimationFrame(null);
+// 下列为了兼容IDE，实际应用把两个变量定义去掉
+cancelIdleCallback = undefined;
+requestIdleCallback = undefined;
+//===========上面是多余部分===============
 window.cancelIdleCallback(window.requestIdleCallback(function (deadline) {
-    console.log("hello")
+    console.log("hello", deadline)
 }));
 window.clearInterval(window.setInterval(function () {
 }, 1000));
@@ -295,6 +304,7 @@ new_window.resizeTo(500, 300);
 
 // ===========smart_func=============
 let range = (start, end) => new Array(end - start).fill(start).map((el, i) => start + i);
+console.log(range);
 console.log([...Array(5).keys()]);
 Array.prototype.push.apply([], []);
 Array.prototype.slice.call(document.getElementsByTagName("p"), 0);

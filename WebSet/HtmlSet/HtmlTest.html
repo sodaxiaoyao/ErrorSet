@@ -1,15 +1,25 @@
 ﻿<!DOCTYPE html>
+
 <html>
+
 <head>
+
+    <base href="http://www.runoob.com/images/" target="_blank">
+
     <meta charset="utf-8">
     <meta name="" content="">
     <meta http-equiv="content-type" content="text/html">
+
     <title>HTML标签集合测试</title>
-<script src="../js/my_pack/JavaScriptTest.js"></script>
-    <base href="http://www.runoob.com/images/" target="_blank"> <style></style>
-    <basefont color="red" size="5"/>
+
+    <script src="../JsSet/MyJsSet/JavaScriptTest.js"></script>
+
+    <style></style>
+
 </head>
+
 <body>
+
 <h1>h1标签</h1>
 <h2>h2标签</h2>
 <h3>h3标签</h3>
@@ -25,7 +35,6 @@
 
 <!-- 注释 -->
 
-<acronym title="标签描述">acronym已经废弃</acronym>
 <abbr title="标签描述">abbr标签</abbr>
 
 <address>address标签</address>
@@ -36,11 +45,7 @@
 
 <bdo dir="rtl">bdo标签</bdo>
 
-<big>big已经废弃</big>
-
-<blockquote>blockquote标签</blockquote>
-
-<center>center已经废弃</center>
+<blockquote>block quote标签</blockquote>
 
 <cite>cite标签</cite>
 
@@ -51,8 +56,6 @@
 <dfn>dfn标签</dfn>
 
 <em>em标签</em>
-
-<font>font已经废弃</font>
 
 <i>i标签</i>
 
@@ -83,11 +86,9 @@
 
 <s>s标签</s>
 
-<samp>samp标签</samp>
+<samp>sample标签</samp>
 
 <small>small标签</small>
-
-<strike>strike已经废弃</strike>
 
 <strong>strong标签</strong>
 
@@ -96,8 +97,6 @@
 <sup>sup标签</sup>
 
 <time>time标签</time>
-
-<tt>tt已经废弃</tt>
 
 <u>u标签</u>
 
@@ -108,22 +107,35 @@
 <form>
     表单标签
     <label>label标签</label>
-    <input type="submit" value="input标签" placeholder="提交input">
-    <input type="text" value="input标签" placeholder="文本input">
-    <input type="password" value="input标签" placeholder="密码input">
-    <input type="button" value="input标签" placeholder="按钮input">
-    <input type="file" value="input标签" placeholder="文件input">
-    <input type="color">
-    <input type="date">
-    <input type="datetime">
-    <input type="datatime-local">
-    <input type="email" id="myColor">
-    <input type="month" id="myMonth" value="2014-05">
-    <input type="number" id="myNumber" value="2">
-    <input type="range" id="myRange">
+    <input type="submit" value="input标签" placeholder="提交input"/>
+    <input type="text" value="input标签" placeholder="文本input"/>
+    <input type="password" value="input标签" placeholder="密码input"/>
+    <input type="button" value="input标签" placeholder="按钮input"/>
+    <input type="file" value="input标签" placeholder="文件input"/>
     <input type="search" id="mySearch" placeholder="搜索..">
-    <input type="week" id="myWeek" value="2014-W15">
-    <input type="url" id="myURL" value="http://www.google.com">
+    <label>
+        <input type="color">
+    </label>
+    <label>
+        <input type="date"/>datetime|datatime-local
+    </label>
+    <label for="myColor"></label><input type="email" id="myColor"/>
+
+    <label for="myMonth">
+        <input type="month" id="myMonth" value="2014-05"/>
+    </label>
+    <label for="myNumber">
+        <input type="number" id="myNumber" value="2"/>
+    </label>
+    <label for="myRange">
+        <input type="range" id="myRange"/>
+    </label>
+    <label for="myWeek">
+        <input type="week" id="myWeek" value="2014-W15"/>
+    </label>
+    <label for="myURL">
+        <input type="url" id="myURL" value="http://www.google.com"/>
+    </label>
 
     <textarea placeholder="textarea标签"></textarea>
     <button value="button标签">button标签</button>
@@ -155,13 +167,7 @@
     <output>output标签</output>
 </form>
 
-<frameset cols="25%,50%,25%">
-    <frame src="scope.html">
-    <noframes>noframes标签</noframes>
-</frameset>
-
 <iframe src="http://www.runoob.com"></iframe>
-
 
 <img src="../images/ImageTest.jpg" width="145" height="126" alt="Planets" usemap="#planetmap">
 <map name="planetmap">
@@ -179,6 +185,7 @@
     ctx.fillStyle = '#fff';
     ctx.fillText("canvas标签", 0, 50);
 </script>
+
 <noscript>noscript标签</noscript>
 
 <figure>
@@ -211,10 +218,6 @@
 <ol>
     <li>li标签</li>
 </ol>
-
-<dir>
-    <li>li标签</li>
-</dir>
 
 <dl>
     <dt>dt标签</dt>
@@ -252,6 +255,7 @@
 
 <span>span标签</span>
 
+<main>main标签</main>
 <article>
     <header>
         header标签
@@ -268,8 +272,6 @@
 
 <dialog>dialog标签</dialog>
 
-<applet>Java applet 已经废弃</applet>
-
 <embed src="helloworld.swf" tppabs="http://www.runoob.com//try/demo_source/helloworld.swf">
 
 <object width="400" height="400" data="http://www.runoob.com//try/demo_source/helloworld.swf">
@@ -277,4 +279,5 @@
 </object>
 
 </body>
+
 </html>

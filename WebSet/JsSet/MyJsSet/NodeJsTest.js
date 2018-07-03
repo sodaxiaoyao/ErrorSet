@@ -45,8 +45,10 @@ buf3.fill(0);
 const buf8 = Buffer.allocUnsafeSlow(10);
 buf8.fill(0);
 const buf4 = Buffer.from([1, 2, 3]);
+console.log("兼容IDE", buf4);
 const buf5 = Buffer.from('test', 'ascii');
 const buf6 = Buffer.from('test', 'latin1');
+console.log("兼容IDE", buf6);
 // ascii|utf8|utf16le|ucs2|base64|latin1|binary|hex
 
 // const buf7 = new Buffer(10);
@@ -60,15 +62,13 @@ arr[0] = 5000;
 arr[1] = 4000;
 
 // 拷贝 `arr` 的内容
-const buf9 = Buffer.from(arr);
+// const buf9 = Buffer.from(arr);
 // 与 `arr` 共享内存
 const buf10 = Buffer.from(arr.buffer, 0, 2);
-console.log(buf9);
 console.log(buf10);
 console.log(buf10.length);
 
 arr[1] = 6000;
-console.log(buf9);
 console.log(buf10);
 
 const str = '\u00bd + \u00bc = \u00be';
@@ -77,7 +77,7 @@ console.log(`${str}: ${str.length} 个字符, ` +
     `${Buffer.byteLength(str, 'utf8')} 个字节`);
 
 const buf11 = Buffer.from('1234');
-const buf12 = Buffer.from('0123');
+// const buf12 = Buffer.from('0123');
 const arr1 = [buf1, buf2];
 console.log(arr1.sort(Buffer.compare));
 
@@ -94,7 +94,7 @@ console.log(bufA);
 console.log(bufA.length);
 console.log(Buffer.isBuffer(bufA));
 console.log(Buffer.isEncoding("utf8"));
-console.log(Buffer.poolSize);
+// console.log(Buffer.poolSize);
 console.log(buf11.toString('ascii'));
 
 const arrayBuffer = new ArrayBuffer(16);
@@ -116,7 +116,7 @@ for (const pair of bufD.entries()) {
 }
 
 
-console.log(buf1.equals(buf2));
+// console.log(buf1.equals(buf2));
 console.log(bufD.includes("u"));
 console.log(bufD.indexOf("u"));
 console.log(bufD.keys());
@@ -175,7 +175,7 @@ version.on('error', (err) => {
 version.on('close', (code) => {
     console.log(`子进程退出码：${code}`);
 });
-console.log("进程目录", process.argv0);
+// console.log("进程目录", process.argv0);
 
 // child_process.spawn()、child_process.fork()、child_process.exec() 和 child_process.execFile()
 // 函数都遵循 Node.js API 惯用的异步编程模式。
@@ -192,7 +192,7 @@ console.log("句柄", version.pid);
 if (cluster.isMaster) {
     console.log(`主进程 ${process.pid} 正在运行`);
     cluster.on('exit', (worker, code, signal) => {
-        console.log(`工作进程 ${worker.process.pid} 已退出`);
+        console.log(`工作进程 ${worker.process.pid} 已退出`, code, signal);
     });
 }
 

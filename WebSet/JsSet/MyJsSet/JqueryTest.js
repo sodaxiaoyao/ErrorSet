@@ -213,7 +213,7 @@ let _s = (function () {
         constructor: sj,
         init: function (dom_obj) {
             if (dom_obj) {
-                this.dom_obj = $(dom_obj);
+
             }
         }
     };
@@ -244,7 +244,6 @@ let _s = (function () {
     sj.module = {
         "module_pool": {
             "sj_connect": sj_connect,
-            "sj_datetime": sj_datetime
         },
         "load": function (module) {
             try {
@@ -339,9 +338,11 @@ function sj_connect() {
                     }
                 },
                 dataFilter: function (data, type) {
+                    console.log(type);
                     return data
                 },
                 beforeSend: function (xhr) {
+                    console.log(xhr);
                     that._debug_fun("请求开始");
                     return true;
                 },
@@ -349,6 +350,7 @@ function sj_connect() {
                     that._debug_fun("请求错误");
                 },
                 success: function (data, text_status, jq_xhr) {
+                    console.log(text_status, jq_xhr);
                     let _self = $(this);
                     if (callback) {
                         callback(data, _self)
@@ -357,6 +359,7 @@ function sj_connect() {
                     }
                 },
                 complete: function (xhr, ts) {
+                    console.log(xhr, ts);
                     that._debug_fun("请求完成");
                 }
             });

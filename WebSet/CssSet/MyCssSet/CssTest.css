@@ -82,7 +82,7 @@
     /*outline-style: dotted;*/
     /*outline-width: thick;*/
     /*border-image: url(border.png) 50% 50% 30 30 repeat;*/
-    border-image-source: url("../../images/ImageTest.jpg");
+    border-image-source: url("../../ImgSet/ImageTest.jpg");
     /*border-image-slice: 50% 50%;*/
     border-image-width: 30 30;
     box-decoration-break: slice;
@@ -248,7 +248,7 @@ q {
 }
 
 @media screen and (max-width: 480px) {
-    /*480,768,992,1200*/
+    /*576,768,1200,1920,2048,2880,4096*/
     * {
         display: none;
     }
