@@ -529,8 +529,11 @@ eve.onkeyup = say_hello;
 eve.onsubmit = say_hello;
 eve.onreset = say_hello;
 eve.onselect = say_hello;
-window.onresize=say_hello;
-window.onunload=say_hello;
+window.onresize = say_hello;
+window.onunload = say_hello;
+
+// Event---触发事件
+my_li.click();
 
 
 // ===========smart_func=============
