@@ -394,6 +394,7 @@ location.replace("http://www.zyp233.cn");
 // ===========Document=============
 // Location---静态属性
 document.all;
+document.documentElement;
 document.anchors;
 document.applets;
 document.forms;
@@ -421,20 +422,115 @@ document.querySelector("#a");
 document.querySelectorAll("#score");
 let my_li = document.createElement("li");
 document.createTextNode("zyp");
-document.createAttribute("href");
 let att = document.createAttribute("href");
 att.value = "http://www.zyp233.cn";
+
 
 // ===========Element=============
 // Element---对象
 let ele = document.getElementById('zyp');
 
 // Element---属性
-ele.accessKey;
+document.documentElement.namespaceURI;
+ele.id;
+ele.lang;
+ele.innerHTML;
+ele.innerText;
+ele.textContent;
+ele.tagName;
+ele.nodeName;
+ele.nodeType;
+ele.nodeValue;
+ele.title;
+ele.style;
+ele.className;
 ele.attributes;
+ele.ownerDocument;
+ele.parentNode;
+ele.childNodes.length;
+ele.previousSibling;
+ele.nextSibling;
+ele.tabIndex;
+ele.firstChild;
+ele.lastChild;
+ele.clientWidth;
+ele.clientHeight;
+ele.offsetWidth;
+ele.offsetHeight;
+ele.scrollHeight;
+ele.scrollWidth;
+ele.scrollTop;
+ele.scrollLeft;
+ele.offsetTop;
+ele.offsetLeft;
+ele.offsetParent;
+ele.accessKey;
+ele.dir;
+ele.contentEditable;
+ele.isContentEditable;
 
 // Element---方法
+document.documentElement.isDefaultNamespace('http://www.w3.org/1999/xhtml');
+ele.insertBefore(my_li, my_li);
 ele.appendChild(my_li);
+
+ele.normalize();
+ele.cloneNode(true);
+ele.compareDocumentPosition(ele);
+ele.removeAttribute("href");
+ele.removeAttributeNode(ele.getAttributeNode("target"));
+ele.removeChild(my_li);
+ele.replaceChild(my_li, my_li);
+ele.getAttribute("href");
+ele.hasAttribute("href");
+ele.hasAttributes();
+ele.hasChildNodes();
+ele.setAttribute("href", "http://www.zyp233.cn");
+ele.setAttributeNode(att);
+ele.isEqualNode(ele);
+ele.isSameNode(ele);
+ele.toString();
+ele.item(0);
+
+
+// ===========Attribute=============
+// Attribute---属性
+att.name;
+att.value;
+att.specified;
+ele.attributes.length;
+
+// Attribute---方法
+ele.attributes.getNamedItem("href");
+ele.attributes.item(0);
+ele.attributes.removeNamedItem("href");
+ele.attributes.setNamedItem(document.createAttribute("class"));
+
+
+// ===========Event=============
+// Event---监听事件
+let eve = document.createElement("a");
+eve.onabort = say_hello;
+eve.onerror = say_hello;
+eve.onload = say_hello;
+eve.onfocus = say_hello;
+eve.onblur = say_hello;
+eve.onchange = say_hello;
+eve.onclick = say_hello;
+eve.ondblclick = say_hello;
+eve.onmouseup = say_hello;
+eve.onmousedown = say_hello;
+eve.onmousemove = say_hello;
+eve.onmouseover = say_hello;
+eve.onmouseout = say_hello;
+eve.onkeydown = say_hello;
+eve.onkeypress = say_hello;
+eve.onkeyup = say_hello;
+eve.onsubmit = say_hello;
+eve.onreset = say_hello;
+eve.onselect = say_hello;
+window.onresize=say_hello;
+window.onunload=say_hello;
 
 
 // ===========smart_func=============
@@ -445,3 +541,4 @@ console.log([...Array(5).keys()]);
 Array.prototype.push.apply([], []);
 Array.prototype.slice.call(document.getElementsByTagName("p"), 0);
 console.log([...document.getElementsByTagName("p")]);
+console.log(Object.prototype.toString.call({}) === "[object Object]");
