@@ -7,6 +7,21 @@
 <canvas id="canvas_id"></canvas>
 <script>
     let test_color = "#000";
+    CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+        //自定义圆角矩形的API
+        let min_size = Math.min(w, h);
+        if (r > min_size / 2) {
+            r = min_size / 2;
+        }
+        this.beginPath();
+        this.moveTo(x + r, y);
+        this.arcTo(x + w, y, x + w, y + h, r);
+        this.arcTo(x + w, y + h, x, y + h, r);
+        this.arcTo(x, y + h, x, y, r);
+        this.arcTo(x, y, x + w, y, r);
+        this.closePath();
+        return this;
+    };
 
 
     // 创建canvas对象
@@ -46,6 +61,7 @@
 
     //矩形
     ctx.rect(20, 20, 150, 100);
+    ctx.roundRect(20, 20, 150, 100, 20);//自定义API
     ctx.fillRect(20, 20, 150, 100);
     ctx.strokeRect(20, 20, 150, 100);
     ctx.clearRect(20, 20, 100, 50);
