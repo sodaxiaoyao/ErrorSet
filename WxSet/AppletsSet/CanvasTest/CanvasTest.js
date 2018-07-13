@@ -14,8 +14,8 @@ Page({
 
 
     //图片
-    ctx.drawImage("../images/ImageTest.jpg", 0, 0, 300, 150);
-    const pattern = ctx.createPattern('../images/ImageTest.jpg', 'repeat-x');
+    ctx.drawImage("../ImagesTest/ImageTest.jpg", 0, 0, 300, 150);
+    const pattern = ctx.createPattern('../ImagesTest/ImageTest.jpg', 'repeat-x');
     ctx.fillStyle = pattern;
 
 

@@ -75,7 +75,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -83,33 +82,18 @@
               <item name="WebSet" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebSet" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="WebSet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSet" type="462c0819:PsiDirectoryNode" />
-              <item name="ImgSet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebSet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSet" type="462c0819:PsiDirectoryNode" />
-              <item name="JsSet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebSet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSet" type="462c0819:PsiDirectoryNode" />
-              <item name="JsSet" type="462c0819:PsiDirectoryNode" />
-              <item name="MyJsSet" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.2.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/HtmlDeveloper/workspace/comworkspace/zhicheng" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -157,16 +141,19 @@
       <workItem from="1531360163866" duration="9814000" />
       <workItem from="1531379024215" duration="6521000" />
       <workItem from="1531388935360" duration="17000" />
+      <workItem from="1531389225418" duration="146000" />
+      <workItem from="1531448493046" duration="203000" />
+      <workItem from="1531450136822" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32654000" />
+    <option name="totallyTimeSpent" value="33018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33567524" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33489463" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -214,13 +201,6 @@
     <entry file="file://$PROJECT_DIR$/ImgSet/ImageTest.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/JsSet/MyJsSet/CanvasTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JsSet/MyJsSet/JavaScriptTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -232,6 +212,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JsSet/MyJsSet/CanvasTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>

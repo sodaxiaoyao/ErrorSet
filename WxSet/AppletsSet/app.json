@@ -1,8 +1,7 @@
 {
   "pages": [
     "PageTest/PageTest",
-    "CanvasTest/CanvasTest",
-    "component/ComponentTest"
+    "CanvasTest/CanvasTest"
   ],
   "window": {
     "navigationBarBackgroundColor": "#333",
@@ -32,14 +31,14 @@
       {
         "pagePath": "PageTest/PageTest",
         "text": "tarbar测试",
-        "iconPath": "images/SmallImageTest.png",
-        "selectedIconPath": "images/SmallImageTest.png"
+        "iconPath": "ImagesTest/SmallImageTest.png",
+        "selectedIconPath": "ImagesTest/SmallImageTest.png"
       },
       {
         "pagePath": "PageTest/PageTest",
         "text": "tarbar测试",
-        "iconPath": "images/SmallImageTest.png",
-        "selectedIconPath": "images/SmallImageTest.png"
+        "iconPath": "ImagesTest/SmallImageTest.png",
+        "selectedIconPath": "ImagesTest/SmallImageTest.png"
       }
     ]
   }

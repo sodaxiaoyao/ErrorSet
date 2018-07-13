@@ -3,7 +3,6 @@
     <title>Test collection for the Canvas API</title>
 </head>
 <body>
-<img src="../../ImgSet/ImageTest.jpg" id="lamp"/>
 <canvas id="canvas_id"></canvas>
 <script>
     let test_color = "#000";
@@ -120,9 +119,7 @@
 
 
     //保存
-    ctx.toDataURL("image/jpeg");
-
-
+    console.log(ctx.toDataURL("image/jpeg"));
 </script>
 </body>
 </html>
