@@ -131,18 +131,18 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24791667" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -158,21 +158,5 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/my_pack/JavaScriptTest.js" />
-    <entry file="file://$PROJECT_DIR$/js/my_pack/JavaScriptTest.js" />
-    <entry file="file://$PROJECT_DIR$/CssSet/MyCssSet/CssTest.css" />
-    <entry file="file://$PROJECT_DIR$/JsSet/lib/jquery.min.js" />
-    <entry file="file://$PROJECT_DIR$/JsSet/lib/jquery-3.3.1.js" />
-    <entry file="file://$PROJECT_DIR$/JsSet/MyJsSet/NodeJsTest.js" />
-    <entry file="file://$PROJECT_DIR$/JsSet/MyJsSet/JqueryTest.js" />
-    <entry file="file://$PROJECT_DIR$/HtmlSet/HtmlTest.html" />
-    <entry file="file://$PROJECT_DIR$/ImgSet/ImageTest.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JsSet/MyJsSet/JavaScriptTest.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
   </component>
 </project>
