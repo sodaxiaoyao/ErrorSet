@@ -103,7 +103,7 @@
   skip-hidden-item-layout="true" catchchange="bind_tap" catchanimationfinish="bind_tap">
   <block wx:for="{{[1,2,3]}}" wx:key="*this">
     <swiper-item item-id="item_test">
-      <image src="../images/ImageTest.jpg" class="slide-image" width="355" height="150" />
+      <image src="../ImagesTest/ImageTest.jpg" class="slide-image" width="355" height="150" />
     </swiper-item>
   </block>
 </swiper>
@@ -118,7 +118,7 @@
 
 <cover-view scroll-top="30">
   cover-view
-  <cover-image src="../images/ImageTest.jpg" catchload="bind_tap" catcherror="bind_tap"></cover-image>
+  <cover-image src="../ImagesTest/ImageTest.jpg" catchload="bind_tap" catcherror="bind_tap"></cover-image>
 </cover-view>
 
 
@@ -135,7 +135,7 @@
 
 
 <button size="mini" type="warn" plain="true" disabled="" loading="true" form-type="reset" hover-class="hover-class" hover-stop-propagation="true" hover-start-time="1000" hover-stay-time="1000" open-type="feedbac" lang="en" bindgetuserinfo="bind_tap" session-from="test_id"
-  send-message-title="标题" send-message-path="PageTest/PageTest" send-message-img="../images/ImageTest.jpg" show-message-card="true" bindcontact="bind_tap" bindgetphonenumber="bind_tap" bindopensetting="bind_tap" app-parameter="send_app_msg" binderror="bind_tap">button open-type：contact | share | getUserInfo | getPhoneNumber | launchApp | openSetting | feedbac | exit
+  send-message-title="标题" send-message-path="PageTest/PageTest" send-message-img="../ImagesTest/ImageTest.jpg" show-message-card="true" bindcontact="bind_tap" bindgetphonenumber="bind_tap" bindopensetting="bind_tap" app-parameter="send_app_msg" binderror="bind_tap">button open-type：contact | share | getUserInfo | getPhoneNumber | launchApp | openSetting | feedbac | exit
 </button>
 
 
@@ -216,7 +216,7 @@
 </navigator>
 
 
-<image src="../images/ImageTest.jpg" mode="widthFix" lazy-load="true" bindload="bind_tap" binderror="bind_tap">
+<image src="../ImagesTest/ImageTest.jpg" mode="widthFix" lazy-load="true" bindload="bind_tap" binderror="bind_tap">
   mode: 
   缩放 scaleToFill 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素 
   缩放 aspectFit 保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。 

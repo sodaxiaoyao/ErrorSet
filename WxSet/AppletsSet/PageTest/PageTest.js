@@ -71,7 +71,7 @@ Page({
     }],
     controls: [{
         id: 1,
-        iconPath: '../images/ImageTest.jpg',
+        iconPath: '../ImagesTest/ImageTest.jpg',
         position: {
           left: 180,
           top: 100 - 50,
@@ -82,7 +82,7 @@ Page({
       },
       {
         id: 2,
-        iconPath: '../images/ImageTest.jpg',
+        iconPath: '../ImagesTest/ImageTest.jpg',
         position: {
           left: 200,
           top: 100 - 50,

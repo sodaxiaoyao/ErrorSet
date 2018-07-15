@@ -15,6 +15,13 @@
   <component name="FileEditorManager">
     <leaf />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>set</find>
@@ -24,6 +31,9 @@
       <find>isWindow</find>
       <find>dom_obj</find>
       <find>sj_connect</find>
+      <find>toggle</find>
+      <find>onresize</find>
+      <find>cookie</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -32,9 +42,10 @@
         <option value="$PROJECT_DIR$/js/my_pack/JavaScriptTest.js" />
         <option value="$PROJECT_DIR$/CssSet/MyCssSet/CssTest.css" />
         <option value="$PROJECT_DIR$/HtmlSet/HtmlTest.html" />
+        <option value="$PROJECT_DIR$/JsSet/MyJsSet/NodeJsTest.js" />
         <option value="$PROJECT_DIR$/JsSet/MyJsSet/JqueryTest.js" />
         <option value="$PROJECT_DIR$/JsSet/MyJsSet/JavaScriptTest.js" />
-        <option value="$PROJECT_DIR$/JsSet/MyJsSet/NodeJsTest.js" />
+        <option value="$PROJECT_DIR$/JsSet/MyJsSet/CanvasTest.html" />
       </list>
     </option>
   </component>
@@ -54,16 +65,16 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="351" />
+    <option name="x" value="198" />
+    <option name="y" value="-24" />
     <option name="width" value="1752" />
-    <option name="height" value="1020" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -75,16 +86,18 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.2.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/HtmlDeveloper/workspace/comworkspace/zhicheng" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -120,16 +133,27 @@
       <workItem from="1530622233532" duration="2975000" />
       <workItem from="1530625914575" duration="13000" />
       <workItem from="1530629539128" duration="76000" />
+      <workItem from="1530761347708" duration="1769000" />
+      <workItem from="1530774935568" duration="6000" />
+      <workItem from="1530798628726" duration="21000" />
+      <workItem from="1531292549200" duration="381000" />
+      <workItem from="1531293448857" duration="8808000" />
+      <workItem from="1531360163866" duration="9814000" />
+      <workItem from="1531379024215" duration="6521000" />
+      <workItem from="1531388935360" duration="17000" />
+      <workItem from="1531389225418" duration="146000" />
+      <workItem from="1531448493046" duration="203000" />
+      <workItem from="1531450136822" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5317000" />
+    <option name="totallyTimeSpent" value="33018000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24791667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33489463" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
@@ -159,4 +183,47 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/JsSet/MyJsSet/JavaScriptTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/my_pack/JavaScriptTest.js" />
+    <entry file="file://$PROJECT_DIR$/js/my_pack/JavaScriptTest.js" />
+    <entry file="file://$PROJECT_DIR$/CssSet/MyCssSet/CssTest.css" />
+    <entry file="file://$PROJECT_DIR$/JsSet/lib/jquery.min.js" />
+    <entry file="file://$PROJECT_DIR$/JsSet/lib/jquery-3.3.1.js" />
+    <entry file="file://$PROJECT_DIR$/JsSet/MyJsSet/NodeJsTest.js" />
+    <entry file="file://$PROJECT_DIR$/HtmlSet/HtmlTest.html" />
+    <entry file="file://$PROJECT_DIR$/ImgSet/ImageTest.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JsSet/MyJsSet/JavaScriptTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JsSet/MyJsSet/JqueryTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JsSet/MyJsSet/CanvasTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+>>>>>>> 2c783a9b1aaa6f49c7028104ac6481a10fc0bdac
 </project>

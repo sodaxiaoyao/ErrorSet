@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "ComponentTest": "../component/ComponentTest",
-    "ComponentChildTest": "../component/ComponentChildTest"
+    "ComponentTest": "../ComponentTest/ComponentTest",
+    "ComponentChildTest": "../ComponentTest/ComponentChildTest"
   }
 }
