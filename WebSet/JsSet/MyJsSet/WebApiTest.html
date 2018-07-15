@@ -112,7 +112,47 @@
     idb.deleteDatabase("myDatabase");
 
 
-    //============================================未完成20180715==============================================
+    //============================================Worker==============================================
+    let w = new Worker("../lib/worker.js");
+    // w.postMessage(10);
+    w.onmessage = function (event) {
+        console.log("传回来", event.data);
+        w.terminate();
+    };
+    w.onerror = function (event) {
+        console.log("错误", event);
+        w.terminate();
+    };
+
+
+    //============================================XMLHttpRequest==============================================
+    let ajax = new XMLHttpRequest();
+    ajax.onreadystatechange = function () {
+        if (ajax.readyState === 4 && ajax.status === 200) {
+            console.log(ajax.responseText);
+            // console.log(ajax.responseXML);
+        }
+    };
+    ajax.open("GET", "https://www.baidu.com", true);
+    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajax.send("fname=Bill&lname=Gates");
+
+
+    //============================================JSON==============================================
+    let obj = JSON.parse("{a:1}");
+    console.log(JSON.stringify(obj));
+
+
+    //============================================console==============================================
+    console.info();
+    console.warn();
+    console.error();
+    console.log();
+    console.dir();
+    console.dirxml("");
+    console.time();
+    console.timeEnd();
+    console.clear();
 
 
 </script>

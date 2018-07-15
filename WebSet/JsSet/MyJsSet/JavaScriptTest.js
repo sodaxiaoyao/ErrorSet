@@ -331,6 +331,7 @@ let new_window = window.open('', 'new_window', 'width=200,height=100');
 new_window.opener;
 
 // Window-open---方法
+new_window.postMessage("hello", "*");
 new_window.focus();
 new_window.blur();
 new_window.moveBy(50, 50);
@@ -510,6 +511,8 @@ ele.attributes.setNamedItem(document.createAttribute("class"));
 // ===========Event=============
 // Event---监听事件
 let eve = document.createElement("a");
+eve.addEventListener("click", say_hello, true);
+
 eve.onabort = say_hello;
 eve.onerror = say_hello;
 eve.onload = say_hello;
