@@ -493,8 +493,8 @@ ele.toString();
 ele.item(0);
 
 
-// ===========Attribute=============
-// Attribute---属性
+// ===========Attributes=============
+// Attributes---属性
 att.name;
 att.value;
 att.specified;

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test collection for the WEB API</title>
+</head>
+<body>
+<!--API DOM-->
+
+
+<!--API Instance-->
+<script>
+
+
+    //============================================Image==========================================================
+    //Image---对象
+    let img = new Image();
+
+    //Image---属性
+    img.src = "../../ImgSet/ImageTest.jpg";
+    img.width = 300;
+    img.height = 300;
+
+
+    //============================================window.sessionStorage==========================================
+    sessionStorage.length;
+    sessionStorage.key(3);
+    sessionStorage.clear();
+    sessionStorage.setItem("a", "a");
+    sessionStorage.getItem("a");
+    sessionStorage.removeItem("a");
+
+
+    //============================================window.localStorage==============================================
+    localStorage.length;
+    localStorage.key(3);
+    localStorage.clear();
+    localStorage.setItem("a", "a");
+    localStorage.getItem("a");
+    localStorage.removeItem("a");
+
+
+    //============================================window.indexedDB==============================================
+    let idb = indexedDB.open("myDatabase");
+    idb.onsuccess = function (e) {
+        console.log("成功", e);
+    };
+    idb.onerror = function (e) {
+        console.log("失败", e);
+    };
+    idb.onupgradeneeded = function (e) {
+        console.log('DB version changed to ' + e);
+        let db = e.target;
+        let store = db.result.createObjectStore('s_name', {keyPath: "id", autoIncrement: true});
+        store.createIndex('usernameIndex', 'id', {unique: true});
+        idb_init(db);
+    };
+
+    function idb_init(db) {
+        let ndb = db.result;
+
+        let transaction = ndb.transaction('s_name', 'readwrite');
+        transaction.oncomplete = function (e) {
+            console.log('事务结束了', e);
+        };
+        transaction.onabort = function (e) {
+            console.log('事务被中止了', e);
+        };
+        let store = transaction.objectStore('s_name');
+
+        store.put("zyp");
+        store.add("zyp");
+        let req1 = store.get("1");
+        req1.onsuccess = function (e) {
+            // let student=e.target.result;
+            // console.log(student.name);
+        };
+        let req3 = store.delete("1");
+        req3.onsuccess = function () {
+            console.log('删除数据成功');
+        };
+        store.clear();
+
+        // 游标
+        let c_range = IDBKeyRange.bound(1, 10, false, false);
+        IDBKeyRange.only(1);
+        IDBKeyRange.lowerBound(1, false);
+        IDBKeyRange.upperBound(10, false);
+        let req = store.openCursor(c_range, 'next');
+        req.onsuccess = function () {
+            let cursor = this.result;
+            if (cursor) {
+                // cursor.updata({
+                //     userId : cursor.key,
+                //     userName : 'Hello',
+                //     age : 18
+                // });
+                cursor.delete();
+                console.log(cursor.value);
+                cursor.continue();
+            } else {
+                console.log('检索结束');
+            }
+        };
+
+        ndb.deleteObjectStore('s_name');
+        ndb.onclose = function () {
+            console.log("数据库关闭");
+        };
+        ndb.close();
+    }
+
+    idb.deleteDatabase("myDatabase");
+
+
+    //============================================未完成20180715==============================================
+
+
+</script>
+</body>
+</html>

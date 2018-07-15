@@ -104,9 +104,9 @@
 
 <wbr/>
 
-<form>
+<form id="test_form" novalidate="novalidate" autocomplete="on">
     表单标签
-    <label>label标签</label>
+
     <input type="submit" value="input标签" placeholder="提交input"/>
     <input type="text" value="input标签" placeholder="文本input"/>
     <input type="password" value="input标签" placeholder="密码input"/>
@@ -114,13 +114,20 @@
     <input type="file" value="input标签" placeholder="文件input"/>
     <input type="search" id="mySearch" placeholder="搜索..">
     <label>
+        <input type="checkbox"/> 多选标签
+    </label>
+    <label>
+        <input type="radio"/> 单选标签
+    </label>
+    <label>
         <input type="color">
     </label>
     <label>
         <input type="date"/>datetime|datatime-local
     </label>
-    <label for="myColor"></label><input type="email" id="myColor"/>
-
+    <label for="myColor">
+        <input type="email" id="myColor"/>
+    </label>
     <label for="myMonth">
         <input type="month" id="myMonth" value="2014-05"/>
     </label>
@@ -140,8 +147,7 @@
     <textarea placeholder="textarea标签"></textarea>
     <button value="button标签">button标签</button>
 
-    <label>
-        select标签
+    <label> select标签
         <select>
             <optgroup label="optgroup标签">
                 <option value="option标签">option标签</option>
@@ -149,8 +155,7 @@
         </select>
     </label>
 
-    <fieldset>
-        fieldset标签
+    <fieldset> fieldset标签
         <legend>legend标签</legend>
     </fieldset>
 
@@ -161,11 +166,17 @@
         </datalist>
     </label>
 
-
-    <keygen name="security">keygen已经废弃</keygen>
-
     <output>output标签</output>
+
 </form>
+<label>新属性
+    <input type="submit" form="test_form" formaction="http://www.baidu.com" formmethod="post" formtarget="_self"
+           formnovalidate="formnovalidate"/>
+</label>
+<label>新属性
+    <input type="text" placeholder="新属性" autofocus="autofocus" required="required" pattern="[A-z]{3}"
+           autocomplete="on"/>
+</label>
 
 <iframe src="http://www.runoob.com"></iframe>
 
@@ -193,10 +204,34 @@
     <figcaption>figcaption标签</figcaption>
 </figure>
 
-<audio controls="controls">
+<audio id="audio" controls="controls"> audio标签
     <source src="http://www.runoob.com/try/demo_source/horse.ogg"/>
-    audio标签
 </audio>
+<script>
+    // 多媒体API
+    let audio = document.getElementById("audio");
+    audio.ontimeupdate = function () {
+    };
+    audio.autoplay = true;
+    audio.controls = true;
+    audio.currentSrc;
+    audio.currentTime;
+    console.log(audio.duration);
+    audio.defaultMuted;
+    audio.muted;
+    audio.ended;
+    console.log(audio.readyState);
+    audio.paused = true;
+    audio.volume = 2;
+    audio.loop = true;
+    audio.networkState;
+    console.log(audio.src);
+
+    audio.play();
+    audio.pause();
+    audio.load();
+    audio.canPlayType("mp3");
+</script>
 
 <video width="320" height="240" controls="controls">
     <source src="http://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4">
@@ -224,15 +259,13 @@
     <dd>dd标签</dd>
 </dl>
 
-<menu>menu完全不支持</menu>
-
-<command>command完全不支持</command>
+<menu>menu标签</menu>
 
 <table border="1">
     <caption>caption标签</caption>
     <colgroup>
-        <col span="2" style="background-color:red">
-        <col style="background-color:yellow">
+        <col span="2">
+        <col>
     </colgroup>
     <thead>
     <tr>
