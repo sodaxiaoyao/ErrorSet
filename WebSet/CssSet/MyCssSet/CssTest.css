@@ -45,6 +45,7 @@
 /*=====================背景属性=====================================*/
 ._background {
     background: url("http://www.runoob.com/try/demo_source/planets.gif") no-repeat center center fixed;
+    /*background: linear-gradient(180deg,red 10%,yellow 10%,yellow 30%,blue 30%);*/
     /*background-color: #000;*/
     /*background-image: url("http://www.runoob.com/try/demo_source/planets.gif");*/
     /*background-repeat: no-repeat;*/
