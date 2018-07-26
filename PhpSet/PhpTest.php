@@ -29,6 +29,7 @@ settype($trial, "int");
 
 echo empty(null);
 echo isset($trial);
+unset($trial);
 is_numeric("23");
 is_bool(true);
 is_int(0);
@@ -64,7 +65,22 @@ EOD;
 echo $str;
 
 //=============array=============
+$_array = array("foo", "bar", "hallo", "world");
+var_dump($_array);
+$_array_1 = array(
+    "foo" => "bar",
+    "bar" => "foo",
+    100 => -100,
+    -100 => 100,
+);
+var_dump($_array_1);
+
 //=============object=============
+$_object = new someClass();
+var_dump($_object);
+
 //=============callable=============
+call_user_func(array('someClass', 'someMethod'));
+
 //=============resource=============
 //=============NULL=============
