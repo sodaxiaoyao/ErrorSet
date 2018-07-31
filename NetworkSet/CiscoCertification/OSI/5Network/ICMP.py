@@ -3,13 +3,17 @@
 BYTES = 0xFF
 
 
-class ICMPProtocol:
+class InternetControlMessageProtocol:
 
     def __init__(self):
         self.type = BYTES * 1
         self.code = BYTES * 1
+
         self.checksum = BYTES * 2
-        self.flag = BYTES * 2
+
+    @staticmethod
+    def get_port():
+        return 1
 
     def get_type(self, num):
         if num < self.type:
