@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class HyperTextTransferProtocolOverSecureSocketLayer:
+class HyperTextTransferProtocolOverSecureSocketLayer(object):
 
     def __init__(self):
         pass

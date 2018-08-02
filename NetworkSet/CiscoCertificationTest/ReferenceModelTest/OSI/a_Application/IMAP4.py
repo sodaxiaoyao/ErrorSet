@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class InternetMessageAccessProtocol4:
+class InternetMessageAccessProtocol4(object):
 
     def __init__(self):
         pass

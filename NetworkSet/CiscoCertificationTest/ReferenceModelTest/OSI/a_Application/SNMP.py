@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class SimpleNetworkManagementProtocol:
+class SimpleNetworkManagementProtocol(object):
 
     def __init__(self):
         pass

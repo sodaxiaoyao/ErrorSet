@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class AddressResolutionProtocol:
+class AddressResolutionProtocol(object):
 
     def __init__(self):
         self.hardware_type = BYTES * 2

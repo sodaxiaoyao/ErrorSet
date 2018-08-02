@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class SecureShell:
+class SecureShell(object):
 
     def __init__(self):
         pass

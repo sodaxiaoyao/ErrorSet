@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class DomainNameSystem:
+class DomainNameSystem(object):
 
     def __init__(self):
         pass

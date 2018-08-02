@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class PostOfficeProtocolVersion3:
+class PostOfficeProtocolVersion3(object):
 
     def __init__(self):
         pass

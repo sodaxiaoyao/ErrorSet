@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class SimpleMailTransferProtocol:
+class SimpleMailTransferProtocol(object):
 
     def __init__(self):
         pass

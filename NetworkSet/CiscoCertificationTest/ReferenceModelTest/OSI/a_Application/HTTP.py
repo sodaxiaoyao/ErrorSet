@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class HyperTextTransferProtocol:
+class HyperTextTransferProtocol(object):
 
     def __init__(self):
         pass

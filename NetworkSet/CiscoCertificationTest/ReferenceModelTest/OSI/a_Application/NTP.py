@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class NetworkTimeProtocol:
+class NetworkTimeProtocol(object):
 
     def __init__(self):
         pass

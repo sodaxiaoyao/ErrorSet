@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class InternetProtocol:
+class InternetProtocol(object):
 
     def __init__(self):
         self.source = BYTES * 4

@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class TrivialFileTransferProtocol:
+class TrivialFileTransferProtocol(object):
 
     def __init__(self):
         pass

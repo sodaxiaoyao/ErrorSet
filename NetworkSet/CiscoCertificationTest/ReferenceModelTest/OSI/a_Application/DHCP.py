@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class DynamicHostConfigurationProtocol:
+class DynamicHostConfigurationProtocol(object):
 
     def __init__(self):
         pass

@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class UserDatagramProtocol:
+class UserDatagramProtocol(object):
 
     def __init__(self):
         self.source_port = BYTES * 2

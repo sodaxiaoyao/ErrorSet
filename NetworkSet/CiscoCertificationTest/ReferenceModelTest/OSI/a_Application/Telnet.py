@@ -3,7 +3,7 @@
 BYTES = 0xFF
 
 
-class Telnet:
+class Telnet(object):
 
     def __init__(self):
         pass
