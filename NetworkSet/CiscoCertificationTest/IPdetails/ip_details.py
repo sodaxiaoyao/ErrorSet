@@ -76,16 +76,14 @@ class IPDetails(object):
     def max_pc_size(self, sub_mask, re=False):
         # 功能：获取最大主机数/子网掩码
         if re:
-            bit_size = self.find_bit(sub_mask)
-            return [self.re_conversion_mask(32 - bit_size).strip('\n'), bit_size]
+            bit_size = 32 - self.find_bit(sub_mask)
+            return [self.re_conversion_mask(bit_size).strip('\n'), bit_size]
         else:
             return 2 ** (32 - self.conversion_mask(sub_mask)) - 2
 
     def set_subnet(self, subnet_size, is_zero=True):
         # 功能：设置子网划分位
         bit_size = self.find_bit(subnet_size, is_zero)
-        if bit_size > 8:
-            raise Exception("暂不支持该类划分")
         bit_size += self.mask
         if bit_size > 30:
             print "主机位不足，请重新设置"
@@ -99,24 +97,27 @@ class IPDetails(object):
         self.__div_mod = [self.mask / 8, self.mask % 8]
 
     def print_all_subnet(self):
-        print "=============输出开始==============="
+        # 功能：打印子网，进行划分
+        print "=============承载主机数：" + str(2 ** (32 - self.mask) - 2) + "==============="
         sub_size = self.mask - self.source_mask
         if sub_size <= 0:
             print "未进行子网段设置"
         else:
+            offset_min = sub_size / 8
+            offset_max = offset_min + int(sub_size % 8 != 0)
             ip_list = self.get_ip_list(self.website_address.strip("\n"))
-            ip_id = self.mask / 8
-            ip_mod = bin(int(ip_list[ip_id])).replace("0b", "").zfill(8)[0:self.mask % 8]
             source_site = self.source_mask % 8
+            ip_id = self.__div_mod[0] - offset_min
+            ip_mod = bin(int(ip_list[ip_id])).replace("0b", "").zfill(8)[0:self.__div_mod[1]]
             source_ip = ip_mod[0:source_site]
             for i in range(2 ** sub_size):
                 the_ip_net = bin(i).replace("0b", "").zfill(sub_size)
-                ip_list[ip_id] = str(
-                    int((source_ip + the_ip_net).ljust(8, '0'), 2))
-                if the_ip_net == ip_mod[source_site:]:
-                    print "当前IP所在网段：",
-                print ".".join(ip_list)
-        print "=============输出结束==============="
+                tmp = (source_ip + the_ip_net).ljust(8 * offset_max, '0')
+                for k in range(offset_max):
+                    begin = k * 8
+                    ip_list[ip_id + k] = str(int(tmp[begin:begin + 8], 2))
+                print ".".join(ip_list) + "/" + str(self.mask)
+        print "========================================="
 
     @property
     def website_address(self):
