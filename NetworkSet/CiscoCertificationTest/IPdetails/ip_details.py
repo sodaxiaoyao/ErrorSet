@@ -108,8 +108,9 @@ class IPDetails(object):
             ip_list = self.get_ip_list(self.website_address.strip("\n"))
             source_site = self.source_mask % 8
             ip_id = self.__div_mod[0] - offset_min
-            ip_mod = bin(int(ip_list[ip_id])).replace("0b", "").zfill(8)[0:self.__div_mod[1]]
-            source_ip = ip_mod[0:source_site]
+            if self.__div_mod[1] == 0:
+                ip_id -= 1
+            source_ip = bin(int(ip_list[ip_id])).replace("0b", "").zfill(8)[0:source_site]
             for i in range(2 ** sub_size):
                 the_ip_net = bin(i).replace("0b", "").zfill(sub_size)
                 tmp = (source_ip + the_ip_net).ljust(8 * offset_max, '0')
