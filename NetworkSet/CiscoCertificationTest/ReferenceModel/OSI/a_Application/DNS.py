@@ -11,3 +11,6 @@ class DomainNameSystem(object):
     @staticmethod
     def get_port(protocol):
         return {"tcp": 53, "udp": 53}.get(protocol, None)
+
+    def work_process(self):
+        pass

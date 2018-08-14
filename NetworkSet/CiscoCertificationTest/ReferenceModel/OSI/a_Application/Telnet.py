@@ -11,3 +11,6 @@ class Telnet(object):
     @staticmethod
     def get_port(protocol):
         return {"tcp": 23, "udp": None}.get(protocol, None)
+
+    def work_process(self):
+        pass

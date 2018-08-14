@@ -11,3 +11,6 @@ class SimpleNetworkManagementProtocol(object):
     @staticmethod
     def get_port(protocol):
         return {"tcp": None, "udp": 161}.get(protocol, None)
+
+    def work_process(self):
+        pass

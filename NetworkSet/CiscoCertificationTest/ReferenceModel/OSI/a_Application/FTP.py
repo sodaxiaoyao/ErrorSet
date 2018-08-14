@@ -11,3 +11,6 @@ class FileTransferProtocol(object):
     @staticmethod
     def get_port(protocol):
         return {"tcp": [20, 21], "udp": None}.get(protocol, None)
+
+    def work_process(self):
+        pass

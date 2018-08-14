@@ -17,3 +17,13 @@ class AddressResolutionProtocol(object):
         self.target_ip_address = BYTES * 4
 
         self.option_code = BYTES * 2
+
+    def post_request(self):
+        pass
+
+    def get_reply(self):
+        pass
+
+    def work_process(self):
+        self.post_request()
+        self.get_reply()

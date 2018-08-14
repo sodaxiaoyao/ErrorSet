@@ -11,3 +11,6 @@ class HyperTextTransferProtocolOverSecureSocketLayer(object):
     @staticmethod
     def get_port(protocol):
         return {"tcp": 443, "udp": None}.get(protocol, None)
+
+    def work_process(self):
+        pass

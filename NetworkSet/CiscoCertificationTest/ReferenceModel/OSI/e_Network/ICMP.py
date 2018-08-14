@@ -27,3 +27,13 @@ class InternetControlMessageProtocol(object):
                 13: "时间戳请求或回答",
                 14: "时间戳请求或回答",
             }.get(num, None)
+
+    def post_echo_request(self):
+        pass
+
+    def get_echo_reply(self):
+        pass
+
+    def work_process(self):
+        self.post_echo_request()
+        self.get_echo_reply()

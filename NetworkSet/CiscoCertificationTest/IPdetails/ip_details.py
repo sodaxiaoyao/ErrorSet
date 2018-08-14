@@ -10,6 +10,7 @@
     6.掩码位转换为子网掩码
     7.根据数量大小查询到最接近的位数
     8.子网打印功能
+    9.二进制和十进制互转
 """
 
 
@@ -131,6 +132,15 @@ class IPDetails(object):
         return self.__get_address(1)
 
     @staticmethod
+    def bin2int(bin_num, re=False):
+        # 功能：二进制和十进制互转
+        if re:
+            tmp = int(str(bin_num), 2)
+        else:
+            tmp = bin(bin_num)
+        return tmp
+
+    @staticmethod
     def get_ip_list(ip_address):
         # 功能：获取掩码列表
         ip_list = ip_address.split(".")
@@ -144,6 +154,7 @@ class IPDetails(object):
         zero = 2 if is_zero else 0
         bit_size = 0
         tmp_pc_size = 0
+        assert type(sub_size) == int
         while True:
             tmp_pc_size += 2 ** bit_size
             bit_size += 1
