@@ -124,6 +124,21 @@
         w.terminate();
     };
 
+    //============================================二进制==============================================
+    let bf = new ArrayBuffer(8);
+    console.log(bf.buffer);
+
+    let a = new Uint8Array(8);
+    let b = new Uint8Array(10);
+    b.set(a, 2);
+
+    a = new Uint16Array(8);
+    b = a.subarray(2, 3);
+    a.byteLength;
+
+    //============================================Blob==============================================
+    let arr = [1, 2, 3];
+    URL.createObjectURL(new Blob(arr));
 
     //============================================XMLHttpRequest==============================================
     let ajax = new XMLHttpRequest();
