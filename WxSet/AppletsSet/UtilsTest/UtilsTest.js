@@ -1349,6 +1349,20 @@ function wx_api() {
 
 
 
+  console.log("==============API createBLEConnection======================");
+  wx.createBLEConnection({
+    deviceId: "",
+    timeout: 3000,
+    success: function(res) {
+      console.log("wx.createBLEConnection success", res);
+    },
+    fail: function(res) {
+      console.log("wx.createBLEConnection fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.createBLEConnection complete", res);
+    }
+  });
 
 
 
@@ -1357,6 +1371,19 @@ function wx_api() {
 
 
 
+  console.log("==============API closeBLEConnection======================");
+  wx.closeBLEConnection({
+    deviceId: "",
+    success: function(res) {
+      console.log("wx.closeBLEConnection success", res);
+    },
+    fail: function(res) {
+      console.log("wx.closeBLEConnection fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.closeBLEConnection complete", res);
+    }
+  });
 
 
 
@@ -1367,6 +1394,19 @@ function wx_api() {
 
 
 
+  console.log("==============API getBLEDeviceServices======================");
+  wx.getBLEDeviceServices({
+    deviceId: "",
+    success: function(res) {
+      console.log("wx.getBLEDeviceServices success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getBLEDeviceServices fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.getBLEDeviceServices complete", res);
+    }
+  });
 
 
 
@@ -1375,6 +1415,20 @@ function wx_api() {
 
 
 
+  console.log("==============API getBLEDeviceCharacteristics======================");
+  wx.getBLEDeviceCharacteristics({
+    deviceId: "",
+    serviceId: "",
+    success: function(res) {
+      console.log("wx.getBLEDeviceCharacteristics success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getBLEDeviceCharacteristics fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.getBLEDeviceCharacteristics complete", res);
+    }
+  });
 
 
 
@@ -1385,6 +1439,21 @@ function wx_api() {
 
 
 
+  console.log("==============API readBLECharacteristicValue======================");
+  wx.readBLECharacteristicValue({
+    deviceId: "",
+    serviceId: "",
+    characteristicId: "",
+    success: function(res) {
+      console.log("wx.readBLECharacteristicValue success", res);
+    },
+    fail: function(res) {
+      console.log("wx.readBLECharacteristicValue fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.readBLECharacteristicValue complete", res);
+    }
+  });
 
 
 
@@ -1395,6 +1464,22 @@ function wx_api() {
 
 
 
+  console.log("==============API writeBLECharacteristicValue======================");
+  wx.writeBLECharacteristicValue({
+    deviceId: "",
+    serviceId: "",
+    characteristicId: "",
+    value: [],
+    success: function(res) {
+      console.log("wx.writeBLECharacteristicValue success", res);
+    },
+    fail: function(res) {
+      console.log("wx.writeBLECharacteristicValue fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.writeBLECharacteristicValue complete", res);
+    }
+  });
 
 
 
@@ -1409,6 +1494,22 @@ function wx_api() {
 
 
 
+  console.log("==============API notifyBLECharacteristicValueChange======================");
+  wx.notifyBLECharacteristicValueChange({
+    deviceId: "",
+    serviceId: "",
+    characteristicId: "",
+    state: true,
+    success: function(res) {
+      console.log("wx.notifyBLECharacteristicValueChange success", res);
+    },
+    fail: function(res) {
+      console.log("wx.notifyBLECharacteristicValueChange fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.notifyBLECharacteristicValueChange complete", res);
+    }
+  });
 
 
 
@@ -1421,10 +1522,131 @@ function wx_api() {
 
 
 
+  console.log("==============API onBLEConnectionStateChange======================");
+  wx.onBLEConnectionStateChange(function(res) {
+    console.log("wx.onBLEConnectionStateChange 监听", res);
+  })
 
 
 
 
+
+
+
+
+
+
+
+
+  console.log("==============API onBLECharacteristicValueChange======================");
+  wx.onBLECharacteristicValueChange(function(res) {
+    console.log("wx.onBLECharacteristicValueChange 监听", res);
+  })
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API startBeaconDiscovery======================");
+  wx.startBeaconDiscovery({
+    uuids: "",
+    success: function(res) {
+      console.log("wx.startBeaconDiscovery success", res);
+    },
+    fail: function(res) {
+      console.log("wx.startBeaconDiscovery fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.startBeaconDiscovery complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API stopBeaconDiscovery======================");
+  wx.stopBeaconDiscovery({
+    success: function(res) {
+      console.log("wx.stopBeaconDiscovery success", res);
+    },
+    fail: function(res) {
+      console.log("wx.stopBeaconDiscovery fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.stopBeaconDiscovery complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API getBeacons======================");
+  wx.getBeacons({
+    success: function(res) {
+      console.log("wx.getBeacons success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getBeacons fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.getBeacons complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API onBeaconUpdate======================");
+  wx.onBeaconUpdate(function(res) {
+    console.log("wx.onBeaconUpdate 监听", res);
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API onBeaconServiceChange======================");
+  wx.onBeaconServiceChange(function(res) {
+    console.log("wx.onBeaconServiceChange 监听", res);
+  })
 
 
 
@@ -1443,12 +1665,14 @@ function wx_api() {
       console.log("wx.setScreenBrightness success", res);
     },
     fail: function(res) {
-      console.log("wx.setScreenBrightness fail", res)
+      console.log("wx.setScreenBrightness fail", res);
     },
     complete: function(res) {
       console.log("wx.setScreenBrightness complete", res);
     }
   });
+
+
 
 
 
@@ -1460,7 +1684,7 @@ function wx_api() {
       console.log("wx.getScreenBrightness success", res);
     },
     fail: function(res) {
-      console.log("wx.getScreenBrightness fail", res)
+      console.log("wx.getScreenBrightness fail", res);
     },
     complete: function(res) {
       console.log("wx.getScreenBrightness complete", res);
@@ -1475,6 +1699,125 @@ function wx_api() {
 
 
 
+  console.log("==============API setKeepScreenOn======================");
+  wx.setKeepScreenOn({
+    keepScreenOn: true,
+    success: function(res) {
+      console.log("wx.setKeepScreenOn success", res);
+    },
+    fail: function(res) {
+      console.log("wx.setKeepScreenOn fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.setKeepScreenOn complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+  console.log("==============API onUserCaptureScreen======================");
+  wx.onUserCaptureScreen(function(res) {
+    console.log('用户截屏了');
+  });
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API vibrateLong======================");
+  wx.vibrateLong({
+    keepScreenOn: true,
+    success: function(res) {
+      console.log("wx.vibrateLong success", res);
+    },
+    fail: function(res) {
+      console.log("wx.vibrateLong fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.vibrateLong complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+  console.log("==============API vibrateShort======================");
+  wx.vibrateShort({
+    keepScreenOn: true,
+    success: function(res) {
+      console.log("wx.vibrateShort success", res);
+    },
+    fail: function(res) {
+      console.log("wx.vibrateShort fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.vibrateShort complete", res);
+    }
+  });
+
+
+
+
+  console.log("==============API addPhoneContact======================");
+  if (0)
+    wx.addPhoneContact({
+      photoFilePath: "",
+      nickName: "",
+      lastName: "",
+      middleName: "",
+      firstName: "",
+      remark: "",
+      mobilePhoneNumber: "",
+      weChatNumber: "",
+      addressCountry: "",
+      addressState: "",
+      addressCity: "",
+      addressStreet: "",
+      addressPostalCode: "",
+      organization: "",
+      title: "",
+      workFaxNumber: "",
+      workPhoneNumber: "",
+      hostNumber: "",
+      email: "",
+      url: "",
+      workAddressCountry: "",
+      workAddressState: "",
+      workAddressCity: "",
+      workAddressStreet: "",
+      workAddressPostalCode: "",
+      homeFaxNumber: "",
+      homePhoneNumber: "",
+      homeAddressCountry: "",
+      homeAddressState: "",
+      homeAddressCity: "",
+      homeAddressStreet: "",
+      homeAddressPostalCode: "",
+      success: function(res) {
+        console.log("wx.addPhoneContact success", res);
+      },
+      fail: function(res) {
+        console.log("wx.addPhoneContact fail", res);
+      },
+      complete: function(res) {
+        console.log("wx.addPhoneContact complete", res);
+      }
+    });
 
 
 
@@ -1491,7 +1834,347 @@ function wx_api() {
 
 
 
+  console.log("==============API getHCEState======================");
+  wx.getHCEState({
+    success: function(res) {
+      console.log("wx.getHCEState success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getHCEState fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.getHCEState complete", res);
+    }
+  });
 
+
+
+
+
+
+
+
+
+
+  console.log("==============API startHCE======================");
+  wx.startHCE({
+    aid_list: [""],
+    success: function(res) {
+      console.log("wx.startHCE success", res);
+    },
+    fail: function(res) {
+      console.log("wx.startHCE fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.startHCE complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+
+  console.log("==============API stopHCE======================");
+  wx.stopHCE({
+    success: function(res) {
+      console.log("wx.stopHCE success", res);
+    },
+    fail: function(res) {
+      console.log("wx.stopHCE fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.stopHCE complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API onHCEMessage======================");
+  wx.onHCEMessage(function(res) {
+    console.log("wx.onHCEMessage 监听", res);
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API sendHCEMessage======================");
+  wx.sendHCEMessage({
+    data: [],
+    success: function(res) {
+      console.log("wx.sendHCEMessage success", res);
+    },
+    fail: function(res) {
+      console.log("wx.sendHCEMessage fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.sendHCEMessage complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API startWifi======================");
+  wx.startWifi({
+    success: function(res) {
+      console.log("wx.startWifi success", res);
+    },
+    fail: function(res) {
+      console.log("wx.startWifi fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.startWifi complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API getWifiList======================");
+  wx.getWifiList({
+    success: function(res) {
+      console.log("wx.getWifiList success", res);
+    },
+    fail: function(res) {
+      console.log("wx.getWifiList fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.getWifiList complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API onGetWifiList======================");
+  wx.onGetWifiList(function(res) {
+    console.log("获取到wifi列表", res);
+    if (0)
+      wx.connectWifi({
+        SSID: "",
+        BSSID: "",
+        password: "",
+        success: function(res) {
+          console.log("wx.connectWifi success", res);
+        },
+        fail: function(res) {
+          console.log("wx.connectWifi fail", res);
+        },
+        complete: function(res) {
+          console.log("wx.connectWifi complete", res);
+        }
+      });
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API onWifiConnected======================");
+  wx.onWifiConnected(function(res) {
+    console.log("wifi已连接", res);
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log("==============API stopWifi======================");
+  wx.stopWifi({
+    success: function(res) {
+      console.log("wx.stopWifi success", res);
+    },
+    fail: function(res) {
+      console.log("wx.stopWifi fail", res);
+    },
+    complete: function(res) {
+      console.log("wx.stopWifi complete", res);
+    }
+  });
+
+
+
+
+
+
+
+
+  console.log("==============API showToast======================");
+
+  console.log("==============API showLoading======================");
+
+  console.log("==============API hideToast======================");
+
+  console.log("==============API hideLoading======================");
+
+  console.log("==============API showModal======================");
+
+  console.log("==============API showActionSheet======================");
+
+  console.log("==============API setNavigationBarTitle======================");
+
+  console.log("==============API showNavigationBarLoading======================");
+
+  console.log("==============API hideNavigationBarLoading======================");
+
+  console.log("==============API setNavigationBarColor======================");
+
+  console.log("==============API setTabBarBadge======================");
+
+  console.log("==============API removeTabBarBadge======================");
+
+  console.log("==============API showTabBarRedDot======================");
+
+  console.log("==============API hideTabBarRedDot======================");
+
+  console.log("==============API setTabBarStyle======================");
+
+  console.log("==============API setTabBarItem======================");
+
+  console.log("==============API hideTabBar======================");
+
+  console.log("==============API setBackgroundColor======================");
+  
+  console.log("==============API setBackgroundTextStyle======================");
+
+  console.log("==============API setTopBarText======================");
+
+  console.log("==============API navigateTo======================");
+
+  console.log("==============API redirectTo======================");
+
+  console.log("==============API switchTab======================");
+
+  console.log("==============API navigateBack======================");
+
+  console.log("==============API reLaunch======================");
+
+  console.log("==============API pageScrollTo======================");
+
+  console.log("==============API startPullDownRefresh======================");
+
+  console.log("==============API stopPullDownRefresh======================");
+  
+  console.log("==============API getExtConfig======================");
+
+  console.log("==============API getExtConfigSync======================");
+
+  console.log("==============API login======================");
+
+  console.log("==============API checkSession======================");
+
+  console.log("==============API authorize======================");
+
+  console.log("==============API getPhoneNumber======================");
+
+  console.log("==============API requestPayment======================");
+
+  console.log("==============API showShareMenu======================");
+
+  console.log("==============API hideShareMenu======================");
+
+  console.log("==============API updateShareMenu======================");
+
+  console.log("==============API getShareInfo======================");
+
+  console.log("==============API chooseAddress======================");
+
+  console.log("==============API addCard======================");
+
+  console.log("==============API openCard======================");
+
+  console.log("==============API openSetting======================");
+
+  console.log("==============API getSetting======================");
+
+  console.log("==============API getWeRunData======================");
+
+  console.log("==============API getAccountInfoSync======================");
+
+  console.log("==============API navigateToMiniProgram======================");
+
+  console.log("==============API navigateBackMiniProgram======================");
+
+  console.log("==============API chooseInvoiceTitle======================");
+
+  console.log("==============API checkIsSupportSoterAuthentication======================");
+
+  console.log("==============API startSoterAuthentication======================");
+
+  console.log("==============API checkIsSoterEnrolledInDevice======================");
+
+  console.log("==============API getUpdateManager======================");
+
+  console.log("==============API createWorker======================");
+
+  console.log("==============API getLogManager======================");
+
+  
 }
 
 module.exports = {

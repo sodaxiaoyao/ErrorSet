@@ -1,0 +1,2 @@
+<view id="test">测试</view>
+<view id="anim" animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx">动画</view>

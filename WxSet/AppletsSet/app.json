@@ -1,6 +1,7 @@
 {
   "pages": [
     "PageTest/PageTest",
+    "DomApiTest/DomApiTest",
     "CanvasTest/CanvasTest"
   ],
   "window": {
