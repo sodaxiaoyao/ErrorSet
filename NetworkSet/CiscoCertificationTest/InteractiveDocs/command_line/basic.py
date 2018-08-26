@@ -1,5 +1,9 @@
 my_cmd = {
-    "exit": "Exit current mode"
+    "exit": "Exit current mode",
+    "end": "Exit to privileged mode",
+    "disable": "Exit to user mode",
+    "logout": "Exit user mode",
+    "no [name": "cancel configure"
 }
 
 user = {

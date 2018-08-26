@@ -6,6 +6,8 @@ user = {
 
 privilege = {
     "show running-config": "Show configuration information",
+    "show history": "View history",
+    "show terminal": "View history buffer size",
 }
 
 config = {
