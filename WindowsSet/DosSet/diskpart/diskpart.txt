@@ -1,0 +1,82 @@
+::list disk
+::查看电脑当前可用硬盘
+
+
+::select disk (x)
+::选择你要进行分区操作的硬盘
+
+
+::list partition
+::查看分区格式
+
+
+::clean
+::清除磁盘数据和分区
+
+
+::convert gpt
+::转换为gpt分区格式
+
+
+::create partition efi size=200
+::创建efi分区
+
+
+::create partition msr size=200
+::创建微软系统保留分区分区
+
+
+::create partition primary size=200
+::创建主要分区
+
+
+::create partition /?
+::更多的分区类型
+
+
+::assign
+::自动分配卷标
+
+
+::delete partition override
+::删除选中的分区
+
+
+::help Clean
+::help List
+::help Select
+::help Create
+::help Format
+::help Exit
+
+
+::active 
+::标记选中内容为活动分区
+
+
+::detail disk
+::查看磁盘详细信息
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
