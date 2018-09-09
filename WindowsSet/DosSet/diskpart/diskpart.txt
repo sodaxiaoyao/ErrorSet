@@ -1,62 +1,81 @@
-::list disk
-::查看电脑当前可用硬盘
+rem list disk
+rem 查看电脑当前可用硬盘
 
 
-::select disk (x)
-::选择你要进行分区操作的硬盘
+rem select disk (x)
+rem 选择你要进行分区操作的硬盘
 
 
-::list partition
-::查看分区格式
+rem list partition
+rem 查看分区格式
 
 
-::clean
-::清除磁盘数据和分区
+rem select partition (x)
+rem 选择你要进行分区操作的分区
 
 
-::convert gpt
-::转换为gpt分区格式
+rem clean
+rem 清除磁盘数据和分区
 
 
-::create partition efi size=200
-::创建efi分区
+rem convert gpt
+rem 转换为gpt分区格式
 
 
-::create partition msr size=200
-::创建微软系统保留分区分区
+rem create partition efi size=200
+rem 创建efi分区
 
 
-::create partition primary size=200
-::创建主要分区
+rem create partition msr size=200
+rem 创建微软系统保留分区分区
 
 
-::create partition /?
-::更多的分区类型
+rem create partition primary size=200
+rem 创建主要分区
 
 
-::assign
-::自动分配卷标
+rem create partition /?
+rem 更多的分区类型
 
 
-::delete partition override
-::删除选中的分区
+rem assign
+rem 自动分配卷标
 
 
-::help Clean
-::help List
-::help Select
-::help Create
-::help Format
-::help Exit
+rem format fs=ntfs quick label="Magic"
+rem 快速格式化 
 
 
-::active 
-::标记选中内容为活动分区
+rem delete partition override
+rem 删除选中的分区
 
 
-::detail disk
-::查看磁盘详细信息
+rem delete volume
+rem 删除选中的卷
 
+
+rem help Clean
+rem help List
+rem help Select
+rem help Create
+rem help Format
+rem help Exit
+
+
+rem active 
+rem 标记选中内容为活动分区
+
+
+rem inactive 
+rem 标记选中内容为不活动分区
+
+
+rem detail disk
+rem 查看磁盘详细信息
+
+
+rem filesystems
+rem 显示卷上当前和支持的文件系统
 
 
 
