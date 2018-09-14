@@ -1,5 +1,5 @@
 @echo off
-echo "ÇëÊäÈëcommitµÄÄÚÈİ£º"
+echo "input the content of the commit£º"
 set /p commit_content=
 echo %commit_content%
 git add .
