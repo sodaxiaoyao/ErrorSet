@@ -1,4 +1,7 @@
-@echo off
+﻿@echo off
+
+:: 打开文件
+start d:\1.txt 
 
 :: 复制文件
 copy d:\1.txt c:\

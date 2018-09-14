@@ -1,5 +1,11 @@
 @echo off
 
+::查看用户
+whoami
+
+::查看系统配置
+systeminfo
+
 ::创建文件
 mkdir %cd%\test\
 md go..\
@@ -19,6 +25,9 @@ type test.txt
 
 ::循环语句 set(开始，步数，结尾)
 for /l %%i in (1,1,6) do (echo %%i)
+
+::判断语句
+if exist 1 (echo 1) else (echo 2)
 
 ::显示当前目录
 dir
