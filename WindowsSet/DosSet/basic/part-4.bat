@@ -3,6 +3,9 @@
 :: 帮助命令
 help ver
 
+:: 控制台颜色
+color /?
+
 :: 通信检测
 ping www.baidu.com
 tracert www.baidu.com
