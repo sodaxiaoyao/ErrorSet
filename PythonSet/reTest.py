@@ -1,6 +1,6 @@
 import re
 
-# Built-in module
+# TYPE: Built-in module
 
 test_str = "i am zyp i am"
 
@@ -11,6 +11,7 @@ def _help():
 
 
 def _flags():
+    # 正则表达式标识符
     print({
         re.S: "使.匹配包括换行在内的所有字符",
         re.I: "使匹配对大小写不敏感",
@@ -56,19 +57,22 @@ def _finditer():
 
 
 def _split():
+    # 按照匹配字符进行分割
     print(re.split(" ", test_str))
 
 
 def _sub():
+    # 把匹配字符进行替换
     print(re.sub(" ", lambda m: '[' + m.group(0) + ']', test_str, 0))
 
 
 def _subn():
+    # 把匹配字符进行替换，并返回替换总数
     print(re.subn(" ", lambda m: '[' + m.group(0) + ']', test_str, 0))
 
 
 def _group():
-    # 分组引用
+    # 引用分组
     print(re.sub("(?P<the_i>i) (am) (?P<the_zyp>zyp) (?P=the_i)", "\g<the_zyp>", test_str))
     print(re.sub("(i) (am) (zyp)", "\g<2>", test_str))
     print(re.sub(re.compile(r'(hello) \1'), "a", "hello hello"))
@@ -77,6 +81,7 @@ def _group():
 
 
 def _grammar():
+    # 匹配的特殊字符
     print({
         "\cx": "x 的值必须为 A-Z 或 a-z 之一,匹配由x指明的控制字符",
         "\f": "匹配一个换页符。等价于 \x0c 和 \cL。",
