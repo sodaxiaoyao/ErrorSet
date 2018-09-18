@@ -1,0 +1,19 @@
+先把交换机vlan配置好
+
+int f0/0
+
+no shutdown
+
+int f0/0.1
+
+encapsulation dot1Q 1
+
+ip address 192.168.1.1 255.255.255.0
+
+int f0/0.2
+
+encapsulation dot1Q 2
+
+ip address 192.168.2.1 255.255.255.0
+
+exit

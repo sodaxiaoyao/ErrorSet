@@ -1,0 +1,13 @@
+int f0/1
+
+switchport mode access 
+
+switchport access vlan 1
+
+switchport port-security 
+
+switchport port-security maximum 2
+
+switchport port-security violation shutdown 
+
+switchport port-security mac-address 0004.9A96.171E

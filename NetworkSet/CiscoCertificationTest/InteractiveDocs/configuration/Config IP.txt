@@ -1,0 +1,22 @@
+hostname test_name
+
+ip domain-name test_domain_name
+
+crypto key generate rsa
+1024
+
+username zyp privilege 15 password zyp
+
+ip ssh version 2
+
+ip ssh time-out 60
+
+ip ssh authentication-retries 2
+
+line vty 0 5
+
+no transport input all
+
+transport input ssh
+
+login local 

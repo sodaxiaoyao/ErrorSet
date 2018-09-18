@@ -7,8 +7,9 @@ command_module_list = [
 ]
 
 if __name__ == "__main__":
+    print("Hello coder,You can stop me by typing 'stop'", end="\n")
     while True:
-        command = raw_input(">>>")
+        command = input(">>>")
         if command == "stop":
             break
         break_flag = False
@@ -17,11 +18,11 @@ if __name__ == "__main__":
             this_cmd = cli.my_cmd
             for cmd_key in this_cmd:
                 if cmd_key == command:
-                    print "Description: " + this_cmd[cmd_key]
+                    print("Description: " + this_cmd[cmd_key])
                     break_flag = True
                     break
             if break_flag:
-                print "Module stops importing"
+                print("Module stops importing")
                 break
         if not break_flag:
-            print "Command line not found"
+            print("Command line not found")

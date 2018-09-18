@@ -1,0 +1,17 @@
+int range f0/1-24
+
+spanning-tree portfast
+
+exit
+
+
++++++++++++++++++++r-pvst+++++++++++
+spanning-tree mode rapid-pvst
+
+int f0/1
+
+spanning-tree link-type point-to-point
+
+exit
+
+

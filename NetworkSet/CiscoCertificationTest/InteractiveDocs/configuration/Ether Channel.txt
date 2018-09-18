@@ -1,0 +1,61 @@
+========================PAGP==================
+
+++++++++++++++++++++++++主动+++++++++++++++
+
+int range f0/1-5
+
+switchport mode trunk
+
+channel-group 1 mode desirable
+
+channel-protocol lacp
+
+exit
+
+port-channel load-balance dst-ip
+
+++++++++++++++++++++++++被动+++++++++++++++
+
+int range f0/1-5
+
+switchport mode trunk
+
+channel-protocol pagp
+
+channel-group 1 mode auto
+
+exit
+
+port-channel load-balance dst-ip
+
+
+
+========================LACP==================
+
+++++++++++++++++++++++++主动+++++++++++++++
+
+int range f0/1-5
+
+switchport mode trunk
+
+channel-group 1 mode active
+
+channel-protocol lacp
+
+exit
+
+port-channel load-balance dst-ip
+
+++++++++++++++++++++++++被动+++++++++++++++
+
+int range f0/1-5
+
+switchport mode trunk
+
+channel-protocol lacp
+
+channel-group 1 mode passive
+
+exit
+
+port-channel load-balance dst-ip

@@ -1,0 +1,62 @@
+==============================server==============
+
+vtp mode server 
+
+vtp domain test_vtp
+
+vtp password zyp
+
+vtp version 2
+
+int f0/1 
+
+switchport mode trunk
+
+exit
+
+
+
+==============================client==============
+
+vtp mode client
+
+vtp domain test_vtp
+
+vtp password zyp
+
+vtp version 2
+
+int f0/1 
+
+switchport mode trunk
+
+exit
+
+
+
+==============================create vlan==============
+vlan 2
+
+name test_vlan
+
+exit
+
+
+
+==============================drop vlan==============
+no interface vlan 2
+
+no vlan 2
+
+end
+
+delete vlan.dat
+
+
+
+
+
+
+
+
+

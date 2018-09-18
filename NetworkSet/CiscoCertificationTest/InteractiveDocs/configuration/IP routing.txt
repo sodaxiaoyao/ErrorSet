@@ -1,0 +1,44 @@
+++++++++++++++++三层交换机+++++++++++++++++
+
+ip routing
+
+int range f0/1-2
+
+switchport trunk encapsulation dot1q
+
+switchport mode trunk 
+
+exit
+
+valn 2 
+
+exit
+
+int vlan 1
+
+ip add 192.168.1.1 255.255.255.0
+
+no shutdown
+
+exit
+
+int vlan 2
+
+ip add 192.168.2.1 255.255.255.0
+
+exit
+
+
+++++++++++++++++二层交换机+++++++++++++++++
+
+int f0/1
+
+switchport mode access 
+
+switchport access vlan 2
+
+int vlan 1
+
+no shutdown
+
+exit
