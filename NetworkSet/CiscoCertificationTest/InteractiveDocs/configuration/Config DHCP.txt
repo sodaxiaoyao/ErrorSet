@@ -1,0 +1,17 @@
+ip dhcp pool test_dhcp
+
+network 10.1.1.0 255.0.0.0
+
+default-router 10.1.1.1
+
+dns-server 202.99.8.1
+
+exit
+
+ip dhcp excluded-address 10.1.1.1
+
+int f0/1
+
+ip add 10.1.1.1 255.0.0.0
+
+no shutdown
