@@ -113,7 +113,7 @@
 
 
     //============================================Worker==============================================
-    let w = new Worker("../lib/worker.js");
+    let w = new Worker("../LibTest/worker.js");
     // w.postMessage(10);
     w.onmessage = function (event) {
         console.log("传回来", event.data);
