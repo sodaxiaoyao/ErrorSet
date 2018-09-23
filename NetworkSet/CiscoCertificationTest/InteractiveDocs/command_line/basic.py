@@ -1,13 +1,14 @@
 my_cmd = {
-    "exit": "Exit current mode",
-    "end": "Exit to privileged mode",
-    "disable": "Exit to user mode",
-    "logout": "Exit user mode",
-    "no [name": "cancel configure"
+    "copy": "复制命令",
+    "exit": "退出当前模式",
+    "end": "退出特权模式",
+    "disable": "退出用户模式",
+    "logout": "退出用户模式",
+    "no": "取消配置",
 }
 
 user = {
-    "enable": "Enter privileged mode"
+    "enable": "进入特权模式"
 }
 
 privilege = {
@@ -15,8 +16,10 @@ privilege = {
     "write": "保存交换机设置内容",
     "copy running-config startup-config": "保存交换机设置内容",
     "reload": "重启交换机",
-
-    "configure terminal": "Enter global configuration mode"
+    "clock set": "设置时间",
+    "terminal history": "历史记录操作",
+    "debug ip routing": "开启路由Debug",
+    "configure terminal": "进入全局配置模式"
 }
 
 config = {
@@ -25,9 +28,12 @@ config = {
     "service password-encryption": "加密enable密码",
     "enable secret": "设置enable加密密码",
     "hostname": "改变pc名称",
-
-    "line [name": "Entering the line",
-    "int [name": "Enter port",
+    "ip host": "设置hosts文件",
+    "no ip domain-lookup": "关闭域名查询",
+    "clock rate": "(DCE)设置时钟频率",
+    "ip default-gateway": "设置网关",
+    "line": "进入线路",
+    "int": "进入端口",
 }
 
 config_if = {
@@ -38,11 +44,13 @@ config_if = {
     "clock rata 64000": "设置时钟频率",
     "duplex full/half": "配置单工或双工",
     "speed": "配置端口速率",
+    "description": "添加端口描述",
+    "bandwidth": "设置端口带宽",
+    "delay": "设置延时",
     "switchport mode access switchport access vlan 1": "添加端口到vlan",
     "switchport mode trunk": "跨vlan通信端口",
     "switchport trunk native vlan 1": "设置本地vlan",
     "switchport trunk allowed vlan 2,3": "允许通过的vlan"
-
 }
 
 my_cmd.update(user)

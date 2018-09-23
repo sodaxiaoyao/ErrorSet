@@ -1,0 +1,9 @@
+banner login line
+hello world
+
+line vty 0 4
+
+logging synchronous
+
+exit
+

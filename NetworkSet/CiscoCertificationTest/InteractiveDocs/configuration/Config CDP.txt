@@ -1,0 +1,4 @@
+no cdp run
+
+Int f0/0
+no cdp enable

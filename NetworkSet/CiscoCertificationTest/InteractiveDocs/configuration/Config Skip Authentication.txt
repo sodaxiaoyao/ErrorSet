@@ -1,0 +1,9 @@
+(全局下)config-register 0x2102
+
+虚拟机：Ctril+alt+pause(启动跳过)
+实体机：长按mode按钮直到显示switch：放开，输入boot恢复出厂值
+confreg 0x2142
+reset
+
+2102：读
+2142：跳

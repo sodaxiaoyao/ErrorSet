@@ -8,11 +8,11 @@ privilege = {
 }
 
 config = {
-    "ip subnet-zero": "Allow the first and last sub_nets to be used",
+    "ip subnet-zero": "允许使用0和1做为子网",
 }
 
 config_if = {
-    "ip proxy-arp": "Open proxy arp"
+    "ip proxy-arp": "开启ARP代理"
 }
 
 my_cmd.update(user)
