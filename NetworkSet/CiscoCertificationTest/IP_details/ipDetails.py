@@ -24,7 +24,7 @@ class IPDetails(object):
             assert 0 <= self.mask <= 32, "错误的掩码"
         else:
             self.mask = self.conversion_mask(sub_mask)
-        self.__div_mod = [self.mask / 8, self.mask % 8]
+        self.__div_mod = [self.mask // 8, self.mask % 8]
         self.source_website = self.website_address
         self.source_mask = self.mask
 
@@ -87,24 +87,25 @@ class IPDetails(object):
         bit_size = self.find_bit(subnet_size, is_zero)
         bit_size += self.mask
         if bit_size > 30:
-            print "主机位不足，请重新设置"
+            print("主机位不足，请重新设置")
         else:
             self.mask = bit_size
-            self.__div_mod = [self.mask / 8, self.mask % 8]
+            self.__div_mod = [self.mask // 8, self.mask % 8]
 
     def clear_subnet(self):
         # 功能：清除子网划分
         self.mask = self.source_mask
-        self.__div_mod = [self.mask / 8, self.mask % 8]
+        self.__div_mod = [self.mask // 8, self.mask % 8]
 
     def print_all_subnet(self):
         # 功能：打印子网，进行划分
-        print "=============承载主机数：" + str(2 ** (32 - self.mask) - 2) + "==============="
+        print("=============承载主机数：" + str(2 ** (32 - self.mask) - 2) + "===============")
         sub_size = self.mask - self.source_mask
         if sub_size <= 0:
-            print "未进行子网段设置"
+            print("未进行子网段设置")
+
         else:
-            offset_min = sub_size / 8
+            offset_min = sub_size // 8
             offset_max = offset_min + int(sub_size % 8 != 0)
             ip_list = self.get_ip_list(self.website_address.strip("\n"))
             source_site = self.source_mask % 8
@@ -118,8 +119,8 @@ class IPDetails(object):
                 for k in range(offset_max):
                     begin = k * 8
                     ip_list[ip_id + k] = str(int(tmp[begin:begin + 8], 2))
-                print ".".join(ip_list) + "/" + str(self.mask)
-        print "========================================="
+                print(".".join(ip_list) + "/" + str(self.mask))
+        print("=========================================")
 
     @property
     def website_address(self):
@@ -166,7 +167,7 @@ class IPDetails(object):
         # 功能：将掩码位转换成子网掩码
         assert 0 <= mask_size <= 32, "超出正常范围"
         tmp_mask = []
-        div_mod = [mask_size / 8, mask_size % 8]
+        div_mod = [mask_size // 8, mask_size % 8]
         tmp_mask.extend(["255"] * div_mod[0])
         if div_mod[1] > 0:
             tmp_mask.append(str(int(("1" * div_mod[1]).ljust(8, "0"), 2)))
