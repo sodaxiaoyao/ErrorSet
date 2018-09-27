@@ -1,4 +1,4 @@
-# TYPE: 命名规则
+# TYPE: Built-in syntax
 
 
 def _help():
