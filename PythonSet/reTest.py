@@ -122,4 +122,5 @@ def _grammar():
 
 
 if __name__ == "__main__":
-    _help()
+    # _help()
+    pass
