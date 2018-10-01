@@ -34,6 +34,31 @@ def _bitwise():
     print(bin(13 << 2).replace("0b", "").zfill(8), ":左移")
 
 
+def _color():
+    # 颜色控制
+    display = {"默认": 0, "高亮": 1, "下划线": 4, "闪烁": 5, "反白": 7, "不可见": 8}
+    foreground = [30, 31, 32, 33, 34, 35, 36, 37]
+    background = [40, 41, 42, 43, 44, 45, 46, 47]
+    print("\033[{};{};{}m".format(display["高亮"], foreground[2], background[3]))
+    print("测试内容")
+    print("\033[0m")
+
+
+def test_decorator():
+    # 装饰器
+    def wrapper(func):
+        def check(*args):
+            return func(*args) + 12
+
+        return check
+
+    @wrapper
+    def test(x):
+        return x + 1
+
+    print(test(1))
+
+
 # =============================函数============================
 def _dir():
     # 获取对象所有属性
@@ -45,6 +70,7 @@ def _attr():
     setattr(test_func, "test_attr", "test")
     if hasattr(test_func, 'test_attr'):
         print(getattr(test_func, 'test_attr'))
+    delattr(test_func, "test_attr")
 
 
 def _type():
@@ -52,9 +78,139 @@ def _type():
     print(isinstance(test_func, type(test_func)))
 
 
-# =============================对象============================
+def _enumerate():
+    # 生成枚举格式
+    for i, e in enumerate([1, 2, 3]):
+        print(i, e)
+
+
+def _id():
+    # 获取存储地址
+    print(id(0))
+
+
+def _sorted():
+    # 对集合排序
+    print(sorted([3, 1, 2], key=lambda x: x, reverse=False))
+
+
+def _abs():
+    # 获取绝对值
+    print(abs(-12))
+
+
+def _div_mod():
+    # 获取余数和整数
+    print(divmod(5, 2))
+
+
+def _pow():
+    # 求幂
+    print(pow(3, 2))
+
+
+def _range():
+    # 产生列表
+    print(range(10))
+
+
+def _sum():
+    # 求和
+    print(sum([1, 2, 3]))
+
+
+def _oct():
+    # 获取八进制
+    print(oct(11))
+
+
+def _hex():
+    # 获取十六进制
+    print(hex(11))
+
+
+def _chr():
+    # 获取ascii码
+    print(chr(10))
+
+
+def _ord():
+    # ascii码转整数
+    print(ord('a'))
+
+
+def _bin():
+    # 获取二进制
+    print(bin(11))
+
+
+def _format():
+    # 格式化字符串
+    print(format("i am {0}", "zyp"))
+
+
+def _max():
+    # 返回最大值
+    print(max([1, 2, 3]))
+
+
+def _min():
+    # 返回最小值
+    print(min([1, 2, 3]))
+
+
+def _all():
+    # 集合中都为真时候为真
+    print(all([True, False]))
+
+
+def _any():
+    # 集合中一个为真时候为真
+    print(any([True, False]))
+
+
+def _callable():
+    # 检测类是否被实例化
+    print(callable(test_func))
+
+
+def _eval():
+    # 运算输入的内容
+    print(eval("1+2"))
+    print(exec("print('123')"))
+
+
+def _filter():
+    # 内容过滤
+    for i in filter(lambda x: x > 10, [1, 2, 3, 4, 5, 19]):
+        print(i)
+    for i in map(lambda x: x + 10, [1, 2, 3, 4, 5, 19]):
+        print(i)
+
+
+def _content():
+    # 返回全局和局部内容
+    print(globals())
+    print(locals())
+
+
+def _len():
+    # 获取长度
+    print(len("123"))
+
+
+def _zip():
+    # 拼接集合
+    print(zip([1, 2, 3], [4, 5, 6]))
+
+
+# +++++++++++++++++++++++++++++++++++++++++++对象+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+# =============================Function============================
 def test_func(name, age=11, home='CHN', *args, **kwargs):
     inner = 'inner'
+    print(name, age, home, args, kwargs, inner)
 
 
 def function_help():
@@ -72,7 +228,7 @@ def _code():
     print(code.co_flags & 0b100)
 
 
-# =============================列表============================
+# =============================List============================
 test_list = list()
 
 
@@ -108,7 +264,12 @@ def _index():
     print(test_list.index("1", 0, 1))
 
 
-# =============================字典============================
+def _count():
+    # 统计出现次数
+    print(test_list.count('0'))
+
+
+# =============================Dict============================
 test_dict = dict()
 
 
@@ -130,7 +291,7 @@ def _get_dict():
         print(i)
 
 
-# =============================生成器============================
+# =============================Generator============================
 def test_generator():
     yield 0
     x = yield 1
@@ -146,6 +307,58 @@ def _get_gen():
     pass
 
 
+# =============================Str============================
+test_str = str("oHo")
+
+
+def _get_str():
+    # 查找字符出现位置
+    print(test_str.find('H', 0, 2))
+
+
+def _split():
+    # 分割字符串
+    print(test_str.split('H'))
+    print(test_str.partition('H'))
+
+
+def _check():
+    # 检测字符串
+    print(test_str.startswith('o'))
+    print(test_str.endswith('o'))
+
+
+def _set_shape():
+    # 设置形态
+    print(test_str.upper())
+    print(test_str.lower())
+    print(test_str.title())
+
+
+def _set_format():
+    # 对字符串类型格式化
+    print(test_str.center(11, 'a'))
+    print(test_str.ljust(11, 'a'))
+    print(test_str.rjust(11, 'a'))
+
+    print(test_str.zfill(11))
+
+    print(test_str.lstrip('o'))
+    print(test_str.rstrip('o'))
+    print(test_str.strip('o'))
+
+
+def _judgment_str():
+    # 判断字符串
+    print(test_str.isdigit())
+    print(test_str.isalpha())
+    print(test_str.isalnum())
+    print(test_str.islower())
+    print(test_str.isupper())
+    print(test_str.istitle())
+    print(test_str.isspace())
+
+
 if __name__ == "__main__":
-    _help()
+    # _help()
     pass
