@@ -3,16 +3,16 @@ import asyncio
 
 # TYPE: Built-in package
 
-def _help():
-    # 内置对异步IO的支持
-    pass
-
-
 @asyncio.coroutine
 def test_cor():
     print("Hello world!")
     yield from asyncio.sleep(1)
     print("Hello again!")
+
+
+def _help():
+    # 内置对异步IO的支持
+    pass
 
 
 def _is_cor(cor):

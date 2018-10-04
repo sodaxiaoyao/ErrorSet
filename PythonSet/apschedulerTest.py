@@ -3,13 +3,13 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 
 # TYPE: Third-party package
 
+def test_job():
+    print("执行任务")
+
+
 def _help():
     # 第三方的定时任务调度器
     pass
-
-
-def test_job():
-    print("执行任务")
 
 
 def start_job():
