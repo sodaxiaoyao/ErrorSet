@@ -1,20 +1,26 @@
 @echo off
 
-::ÅäÖÃ·şÎñ
-rem sc config ·şÎñÃû start= AUTO    (×Ô¶¯)
-rem sc config ·şÎñÃû start= DEMAND  (ÊÖ¶¯)
-rem sc config ·şÎñÃû start= DISABLED(½ûÓÃ)
+::é…ç½®æœåŠ¡
+rem sc config æœåŠ¡å start= AUTO    (è‡ªåŠ¨)
+rem sc config æœåŠ¡å start= DEMAND  (æ‰‹åŠ¨)
+rem sc config æœåŠ¡å start= DISABLED(ç¦ç”¨)
 
-::¿ªÆô·şÎñ
-rem net start ·şÎñÃû
+::å¼€å¯æœåŠ¡
+rem net start æœåŠ¡å
 
-::¹Ø±Õ·şÎñ
-net stop ·şÎñÃû
+::å…³é—­æœåŠ¡
+net stop æœåŠ¡å
 
-::É¾³ı·şÎñ
-sc delete ·şÎñÃû 
+::æè¿°æœåŠ¡
+sc description ServerName "æè¿°å†…å®¹" 
 
-::²éÑ¯·şÎñ
-sc query ·şÎñÃû 
+::åˆ›å»ºæœåŠ¡
+sc create ServerName binPath="" start="auto"
+
+::åˆ é™¤æœåŠ¡
+sc delete æœåŠ¡å 
+
+::æŸ¥è¯¢æœåŠ¡
+sc query æœåŠ¡å 
 
 pause
