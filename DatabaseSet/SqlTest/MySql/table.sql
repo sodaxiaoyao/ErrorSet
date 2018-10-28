@@ -11,13 +11,13 @@ create table table_name (
 DROP TABLE table_name;
 -- 删除表格
 
-delete
-from table_name;
-truncate table table_name;
--- 清空表格
+delete from table_name;
+-- 清空表格_1
 
-RENAME TABLE
-    table_name TO new_table_name;
+truncate table table_name;
+-- 清空表格_2
+
+RENAME TABLE table_name TO new_table_name;
 -- 重命名表格
 
 show tables;

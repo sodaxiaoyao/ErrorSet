@@ -14,5 +14,9 @@ show grants for 'username'@'%';
 SET PASSWORD FOR 'username'@'host' = PASSWORD('newpassword');
 -- 设置密码
 
+UPDATE USER set authentication_string=PASSWORD("111111") WHERE user='zyp';
+flush privileges;
+-- 修改内容
+
 SELECT DISTINCT CONCAT('User: ''',user,'''@''',host,''';') AS query FROM mysql.user;
 -- 查询用户
