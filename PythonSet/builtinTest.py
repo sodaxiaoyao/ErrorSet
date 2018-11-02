@@ -244,7 +244,17 @@ def list_help():
     # 交互界面查看文档，使用help(),退出quit
     print(list.__doc__)
 
+    
+def _reverse():
+    # list对象反序
+    test_list.reverse()
+    
+    
+def _sort():
+    # list对象排序
+    test_list.sort(key=lambda x:x[1]，reverse=False)
 
+    
 def _append():
     # list对象添加元素
     test_list.append(1)
