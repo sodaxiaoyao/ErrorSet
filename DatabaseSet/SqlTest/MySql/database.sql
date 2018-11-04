@@ -8,6 +8,9 @@ create database 数据库名 default character set gbk collate gbk_chinese_ci;
 status;
 -- 查看数据库版本
 
+select version();
+-- 查看数据库版本
+
 show variables like "% character %";
 -- 查看数据库编码
 
