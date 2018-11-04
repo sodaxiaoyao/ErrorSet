@@ -6,6 +6,8 @@ vim vi /etc/my.cnf
 skip-name-resolve  
 skip-grant-tables
 -- 跳过密码认证
+skip_ssl
+-- 关闭SSL认证
 
 create database 数据库名 default character set utf8 collate utf8_general_ci;
 create database 数据库名 default character set gbk collate gbk_chinese_ci;
