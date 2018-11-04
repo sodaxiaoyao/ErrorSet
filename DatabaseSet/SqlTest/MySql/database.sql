@@ -5,6 +5,9 @@ create database 数据库名 default character set utf8 collate utf8_general_ci;
 create database 数据库名 default character set gbk collate gbk_chinese_ci;
 -- 创建数据库
 
+status;
+-- 查看数据库版本
+
 show variables like "% character %";
 -- 查看数据库编码
 
