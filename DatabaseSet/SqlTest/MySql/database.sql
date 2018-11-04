@@ -1,6 +1,12 @@
 mysql -h 127.0.0.1 -u root -p password
 -- 连接数据库
 
+vim vi /etc/my.cnf
+[mysqld]
+skip-name-resolve  
+skip-grant-tables
+-- 跳过密码认证
+
 create database 数据库名 default character set utf8 collate utf8_general_ci;
 create database 数据库名 default character set gbk collate gbk_chinese_ci;
 -- 创建数据库
