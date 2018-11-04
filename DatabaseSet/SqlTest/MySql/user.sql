@@ -13,6 +13,8 @@ show grants for 'username'@'%';
 
 SET PASSWORD FOR 'username'@'host' = PASSWORD('newpassword');
 -- 设置密码
+alter user user() identified by "123456";
+-- 首次登陆设置密码,[grep 'temporary password' /var/log/mysqld.log]查看安装默认密码
 
 UPDATE USER set authentication_string=PASSWORD("111111") WHERE user='zyp';
 flush privileges;
