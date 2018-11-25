@@ -212,6 +212,11 @@ def _import():
     print(c)
 
 
+def _round():
+    # 四舍五入
+    print(round(2.5))
+
+
 # +++++++++++++++++++++++++++++++++++++++++++对象+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -369,6 +374,7 @@ def _set_format():
 def _judgment_str():
     # 判断字符串
     print(test_str.isdigit())
+    print(test_str.isdecimal())
     print(test_str.isalpha())
     print(test_str.isalnum())
     print(test_str.islower())

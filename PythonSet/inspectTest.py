@@ -60,5 +60,4 @@ def _iscoroutinefunction():
 
 if __name__ == "__main__":
     # _help()
-    _isclass()
     pass
