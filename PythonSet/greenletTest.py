@@ -17,9 +17,11 @@ def test_job_2():
 
 
 def _help():
+    # 交互界面查看文档，使用help(),退出quit
     # 第三方的协程实现工具
     # 直接下载编译后的模块包：https://www.lfd.uci.edu/~gohlke/pythonlibs/#gevent
     pass
+    # 功能：初级非自动协程支持工具
 
 
 def _create_greenlet():

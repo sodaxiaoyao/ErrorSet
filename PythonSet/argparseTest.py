@@ -5,7 +5,8 @@ import argparse
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(argparse.__doc__)
+    pass
+    # 功能：处理命令行参数
 
 
 def _create_parser():

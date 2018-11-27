@@ -14,8 +14,9 @@ def test_gcd(pair):
 
 
 def _help():
-    # 内置对线程和进程的更抽象实现
+    # 交互界面查看文档，使用help(),退出quit
     pass
+    # 功能：并发处理工具包【线程和进程】
 
 
 def _thread():

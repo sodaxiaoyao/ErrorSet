@@ -5,7 +5,8 @@ import time
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(time.__doc__)
+    pass
+    # 功能：传统时间戳工具
 
 
 def _time():

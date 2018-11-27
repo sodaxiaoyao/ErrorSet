@@ -5,7 +5,8 @@ import math
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(math.__doc__)
+    pass
+    # 功能：数学计算函数
 
 
 def _acos():

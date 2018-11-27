@@ -6,7 +6,8 @@ import functools
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(functools.__doc__)
+    pass
+    # 功能：函数拓展工具包
 
 
 def _cmp_to_key():

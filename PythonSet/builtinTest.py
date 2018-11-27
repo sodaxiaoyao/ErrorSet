@@ -2,7 +2,7 @@
 
 
 def _help():
-    # Python项目命名规则
+    # 交互界面查看文档，使用help(),退出quit
     naming_rules = {
         "项目": "Word_word",
         "包": "word_word",
@@ -21,6 +21,8 @@ def _help():
         "魔法": "__word__"
     }
     naming_rules.update({"填充符": "fill"})
+    pass
+    # 功能：内置的一切内容
 
 
 # =============================语法============================

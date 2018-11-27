@@ -4,8 +4,9 @@ import collections
 # TYPE: Built-in package
 
 def _help():
-    # 内置对结合操作的包
+    # 交互界面查看文档，使用help(),退出quit
     pass
+    # 功能：集合模块处理方法
 
 
 def _namedtuple():

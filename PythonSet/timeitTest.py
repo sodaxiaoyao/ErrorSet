@@ -13,7 +13,8 @@ def test_gcd(pair):
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(timeit.__doc__)
+    pass
+    # 功能：代码效率测试工具
 
 
 def _timeit():

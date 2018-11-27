@@ -6,7 +6,8 @@ test_obj = 's'
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(copy.__doc__)
+    pass
+    # 功能：内容复制
 
 
 def _copy():

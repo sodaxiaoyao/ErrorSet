@@ -5,7 +5,8 @@ import fractions
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(fractions.__doc__)
+    pass
+    # 功能：分数处理工具
 
 
 def _fraction():

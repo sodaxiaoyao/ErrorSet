@@ -6,7 +6,8 @@ import logging.handlers
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(logging.__doc__)
+    pass
+    # 功能：日志工具
 
 
 def _flags():

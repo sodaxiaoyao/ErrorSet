@@ -6,8 +6,8 @@ import os.path
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(os.__doc__)
-    print(os.path.__doc__)
+    pass
+    # 功能：系统相关处理
 
 
 # ======================OS=======================

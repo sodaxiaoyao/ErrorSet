@@ -6,7 +6,8 @@ from distutils import core
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(distutils.__doc__)
+    pass
+    # 功能：初级代码打包发布工具
 
 
 def _setup():

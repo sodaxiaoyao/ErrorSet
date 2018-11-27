@@ -5,7 +5,8 @@ import itertools
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(itertools.__doc__)
+    pass
+    # 功能：迭代对象工具包
 
 
 def _count():

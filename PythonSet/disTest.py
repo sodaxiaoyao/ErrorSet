@@ -13,7 +13,8 @@ def test_func():
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(dis.__doc__)
+    pass
+    # 功能：代码反编译
 
 
 def _dis():

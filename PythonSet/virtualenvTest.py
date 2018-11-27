@@ -2,9 +2,11 @@
 
 
 def _help():
+    # 交互界面查看文档，使用help(),退出quit
     # 第三方的虚拟环境
     # pip3 install virtualenv
     pass
+    # 功能：虚拟开发环境
 
 
 def _create_v():

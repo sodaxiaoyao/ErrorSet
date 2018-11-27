@@ -6,7 +6,8 @@ from pip._internal import pep425tags
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(pip.__doc__)
+    pass
+    # 功能：模块管理工具
 
 
 def _shell():

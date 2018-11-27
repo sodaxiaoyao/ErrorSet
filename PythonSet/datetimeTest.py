@@ -6,7 +6,8 @@ import datetime
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(datetime.__doc__)
+    pass
+    # 功能：数据时间处理方法
 
 
 def _date():

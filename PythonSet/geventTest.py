@@ -14,9 +14,11 @@ def test_job(x):
 
 
 def _help():
+    # 交互界面查看文档，使用help(),退出quit
     # 第三方的协程实现工具,优化了内置的[生成器],底层-greenlet
     # 直接下载编译后的模块包：https://www.lfd.uci.edu/~gohlke/pythonlibs/#gevent
     pass
+    # 功能：完善的协程支持
 
 
 def _patch():

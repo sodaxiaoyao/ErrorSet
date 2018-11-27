@@ -15,7 +15,8 @@ def test_gcd(pair):
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(threading.__doc__)
+    pass
+    # 功能：传统多线程
 
 
 def _thread():

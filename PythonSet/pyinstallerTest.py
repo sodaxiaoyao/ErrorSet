@@ -5,7 +5,8 @@ import PyInstaller
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(PyInstaller.__doc__)
+    pass
+    # 功能：打包可执行文件的工具
 
 
 def _create():

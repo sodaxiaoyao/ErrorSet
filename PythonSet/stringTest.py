@@ -7,7 +7,8 @@ test_str = "i am zyp i am"
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(string.__doc__)
+    pass
+    # 功能：字符串扩展工具
 
 
 def _const():

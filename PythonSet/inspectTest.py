@@ -10,7 +10,8 @@ class TestClass:
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(inspect.__doc__)
+    pass
+    # 功能：收集python对象的信息
 
 
 def _getmembers():
@@ -21,6 +22,11 @@ def _getmembers():
 def _getmodulename():
     # 获取路径下模块的名称
     print(inspect.getmodulename("./inspectTest.py"))
+
+
+def _getmro():
+    # 获取mro路径查找范围
+    inspect.getmro(TestClass)
 
 
 def _ismodule():

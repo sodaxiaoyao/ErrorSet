@@ -5,7 +5,8 @@ import itsdangerous
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(itsdangerous.__doc__)
+    pass
+    # 功能：签名和序列化处理
 
 
 def _signer():

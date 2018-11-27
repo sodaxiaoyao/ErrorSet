@@ -5,7 +5,8 @@ import decimal
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(decimal.__doc__)
+    pass
+    # 功能：精度数据处理方法
 
 
 def _getcontext():

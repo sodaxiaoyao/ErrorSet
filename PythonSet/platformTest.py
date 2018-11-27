@@ -6,7 +6,8 @@ import platform
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(platform.__doc__)
+    pass
+    # 功能：平台信息
 
 
 def _architecture():

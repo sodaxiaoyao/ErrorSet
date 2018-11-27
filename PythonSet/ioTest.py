@@ -6,7 +6,8 @@ import io
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(io.__doc__)
+    pass
+    # 功能：IO处理工具包
 
 
 def _io_base():

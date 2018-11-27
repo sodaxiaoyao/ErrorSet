@@ -1,3 +1,4 @@
+import apscheduler
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 
@@ -8,8 +9,9 @@ def test_job():
 
 
 def _help():
-    # 第三方的定时任务调度器
+    # 交互界面查看文档，使用help(),退出quit
     pass
+    # 功能：定时任务调度器
 
 
 def start_job():

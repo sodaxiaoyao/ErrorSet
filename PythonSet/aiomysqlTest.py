@@ -5,8 +5,9 @@ import aiomysql
 # TYPE: Third-party package
 
 def _help():
-    # 第三方的异步py_mysql驱动
+    # 交互界面查看文档，使用help(),退出quit
     pass
+    # 功能：异步执行MySQL数据库
 
 
 async def connect_mysql(my_loop):

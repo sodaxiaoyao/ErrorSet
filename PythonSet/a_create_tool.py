@@ -2,6 +2,7 @@ import os.path
 
 name = input("请输入模块：")
 module_name = name
+
 name = "{}Test.py".format(name)
 print(name)
 if not os.path.exists(name):
@@ -15,7 +16,8 @@ if not os.path.exists(name):
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(re.__doc__)
+    pass
+    # 功能：
 
 
 def _example():
@@ -43,6 +45,9 @@ if __name__ == "__main__":
         if not flag:
             print(name + "被创建")
             fp.write(content.replace("re", module_name))
+
+    if flag:
+        os.remove(name)
 
 else:
     print("已经存在")

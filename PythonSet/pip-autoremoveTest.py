@@ -5,7 +5,8 @@ import pip_autoremove
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(pip_autoremove.__doc__)
+    pass
+    # 功能：自动卸载包及其依赖包的工具
 
 
 def _shell():

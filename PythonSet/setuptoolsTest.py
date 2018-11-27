@@ -7,7 +7,8 @@ from setuptools import setup, find_packages
 def _help():
     # 交互界面查看文档，使用help(),退出quit
     # 参考地址：http://blog.konghy.cn/2018/04/29/setup-dot-py/
-    print(setuptools.__doc__)
+    pass
+    # 功能：高级打包和发布工具
 
 
 def _setup():

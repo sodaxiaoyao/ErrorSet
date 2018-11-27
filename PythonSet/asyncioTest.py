@@ -11,8 +11,9 @@ def test_cor():
 
 
 def _help():
-    # 内置对异步IO的支持
+    # 交互界面查看文档，使用help(),退出quit
     pass
+    # 功能：消息循环，实现了异步IO
 
 
 def _is_cor(cor):

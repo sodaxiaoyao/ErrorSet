@@ -6,7 +6,8 @@ import queue
 
 def _help():
     # 交互界面查看文档，使用help(),退出quit
-    print(queue.__doc__)
+    pass
+    # 功能：队列对象
 
 
 def _queue():
