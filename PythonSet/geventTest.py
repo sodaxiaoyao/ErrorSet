@@ -19,7 +19,7 @@ def _help():
     pass
 
 
-def patch():
+def _patch():
     # 非阻塞补丁
     monkey.patch_all()
 
