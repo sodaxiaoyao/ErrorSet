@@ -11,18 +11,18 @@ def _help():
 
 def _print_exc():
     # 直接打印，或者放入文件
-	try:
-		raise SyntaxError, "traceback test"
-	except:
-		traceback.print_exc(file=open("1.txt","a+"))
-    
-	
-def _print_exc():
+    try:
+        raise SyntaxError("traceback test")
+    except SyntaxError:
+        traceback.print_exc(file=open("a.txt", "a+"))
+
+
+def _format_exc():
     # 返回错误信息字符串
-	try:
-		raise SyntaxError, "traceback test"
-	except:
-		traceback.format_exc()
+    try:
+        raise SyntaxError("traceback test")
+    except SyntaxError:
+        traceback.format_exc()
 
 
 if __name__ == "__main__":
