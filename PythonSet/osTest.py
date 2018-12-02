@@ -148,6 +148,11 @@ def _system():
     print(os.popen("echo 'zyp'").read())
 
 
+def _unlink():
+    # 删除文件, 如果文件是一个目录则返回一个错误。
+    os.unlink("")
+
+
 # ======================OS_PATH=======================
 def _abspath():
     # 获取当前文件的绝对路径
