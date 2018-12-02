@@ -205,12 +205,12 @@ def _zip():
     # 拼接集合
     print(zip([1, 2, 3], [4, 5, 6]))
 
-    
+
 def _round():
     # 四舍五入
     print(round(2.5))
-   
-   
+
+
 # ===魔法===    
 def _import():
     # 动态导入模块

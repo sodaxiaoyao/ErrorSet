@@ -16,6 +16,11 @@ def _import_module():
     importlib.import_module('foo').main()
 
 
+def _reload():
+    # 重载模块
+    importlib.reload("sys")
+
+
 def _find_spec():
     # 检查传入的字符串作为模块是否存在
     module_spec = importlib.util.find_spec('bar')
@@ -34,8 +39,8 @@ def _spec_from_file_location(module_name):
     module = importlib.util.module_from_spec(module_spec)
     module_spec.loader.exec_module(module)
     print(dir(module))
-    msg = "The {module_name} module has the following methods:{methods}"
-    print(msg.format(module_name=module_name, methods=dir(module)))
+    print("The {module_name} module has the following methods:{methods}".format(module_name=module_name,
+                                                                                methods=dir(module)))
 
 
 if __name__ == "__main__":

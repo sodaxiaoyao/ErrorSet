@@ -21,6 +21,12 @@ def _walk():
     print(os.walk("."))
 
 
+def _kill():
+    # 杀死进程
+    os.kill(123, 123)  # pid , sid
+    os.killpg(123, 123)  # pgid , sid
+
+
 def _u_time():
     # 指定路径文件最后的修改和访问时间[访问|修改]
     os.utime("a.py", (1330712280, 1330712292))
@@ -136,6 +142,12 @@ def _path_sep():
     print(os.pathsep)
 
 
+def _system():
+    # shell命令
+    os.system("echo 'zyp'")
+    print(os.popen("echo 'zyp'").read())
+
+
 # ======================OS_PATH=======================
 def _abspath():
     # 获取当前文件的绝对路径
@@ -197,9 +209,14 @@ def _norm():
     os.path.normpath('E:\study\Automantic\jxz-code\Course4\函数.py')
 
 
-def _system():
-    # shell命令
-    os.system("echo 'zyp'")
+def _expandvars():
+    # 自动替换环境变量中的内容
+    print(os.path.expandvars("Tmp path is ${tmp}"))
+
+
+def _expanduser():
+    # 把path中包含的"~"和"~user"转换成用户目录
+    print(os.path.expanduser("~"))
 
 
 if __name__ == "__main__":
