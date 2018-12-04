@@ -11,4 +11,4 @@
 - [x] 以目录树的第一个Test为树枝末梢，其后可以自定义命名，与树无关
 <br/>
 
-[目录树详情](http://naotu.baidu.com/file/c859fabacc1a6b3b94408793e1908de0)
+[目录树详情](http://naotu.baidu.com/file/c859fabacc1a6b3b94408793e1908de0?token=4d199acb9ffd9246)
